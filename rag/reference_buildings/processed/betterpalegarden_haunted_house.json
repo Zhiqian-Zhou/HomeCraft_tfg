@@ -3914,7 +3914,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-24T17:00:09Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "Haunted house structure from BetterPaleGarden mod (1.21+ pale garden biome)."
 }

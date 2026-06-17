@@ -14618,7 +14618,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-24T16:56:37Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This Chinese-style temple is a compact, square structure, approximately 21x21 blocks at its base and rising 32 blocks high, featuring a distinct tiered design. The building is constructed primarily from reddish-brown blocks, possibly terracotta or dark wood, which form the main body of each level. Each of the three visible storeys has a broad, overhanging roof with upturned eaves, characteristic of East Asian architecture. Grey stone blocks, including polished andesite and stone brick slabs, are used for decorative elements and the base, creating a subtle contrast with the reddish-brown. A central, spired finial made of darker wood and stone caps the uppermost roof. The structure sits on a small grassy plot with a scattered grey stone and red and yellow block pathway leading to its entrance, suggesting a ceremonial approach.\n\nThe interior of this temple appears to be designed for ceremonial or contemplative use, with a single, open room on each of its three floors. The floors are connected by a central dark oak wood pillar, suggesting a spiral or ladder-like ascent rather than grand stairs. Large, rectangular openings on each level, possibly windows or open archways, are framed with dark wood and offer views to the outside, allowing ample natural light to illuminate the interior spaces. The overall atmosphere is one of humble devotion, with the simple, functional layout and warm reddish-brown palette contributing to a serene and traditional Chinese temple aesthetic."
 }

@@ -18,7 +18,7 @@ try:
 except Exception:
     sps = None
 
-EXP = Path("/Users/zhiqian/Desktop/Uni/TFGv2Z/scratch/experimento")
+EXP = Path(__file__).resolve().parent
 PLOTS = EXP / "plots_5fam"; PLOTS.mkdir(exist_ok=True)
 _RAW = [json.loads(l) for l in (EXP / "results_5fam.jsonl").read_text().splitlines() if l.strip()]
 # El re-run APPENDEA filas (reintentos) → deduplicar por (model,prompt,rep)

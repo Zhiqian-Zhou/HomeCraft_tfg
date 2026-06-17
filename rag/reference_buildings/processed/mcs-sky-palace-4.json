@@ -36844,7 +36844,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-24T16:56:18Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This small, two-storey structure, measuring 22x46 cells and 23 cells high, resembles a miniature Chinese-style pagoda or sky palace, floating on an island of earth and stone. The main body of the building is a square block with walls of smooth quartz and birch planks, giving it a light, airy appearance. A prominent red terracotta tile roof with wide eaves and slightly upturned corners extends around the upper storey, with small red concrete accents on the corners. Above this, a smaller, recessed square structure with stone brick and diorite trim rises, forming an open-air upper level. The entire building rests on a base of grass blocks and jungle leaves, creating a small garden effect, which in turn sits atop a rugged foundation of stone and coarse dirt, suggesting a floating island.\n\nThe interior of this sky palace is implied to be simple, with a main floor and an accessible upper level. The ground floor appears to be a single, open room, likely serving as a common area, with large window-like openings on all sides, suggesting ample natural light. A smaller, open room is present on the upper level, surrounded by a low wall, providing an observation deck or a more private space. The overall design, with its light-colored walls, open structure, and elevated position, suggests a serene and contemplative atmosphere, characteristic of a fantasy-inspired Chinese architectural style."
 }

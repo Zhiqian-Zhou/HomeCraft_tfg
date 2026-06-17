@@ -117,11 +117,10 @@ Requiere `OPENROUTER_API_KEY` exportado.
 ### 1. Smoke isolado de typologies (sin LLM)
 
 ```bash
-cd /Users/zhiqian/Desktop/Uni/TFGv2Z
 python3 tools/preview_typology.py --list           # 29 entradas
 python3 tools/preview_typology.py norman_keep --style gothic --size large
 # → scratch/typology_previews/norman_keep__gothic__large.json
-# Ábrelo en el viewer: docs/viewer
+# Ábrelo en el viewer: viewer/ (python3 -m http.server 8000)
 ```
 
 ### 2. Build single end-to-end (1 LLM run)
@@ -245,8 +244,7 @@ Tests modificados (1 file, 2 cases pinned to legacy mode)
 ## Cómo abrir un render en el viewer
 
 ```bash
-cd /Users/zhiqian/Desktop/Uni/TFGv2Z
-python3 -m http.server 8000
+python3 -m http.server 8000        # desde la raíz del repo
 # luego en el navegador:
 #   http://localhost:8000/viewer/?file=../scratch/typology_previews/<name>__<style>__<size>.json
 ```

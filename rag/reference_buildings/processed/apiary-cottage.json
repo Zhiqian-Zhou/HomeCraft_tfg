@@ -10976,7 +10976,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-23T23:01:59Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This large, single-story apiary cottage measures 23 by 14 blocks with a height of 15 blocks, featuring a distinctive rustic and medieval aesthetic. The structure is predominantly rectangular, with a complex roofline composed of multiple gable sections, each covered in light blue glass panes that allow light to filter through. The walls are constructed from dark spruce logs forming a timber frame, with cobblestone and spruce planks filling in the lower sections and supporting the glass panes above. Accentuated by chains and golden blocks, the exterior presents a charming, functional design, set upon a simple grass block and cobblestone plinth.\n\nThe interior of this apiary cottage is designed to function as a single large space, likely for housing beehives or for agricultural purposes, given its \"apiary\" designation and rustic style. The extensive use of glass for both the roof and the upper wall sections ensures a brightly lit interior, ideal for plants or specific animal husbandry that requires natural light. There are no distinct internal rooms or complex circulation paths, suggesting an open-plan layout. The overall atmosphere is one of practicality and simplicity, aligning with its medieval and rustic style, and suggesting a focus on utility rather than elaborate residential comfort."
 }

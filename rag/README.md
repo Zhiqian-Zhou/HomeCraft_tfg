@@ -10,10 +10,12 @@ El RAG es el sustrato de retrieval que permite a cada agente LLM de Pipeline v2 
 | D · Materials | `materials/` | `material.schema.json` | Catálogo de bloques Minecraft 1.16.5 con metadatos semánticos. |
 | E · Reference buildings | `reference_buildings/` | `reference_building.schema.json` | Edificios reales de Minecraft como listas de vóxeles `{x, y, z, palette_idx}`. |
 
+> **Nota sobre este repo.** El corpus completo de desarrollo son ~2.746 edificios; este repositorio público incluye solo una **muestra de 61 edificios con licencia MIT** (ver `reference_buildings/README.md`). Las cifras de 2.746 que aparecen más abajo describen el corpus de desarrollo sobre el que se construyó el índice offline.
+
 ## Contrato de retrieval
 
-- **Los subgoal agents consultan A + E conjuntamente.** Una llamada del tipo "diseña una cocina medieval" debe devolver tanto la skill entry de cocina (el *cómo*) como ejemplos reales de cocinas medievales de E (cómo podría quedar).
-- Las colecciones A y E comparten `tags.category` (kitchen, bathroom, tower…) y `tags.style` (medieval, fantasy…) para que un mismo filtro cubra ambas.
+- **E (reference buildings) y A (skills) se consultan por mecanismos distintos.** E se *rankea* por similitud TF-IDF (sobre el top-30% por composite score); A no se rankea, se *filtra* como un catálogo tipado (un cajón concreto: las floor layouts, o el mobiliario de un rol de habitación). Aunque son búsquedas separadas, comparten vocabulario y devuelven resultados que ya concuerdan: un prompt "cocina medieval" da el exemplar medieval residencial de E junto con los builders de A que le encajan.
+- Las colecciones A y E comparten `tags.category` (kitchen, bathroom, tower…) y `tags.style` (medieval, fantasy…) por lo que ambas búsquedas concuerdan.
 - C se consulta cuando el main agent necesita justificación basada en Alexander (p.ej. "intimacy gradient" → qué espacios situar más profundo).
 - B se consulta en Phase 1 (Design intent) para fijar la paleta; D es el índice que permite resolver las paletas de B a bloques concretos.
 

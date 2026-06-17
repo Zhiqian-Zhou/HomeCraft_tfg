@@ -1,9 +1,9 @@
-# Experimento: comparación de LLMs como motor generativo de HomeCraft v2
+# Experimento: comparación de LLMs como motor generativo de HomeCraft (pipeline v4)
 
 > Diseño experimental para el TFG (UPC/FIB) — generación **texto → edificio vóxel
 > (Minecraft 1.16.5)**. Documento de referencia para ejecutar y defender la
 > comparación de distintos modelos de lenguaje. Markdown en español (convención
-> del proyecto; ver `CLAUDE.md`).
+> del proyecto).
 
 ## 1. Objetivo del proyecto y del experimento
 

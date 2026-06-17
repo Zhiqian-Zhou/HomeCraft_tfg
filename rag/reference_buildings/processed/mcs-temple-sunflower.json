@@ -16489,7 +16489,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-24T16:56:58Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This structure is a large, two-story building with a footprint of approximately 21x20 blocks and a height of 19 blocks, featuring a complex, multi-tiered roof. The overall shape is a rectangular block, but the roofline introduces a more dynamic silhouette. The roof is composed of reddish-brown blocks, suggesting terracotta tiles, and has multiple gables and overlapping sections, characteristic of some Chinese architectural styles. The walls are primarily constructed from a mix of light grey and white blocks, possibly stone bricks and smooth quartz, with sections of dark oak planks providing a contrasting, darker material. The base of the building is delineated by a band of reddish-brown blocks, matching the roof.\n\nThe interior of this temple-like structure would likely feature a ground floor dedicated to ceremonial or communal activities, given its large size. The presence of multiple stories suggests a hierarchical arrangement of spaces, with upper floors potentially housing private quarters or additional shrine areas. The dominant use of stone and wood on the exterior implies a sturdy, traditional construction, and without visible windows, the interior might be dimly lit, relying on internal light sources or specific architectural openings not apparent from this view. The overall design evokes the solemn and intricate atmosphere of a Chinese temple, emphasizing robust materials and a distinctive roof form."
 }

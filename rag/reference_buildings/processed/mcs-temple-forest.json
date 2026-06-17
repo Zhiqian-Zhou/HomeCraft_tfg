@@ -7827,7 +7827,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-24T16:56:30Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This Chinese-style temple is a compact, single-story structure, approximately 17x12 blocks in width and depth, and 19 blocks high, featuring a prominent hip roof with a gentle slope. The roof is a striking mix of dark red blocks and grey stone, suggesting a weathered or moss-covered appearance, with a distinct eave overhang around the entire perimeter. The walls are primarily smooth sandstone in a light beige, accented by darker brown stripped spruce logs serving as structural pillars and supports. The building is surrounded by a low, irregular perimeter of grey stone and dirt, interspersed with patches of green grass and red blocks, giving it a somewhat overgrown or ancient aesthetic.\n\nThe interior of the temple appears to be a single, open room on the ground floor, designed for communal or ceremonial use, characteristic of a temple layout. The entrance is not explicitly visible but would likely be on one of the longer sides, leading directly into this main space. The sparse number of windows, indicated by small, dark openings in the sandstone walls, suggests a somewhat dim and contemplative atmosphere within. The overall impression is one of a rustic, ancient forest shrine, possibly used for quiet meditation or small gatherings, with a focus on natural materials and a weathered, traditional Chinese aesthetic."
 }

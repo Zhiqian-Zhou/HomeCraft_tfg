@@ -9034,7 +9034,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-23T23:01:57Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This rectangular two-story house, measuring approximately 13x15 cells and 21 blocks high, features a traditional medieval or fantasy aesthetic. Its silhouette is defined by a prominent gable roof, constructed from dark brown spruce planks, which is currently incomplete, exposing the interior framing. The exterior walls are primarily composed of dark brown dirt blocks, suggesting a rustic or earthen construction, with a plinth of grey cobblestone at the base. Visible window openings are glazed with light blue glass panes, providing a subtle contrast to the earthy tones. A small patch of green grass block extends from one side of the house, indicating a simple, natural setting.\n\nThe interior of the house is currently an open shell, revealing the structural elements and suggesting a work in progress or a ruin. The ground floor appears to be a single, large open space, with cobblestone flooring and several stripped spruce log pillars providing support. A furnace is visible on the ground floor, indicating a potential kitchen or heating area. The upper floor is also open, with several more stripped spruce log pillars and a partial cobblestone floor. The exposed rafters of the gable roof are visible above, and several lanterns, suspended by chains, are scattered throughout the interior, suggesting an intent for illumination. The overall impression is that of a functional, if unfinished, dwelling, awaiting further detailing to create distinct rooms and a complete living environment."
 }

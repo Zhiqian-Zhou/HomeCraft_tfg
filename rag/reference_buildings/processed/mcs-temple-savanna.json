@@ -8710,7 +8710,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-24T16:56:47Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This Chinese-style temple is a roughly rectangular structure, approximately 19x14 cells at its base, rising to 21 cells high, featuring a single storey. The most striking feature is its elaborate hip roof, which has a multi-tiered, slightly upturned profile, characteristic of East Asian architecture. The roof is predominantly constructed from dark brown oak planks, with a diagonal checkerboard pattern of lighter spruce and birch planks, creating a decorative tiled effect. The walls beneath the eave overhangs are made of smooth sandstone and spruce planks, giving a warm, earthy tone. The building is surrounded by a simple perimeter of stone brick slabs and grass, with scattered red and yellow accent blocks suggesting a path or decorative elements.\n\nThe interior of this temple is likely a single, open space, given its one-storey design. The main entrance appears to be on the longer side of the structure, indicated by a dark opening. While specific rooms are not visible, the design suggests a central hall suitable for ceremonial or communal gatherings, typical of a temple. The lack of visible windows implies a dimly lit interior, relying on the main entrance for light or internal light sources not depicted. The overall impression is one of a modest but culturally significant structure, designed for a specific spiritual or community purpose within a traditional Chinese architectural context."
 }

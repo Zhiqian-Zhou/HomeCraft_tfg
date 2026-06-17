@@ -18,7 +18,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-EXP = Path("/Users/zhiqian/Desktop/Uni/TFGv2Z/scratch/experimento")
+EXP = Path(__file__).resolve().parent
 PLOTS = EXP / "plots_decon"; PLOTS.mkdir(exist_ok=True)
 
 def load(p):

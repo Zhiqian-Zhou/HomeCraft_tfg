@@ -4000,7 +4000,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-24T16:59:21Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This desert temple chamber is a compact, single-story rectangular block measuring 13x13 cells with a height of 6 cells. The exterior is predominantly constructed from stone bricks, giving it a uniform, reddish-brown appearance. The flat roof is also made of stone bricks, blending seamlessly with the walls. The structure features a single small window on one side, composed of iron bars, which stands out against the otherwise solid brick facade. The overall impression is one of a sturdy, unadorned structure, characteristic of ancient desert architecture, with minimal external ornamentation.\n\nInside, the chamber is designed as a single, open room, suggesting a functional space for rituals or storage rather than residential use. The interior walls and floor are also made of stone bricks, maintaining the austere aesthetic of the exterior. There are no visible stairs or separate areas, indicating a simple, undivided space. The only source of natural light comes from the small, barred window, which would likely keep the interior quite dim, contributing to a mysterious or sacred atmosphere. The use of cut sandstone, chiseled sandstone, and smooth sandstone stairs in the palette suggests subtle decorative elements or structural details within the chamber, hinting at an Egyptian-inspired design for a ceremonial or guarded space.",
  "description_legacy": "Desert/egyptian-styled husk temple chamber from Stonevaults dungeon rooms."

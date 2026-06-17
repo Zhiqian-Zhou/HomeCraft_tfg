@@ -8901,7 +8901,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-23T23:02:04Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This fantasy-style rustic home is a single-story structure with a rectangular footprint, measuring 13 blocks wide by 11 blocks deep, and rising to 25 blocks in height. The building is characterized by its heavily overgrown appearance, with a dominant palette of brown oak planks for the roof and significant amounts of green grass blocks and spruce leaves suggesting a natural, unkempt aesthetic. Grey stone blocks form the base and some structural elements, while spruce logs provide accent framing. The roof is a complex, multi-level form, possibly a series of gables or hips, and is heavily populated with dirt and grass blocks, giving the impression of a living, green roof. Vines hang from various surfaces, further enhancing the overgrown look. Small yellow blocks, possibly glowstone or lanterns, are scattered across the exterior, providing subtle illumination.\n\nThe interior of this single-story dwelling suggests a simple, open plan with a primary central room. The general ambiance is likely dim and earthy, given the heavy overgrowth and the limited visible windows, which appear to be small, light blue stained glass panes. There are no visible interior walls or distinct room divisions, implying a single, large living space. The rustic materials and natural elements suggest a cozy, perhaps even hobbit-like, dwelling deeply integrated with its environment. The presence of spruce stairs and slabs indicates some interior detailing, possibly leading to a small loft or raised platform within the main space."
 }

@@ -6187,7 +6187,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-24T16:52:45Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This large, rustic cottage measures 16x13 blocks and stands 17 blocks tall, featuring an L-shaped footprint with a complex, multi-gabled roofline. The walls are primarily constructed from spruce and oak logs, giving the structure a natural, woodsy aesthetic, with sections of stone bricks and cobbled deepslate forming the foundation and lower walls. The prominent roof is made of snow blocks, creating a distinct white cap, and is punctuated by a brick chimney with a pink granite cap. Small glass windows are visible, suggesting modest interior lighting, and the structure is partially surrounded by grass blocks and a few spruce leaves, indicating a natural, perhaps mountainous, setting.\n\nThe interior of this cottage is laid out on a single floor, designed for a cozy, domestic atmosphere. The main entrance, not explicitly visible, likely leads into a central living area, from which the other rooms branch off. The use of natural wood and stone materials throughout the structure implies a simple, yet sturdy, living space. The small glass windows suggest a moderately lit interior, relying on artificial light sources for evening illumination. This dwelling is characteristic of a medieval or rustic mountain retreat, providing a functional and comfortable abode within a natural environment.",
  "description_legacy": "Mountain village cottage from MinecraftExampleStructure datapack tutorial."

@@ -2,6 +2,8 @@
 
 **Fecha:** 2026-05-25
 **Alcance:** colecciones A (skills), B (styles), C (patterns), D (materials), E (reference buildings)
+
+> **Nota sobre este repo público.** Esta auditoría se realizó sobre el **corpus completo de desarrollo (2.746 edificios)**. El repositorio público incluye solo una **muestra de 61 edificios con licencia MIT** de la colección E (ver `reference_buildings/README.md`); las cifras de 2.746 de abajo se refieren al corpus de desarrollo, no al subset publicado.
 **Trigger:** petición del usuario — *"Lanza 10 agentes para comprobar que datos son reales y que datos son inventados por LLM. Si se puede, busca el dato real para reemplazarlo. Si no hay forma de encontrar, mirar de borrar ese dato."*
 
 Este documento consolida el resultado de la verificación cruzada que realizaron 10 agentes en paralelo (V1–V10). El objetivo es separar, por colección, **qué datos están respaldados por una fuente externa verificable** y **qué datos siguen siendo síntesis del LLM** (defendibles para el TFG pero no auditables contra una fuente primaria). Al final se listan los borrados y se da una recomendación para la defensa.

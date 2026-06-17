@@ -7,7 +7,7 @@ el resultado de cada modelo. Salida: scratch/experimento/galeria.html
 import json, html
 from pathlib import Path
 
-ROOT = Path("/Users/zhiqian/Desktop/Uni/TFGv2Z")
+ROOT = Path(__file__).resolve().parents[2]
 EXP = ROOT / "scratch" / "experimento"
 rows = [json.loads(l) for l in (EXP / "results_decon.jsonl").read_text().splitlines() if l.strip()]
 

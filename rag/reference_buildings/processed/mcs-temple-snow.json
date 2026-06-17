@@ -7215,7 +7215,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-24T16:56:51Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This large, rectangular building measures 13x13x17 blocks and presents a multi-story, somewhat irregular silhouette. It features a flat roof with a central skylight, providing a modern or minimalist aesthetic. The exterior is primarily composed of diorite and white concrete, creating a cool, light grey and white palette, accented with dark oak planks and stripped dark oak wood for darker details and window frames. The main entrance is highlighted by a short, broad staircase leading to a recessed doorway, flanked by small, square windows. The overall impression is one of clean lines and a somewhat stark, yet functional design.\n\nThe interior is divided into multiple rooms across its various levels, suggesting a complex layout for a large building. The ground floor likely serves as an entrance and common area, with upper floors dedicated to more private or specialized functions. Circulation is managed by internal staircases, though their specific configuration is not visible. Lighting appears to be a mix of natural light from the large central skylight and numerous small, square windows, which are set into the light-colored walls. The functional room types are not specified, but the overall design suggests a contemporary or minimalist dwelling, with a focus on open spaces and natural light, evoking a sense of calm and order."
 }

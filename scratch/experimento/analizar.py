@@ -19,7 +19,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-EXP = Path("/Users/zhiqian/Desktop/Uni/TFGv2Z/scratch/experimento")
+EXP = Path(__file__).resolve().parent
 PLOTS = EXP / "plots"; PLOTS.mkdir(exist_ok=True)
 
 rows = [json.loads(l) for l in (EXP / "results.jsonl").read_text().splitlines() if l.strip()]

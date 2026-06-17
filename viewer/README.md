@@ -1,6 +1,6 @@
 # HomeCraft v2 — Visor RAG-E
 
-Visor web local para inspeccionar los 2.746 edificios voxel del corpus RAG-E.
+Visor web local para inspeccionar los edificios voxel del corpus RAG-E y cualquier edificio generado. Este repo público incluye una muestra de 61 edificios (licencia MIT); el corpus completo de desarrollo tiene ~2.746.
 
 ## Cómo arrancar
 
@@ -28,7 +28,7 @@ python3 tools/build_viewer_index.py
 - `S` — screenshot (descarga PNG)
 - `F` — fullscreen
 - `G` — toggle grid
-- Slider Y-axis — slicer horizontal (Y) para ver interiores
+- L — layer slicer (rango Y) para ver interiores
 
 ## Arquitectura
 
@@ -41,7 +41,7 @@ viewer/
 │   ├── renderer.js    Three.js + InstancedMesh por palette idx
 │   ├── blockstate.js  parser de "minecraft:oak_stairs[facing=east]" + rotaciones
 │   └── textures.js    cache + lazy-load de mcasset.cloud
-└── data/index.json    metadata ligera de los 2.746 edificios
+└── data/index.json    metadata ligera de los edificios (muestra de 61; corpus completo ~2.746)
 ```
 
 ## Fuentes externas (CDN)

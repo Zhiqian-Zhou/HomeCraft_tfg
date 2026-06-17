@@ -2844,7 +2844,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-24T16:59:51Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This building presents as a compact, square block, measuring 13x8x13 cells, giving it a squat, robust appearance. It features a single storey with a flat roof, creating a solid, defensive silhouette. The architectural style leans towards rustic medieval, characterized by its sturdy construction and simple forms. The primary materials are dark oak planks, forming the main body of the structure, complemented by stone bricks that define the roof and base. Dark oak logs are used as structural accents, while lanterns provide subtle illumination. The colour palette is dominated by the deep browns of the dark oak and the grey tones of the stone, creating a somber, utilitarian aesthetic. Four white wall banners are strategically placed on each side, adding a touch of heraldic detail to the otherwise unadorned exterior.\n\nThe interior of this structure is designed as a single, open lobby space, suggesting a functional and communal purpose. The absence of internal divisions indicates a large, unobstructed area, likely serving as an entry point or gathering place. The lighting is provided by hanging lanterns, casting a dim, atmospheric glow that reinforces the rustic medieval character. The overall impression is one of a fortified, unembellished space, suitable for a pillager outpost. The simple, robust construction and limited amenities suggest a focus on utility and defense rather than comfort or elaborate design.",
  "description_legacy": "Pillager outpost lobby/hall from Stonevaults."

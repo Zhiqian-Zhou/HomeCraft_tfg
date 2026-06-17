@@ -2301,7 +2301,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-24T17:00:16Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This small, rustic, medieval-style building presents a rectangular block silhouette, measuring approximately 11x9 cells at its base and standing 11 cells high. It features a single storey with a visible, albeit somewhat dilapidated, flat roof composed of stone slabs. The exterior walls are primarily constructed from spruce planks, giving them a dark brown hue, accented with stripped dark oak logs at the corners and along the timber framing. Light gray stained glass windows are interspersed along the facade, suggesting openings for light. The overall impression is one of a run-down structure, with hints of decay evident in the material choices and the slightly uneven roofline.\n\nThe interior of this compact structure is designed with only one main room on the ground floor, indicating a simple and functional layout typical of a small dwelling or storage area. Access is implied through the visible openings on the exterior, though no specific door is present. The single room would likely serve as a combined living and working space, given its limited size. Lighting would be provided by the light gray stained glass windows, allowing a moderate amount of natural light into the otherwise enclosed space. The rustic and medieval styling extends to the interior, suggesting a humble and utilitarian atmosphere, perhaps a small abandoned cottage.",
  "description_legacy": "Run-down house left half from StructureTutorialMod (MIT)."

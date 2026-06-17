@@ -3255,7 +3255,7 @@
   "tool_version": "0.1.0",
   "source_format": "nbt",
   "ingested_at": "2026-05-23T23:02:01Z",
-  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+  "ingester_path": "tools/ingest_nbt.py"
  },
  "description": "This small, single-story medieval-style residence features an irregular, L-shaped footprint, measuring approximately 13x11 cells. The roof is a complex arrangement of intersecting gable and hip sections, constructed from cobblestone, with no visible overhangs or chimneys. The walls are primarily spruce planks, giving the structure a rustic, timbered appearance, accented by light grey cobblestone trim along the base and roof edges. Small, square windows with glass panes are sparsely distributed across the facades, providing limited fenestration. Lanterns are hung from chains at various points around the exterior, suggesting evening illumination. A small patch of sweet berry bushes grows near one corner.\n\nThe interior of this compact home contains a single room, suggesting an open-plan layout for combined living and sleeping functions. The main entrance is not distinctly visible but would likely lead directly into this central space. Lighting within the room would be provided by the small glass pane windows and the lanterns visible on the exterior, creating a moderately lit, cozy atmosphere. The presence of a furnace indicates a focus on basic domestic utility, while chests suggest storage for personal belongings. The overall character is that of a simple, functional dwelling suitable for a solitary occupant or small family, typical of a medieval agrarian setting."
 }
