@@ -17,43 +17,7 @@ The work is organised into **three tracks**, by who is responsible for each deci
 
 Nine decision agents (six core + three optional) feed four deterministic build stages.
 
-```mermaid
-flowchart LR
-    P([Text prompt]) --> PE
-
-    subgraph B1["Band 1 · LLM decision agents"]
-        direction LR
-        PE[Prompt enrichment] --> GD[Global design] --> ST[Spatial topology] --> FP["Per-floor packing ×N"]
-        FP --> IE["Interior elaboration ×N"]
-        FP --> EE[Exterior elaboration]
-        TS[/Typology selector/]:::opt -. before .-> ST
-        CC[/Cross-floor coherence/]:::opt -. after .-> FP
-        ER[/Envelope refinement/]:::opt -. after .-> EE
-    end
-
-    subgraph B2["Band 2 · RAG retrieval store"]
-        direction LR
-        E[("E · Reference buildings<br/>TF-IDF ranked")]
-        A[("A · Skills<br/>catalogue filter")]
-        BC[("B · Styles / C · Patterns<br/>prompt context")]
-        D[("D · Materials<br/>offline only")]:::faded
-    end
-
-    subgraph B3["Band 3 · Deterministic build"]
-        direction LR
-        SP[Structural plan] --> OP[Opening placement] --> VC[Voxel composition] --> BK["Best-of-K"] --> AV[Alignment verdict]
-    end
-
-    IE --> VC
-    EE --> VC
-    E -. "TF-IDF query" .-> GD
-    A -. "catalogue filter" .-> B1
-    BC -. context .-> B1
-    AV --> OUT([Air-stripped voxel building])
-
-    classDef opt stroke-dasharray: 5 4,fill:#fafafa;
-    classDef faded fill:#f0f0f0,color:#999,stroke:#ccc;
-```
+![The HomeCraft pipeline — the cascade as a three-band diagram (Figure 4.1 of the dissertation).](docs/img/homecraft_pipeline.png)
 
 *Read left to right. Floor packing runs once per floor and interior elaboration once per room
 (`×N`); the floor layout then forks to interior and exterior elaboration, which run concurrently

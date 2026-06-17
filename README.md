@@ -12,46 +12,17 @@ combining an **LLM-agent cascade**, a **five-collection retrieval store (RAG)**,
 
 The pipeline (the *cascade*) reads left to right through three bands: **LLM decision agents** make
 the architectural choices, grounded by the **five-collection RAG store**, and a fixed
-**deterministic back end** turns those decisions into blocks. (Diagram reproduced from the
-dissertation; full walkthrough in [`pipeline_description.md`](pipeline_description.md).)
+**deterministic back end** turns those decisions into blocks.
 
-```mermaid
-flowchart LR
-    P([Text prompt]) --> PE
+![The HomeCraft pipeline — the cascade as a three-band diagram (Figure 4.1 of the dissertation).](docs/img/homecraft_pipeline.png)
 
-    subgraph B1["Band 1 · LLM decision agents"]
-        direction LR
-        PE[Prompt enrichment] --> GD[Global design] --> ST[Spatial topology] --> FP["Per-floor packing ×N"]
-        FP --> IE["Interior elaboration ×N"]
-        FP --> EE[Exterior elaboration]
-        TS[/Typology selector/]:::opt -. before .-> ST
-        CC[/Cross-floor coherence/]:::opt -. after .-> FP
-        ER[/Envelope refinement/]:::opt -. after .-> EE
-    end
-
-    subgraph B2["Band 2 · RAG retrieval store"]
-        direction LR
-        E[("E · Reference buildings<br/>TF-IDF ranked")]
-        A[("A · Skills<br/>catalogue filter")]
-        BC[("B · Styles / C · Patterns<br/>prompt context")]
-        D[("D · Materials<br/>offline only")]:::faded
-    end
-
-    subgraph B3["Band 3 · Deterministic build"]
-        direction LR
-        SP[Structural plan] --> OP[Opening placement] --> VC[Voxel composition] --> BK["Best-of-K"] --> AV[Alignment verdict]
-    end
-
-    IE --> VC
-    EE --> VC
-    E -. "TF-IDF query" .-> GD
-    A -. "catalogue filter" .-> B1
-    BC -. context .-> B1
-    AV --> OUT([Air-stripped voxel building])
-
-    classDef opt stroke-dasharray: 5 4,fill:#fafafa;
-    classDef faded fill:#f0f0f0,color:#999,stroke:#ccc;
-```
+*A single natural-language prompt (far left) becomes an air-stripped voxel building (far right).
+**Band 1 (LLM agents):** six agents refine the design in order — prompt enrichment → global design
+→ spatial topology → floor packing (`×N`) → interior & exterior elaboration (running concurrently);
+three optional refinements are dashed. **Band 2 (RAG store):** reference buildings are TF-IDF
+*ranked* and skills *filtered*; styles, patterns and materials are context only. **Band 3
+(deterministic build):** structural plan → opening placement → voxel composition → best-of-K +
+aligner. Full walkthrough in [`pipeline_description.md`](pipeline_description.md).*
 
 ---
 
