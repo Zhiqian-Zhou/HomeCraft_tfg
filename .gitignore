@@ -21,6 +21,11 @@ venv/
 .vscode/
 *.swp
 
+# Node / survey app (TEST_MC_PLAYERS) — ship source only
+node_modules/
+TEST_MC_PLAYERS/dist/
+TEST_MC_PLAYERS/public/data/
+
 # Generated / reproducible artifacts (regenerable from tools/)
 scratch/material_frequencies.json
 scratch/style_palettes.json

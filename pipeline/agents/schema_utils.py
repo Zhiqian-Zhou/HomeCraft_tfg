@@ -12,7 +12,7 @@ import json
 from pathlib import Path
 
 from jsonschema import Draft202012Validator
-from referencing import Registry, Resource
+from referencing import Registry
 from referencing.jsonschema import DRAFT202012
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent

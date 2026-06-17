@@ -39,7 +39,7 @@ This repo mirrors the architecture described in the dissertation. Each concept m
 | Iterative skill curation loop | [`tools/gym/`](tools/gym/) |
 | Cross-model experiment harness | [`scratch/experimento/`](scratch/experimento/) + [`tools/run_experiment2.py`](tools/run_experiment2.py) |
 | Distillation / SFT pipeline | [`sft/`](sft/) |
-| Human-judge validation study | [`correlacion_humano/`](correlacion_humano/) |
+| Human-judge validation study (RQ5) | [`correlacion_humano/`](correlacion_humano/) (analysis + data) + [`TEST_MC_PLAYERS/`](TEST_MC_PLAYERS/) (survey instrument) |
 | Cross-reference verifier | [`tools/verify_rag_cross_refs.py`](tools/verify_rag_cross_refs.py) |
 | Browser viewer | [`viewer/`](viewer/) |
 | Plot generation | [`tools/build_plots.py`](tools/build_plots.py) |
@@ -190,8 +190,10 @@ multi-GPU runs. See [`sft/README.md`](sft/README.md).
 ### Human-judge validation — `correlacion_humano/`
 
 The study that validates the automatic evaluator against human judgement (RQ5): 13 anonymised
-Minecraft players rated 20 scenes on the five families, and `analysis.py` correlates their
-consensus with the automatic scores. Anonymised ratings and the analysis ship here.
+Minecraft players explored 20 scenes in first person and rated them on the five families;
+`analysis.py` correlates their consensus with the automatic scores (aggregate ≈ 0.84). Anonymised
+ratings and the analysis ship here; the first-person survey instrument used to collect them is in
+[`TEST_MC_PLAYERS/`](TEST_MC_PLAYERS/) (source only — the generated stimuli are not bundled).
 
 ---
 

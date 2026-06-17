@@ -34,7 +34,7 @@ from pathlib import Path
 from typing import Callable
 
 from pipeline.skills.typologies import (
-    get_metadata, filter_by, list_typologies,
+    get_metadata, filter_by,
 )
 
 

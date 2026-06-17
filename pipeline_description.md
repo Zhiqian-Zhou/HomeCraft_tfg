@@ -187,8 +187,9 @@ physical and interior follow as necessary conditions; Alexander and exterior are
 few metrics (block legitimacy, material consistency, door functionality) act as validity gates
 and are reported but excluded from the composite.
 
-The nine Alexander metrics operationalise building/room/threshold-scale patterns as voxel
-predicates — e.g. **intimacy gradient** (private rooms deeper from the entry than public ones,
+The Alexander family has ten metrics — nine operationalise named Christopher Alexander patterns
+as building/room/threshold-scale voxel predicates, and a tenth measures roof layout — e.g.
+**intimacy gradient** (private rooms deeper from the entry than public ones,
 via rank correlation), **light on two sides** (rooms with windows on multiple exterior walls),
 **main entrance** (a legible, marked front door), **sheltering roof** (a real pitched roof rising
 above the walls), **window place** (windows with seating within reach).
