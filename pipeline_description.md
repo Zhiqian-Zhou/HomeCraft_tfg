@@ -45,8 +45,8 @@ The store has five collections, each with a typed schema; a cross-reference veri
 | D | Materials | 182 | Minecraft 1.16.5 block IDs + tags | offline only |
 | E | Reference buildings | 2,746* | air-stripped voxel buildings | **ranked** by TF-IDF |
 
-\* The full corpus; this public repo ships a 61-building MIT-licensed sample (see
-`rag/reference_buildings/README.md`).
+\* The knowledge base (catalogues + corpus) is **not bundled** in this repository for licensing
+reasons — see *Data availability* in the [README](README.md#data-availability).
 
 - **Reference buildings (E)** are searched with **TF-IDF** — a classical sparse method, well
   suited to a few-thousand-document corpus with no need for an embedding model. Each building was
@@ -157,7 +157,7 @@ are a small AST (`base.py`):
 Materials are deferred via **role placeholders** (`@primary`, `@secondary`, `@accent`, `@roof`,
 `@floor`, `@glass`, `@light`, …) resolved per style at compose time, so the same skill renders in
 any style. Coordinate convention: `x = width`, `y = height (up)`, `z = depth`; AABBs are
-half-open. Each skill module is paired 1:1 with a searchable JSON entry in `rag/skills/`.
+half-open. Each skill module is paired 1:1 with a searchable JSON metadata entry in the knowledge base (collection A).
 
 ---
 

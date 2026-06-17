@@ -35,25 +35,19 @@ This repo mirrors the architecture described in the dissertation. Each concept m
 | Cascade pipeline (Chapter 4) | [`pipeline/agents/`](pipeline/agents/) |
 | Executable skill library | [`pipeline/skills/`](pipeline/skills/) |
 | Prompt templates per cascade stage | [`pipeline/agents/prompts/`](pipeline/agents/prompts/) |
-| Retrieval store schemas | [`rag/schema/`](rag/schema/) |
-| Skill metadata | [`rag/skills/`](rag/skills/) |
-| Style packs | [`rag/styles/`](rag/styles/) |
-| Alexander patterns | [`rag/patterns/`](rag/patterns/) |
-| Material catalogue | [`rag/materials/`](rag/materials/) |
-| Reference building corpus | [`rag/reference_buildings/`](rag/reference_buildings/) |
-| Corpus provenance & license audit | [`rag/PROVENANCE_AUDIT.md`](rag/PROVENANCE_AUDIT.md) |
 | Evaluator (Chapter 5) | [`pipeline/agents/evaluator.py`](pipeline/agents/evaluator.py) |
 | Iterative skill curation loop | [`tools/gym/`](tools/gym/) |
 | Cross-model experiment harness | [`scratch/experimento/`](scratch/experimento/) + [`tools/run_experiment2.py`](tools/run_experiment2.py) |
 | Cross-reference verifier | [`tools/verify_rag_cross_refs.py`](tools/verify_rag_cross_refs.py) |
 | Browser viewer | [`viewer/`](viewer/) |
 | Plot generation | [`tools/build_plots.py`](tools/build_plots.py) |
+| Retrieval store (RAG: schemas + skills/styles/patterns/materials catalogues + reference-building corpus) | *not bundled — see [Data availability](#data-availability)* |
 
-> **Note on the reference corpus.** The full corpus is ~2,700 buildings of mixed
-> provenance (mostly research/non-commercial licenses). To keep this repo lightweight and
-> redistributable, only the **61 MIT-licensed buildings** are shipped here as a working
-> sample — enough to run the viewer, retrieval, and corpus tooling end-to-end. See
-> [`rag/reference_buildings/README.md`](rag/reference_buildings/README.md).
+> **Note on the knowledge base.** The retrieval store (RAG) — the skill, style, pattern and
+> material catalogues plus the reference-building corpus — is **not** included in this
+> repository because it aggregates third-party assets under mixed, non-redistributable
+> licenses. The code, schemas and tooling that build and consume it are all here; see
+> [Data availability](#data-availability) at the end of this README to obtain the knowledge base.
 
 ---
 
@@ -140,23 +134,27 @@ A skill is a Python module exposing `build(aabb, materials, style, **kwargs) -> 
 deferred via role placeholders (`@primary`, `@glass`, `@roof`, …) resolved per style at compose
 time. Coordinate convention: `x = width`, `y = height (up)`, `z = depth`; AABBs are half-open.
 
-Each skill module is paired 1:1 with a searchable JSON entry in `rag/skills/`.
+Each skill module is paired 1:1 with a searchable JSON metadata entry in the knowledge base.
 
-### Five-collection RAG — `rag/`
+### Five-collection RAG (the knowledge base)
+
+The retrieval store has five collections. **It is not bundled in this repository** (see
+[Data availability](#data-availability)); the description below documents its design, and the
+code that builds and consumes it ships here.
 
 | Code | Collection | Count | Role |
 |---|---|---|---|
-| A | `skills/` | 316 | parametric building procedures (paired with `pipeline/skills/`) |
-| B | `styles/` | 10 | palettes, signature blocks and ratios per style |
-| C | `patterns/` | 29 | Alexander patterns with verified citations |
-| D | `materials/` | 182 | Minecraft 1.16.5 block catalogue |
-| E | `reference_buildings/` | sample of 61 (MIT) | real buildings as voxel arrays |
+| A | Skills | 316 | parametric building procedures (paired with `pipeline/skills/`) |
+| B | Style packs | 10 | palettes, signature blocks and ratios per style |
+| C | Patterns | 29 | Alexander patterns with verified citations |
+| D | Materials | 182 | Minecraft 1.16.5 block catalogue |
+| E | Reference buildings | ~2,746 | real buildings as voxel arrays |
 
 Reference buildings (**E**) are **ranked** by TF-IDF similarity; skills (**A**) are **filtered** as
 a typed catalogue — both share `tags.category` / `tags.style`, so the two searches agree. **B**
 (styles) and **C** (patterns) are read as prompt context; **D** (materials) is used offline only.
 The data provenance — verified against primary sources vs. synthesised — is documented in
-[`rag/PROVENANCE_AUDIT.md`](rag/PROVENANCE_AUDIT.md) and [`rag/README.md`](rag/README.md).
+[`docs/PROVENANCE_AUDIT.md`](docs/PROVENANCE_AUDIT.md).
 
 ### Evaluator — `pipeline/agents/evaluator.py`
 
@@ -183,10 +181,12 @@ skill category is weakest, and reports an action checklist — used to harden th
 ## Validation tooling
 
 ```bash
-python3 tools/verify_rag_cross_refs.py        # 6 cross-collection checks (exits 0 iff all pass)
-python3 tools/validate_building.py rag/reference_buildings/processed/*.json
-python3 -m pipeline.skills.test_harness        # exercise skills across styles & sizes
+python3 -m pipeline.skills.test_harness        # exercise skills across styles & sizes (no KB needed)
 python3 -m pytest tests/                        # unit tests for planners, connectors, evaluator
+
+# These require the knowledge base in place (see Data availability):
+python3 tools/verify_rag_cross_refs.py         # 6 cross-collection checks (exits 0 iff all pass)
+python3 tools/validate_building.py rag/reference_buildings/processed/*.json
 ```
 
 The cross-reference verifier enforces six invariants: skill→pattern, style→pattern,
@@ -210,7 +210,7 @@ skill/style→material, building→material, skill→skill, and JSON-schema vali
 ## Documentation
 
 - [`pipeline_description.md`](pipeline_description.md) — detailed pipeline walkthrough (the cascade, stage by stage, with the composition algorithm).
-- [`rag/README.md`](rag/README.md) — knowledge-base design and retrieval contract *(en español)*.
+- [`docs/PROVENANCE_AUDIT.md`](docs/PROVENANCE_AUDIT.md) — knowledge-base provenance & license audit (what is verified vs. synthesised) *(en español)*.
 - [`docs/TYPOLOGY_CATALOG.md`](docs/TYPOLOGY_CATALOG.md) — architectural typology system.
 - [`docs/experimento_comparacion_llms.md`](docs/experimento_comparacion_llms.md) — cross-model experiment design.
 
@@ -218,13 +218,10 @@ skill/style→material, building→material, skill→skill, and JSON-schema vali
 
 ## Licensing
 
-The **code** in this repository is released under the MIT License (see [`LICENSE`](LICENSE)).
-
-The shipped **reference buildings** (`rag/reference_buildings/processed/`) are the subset of the
-corpus carrying an **MIT license**; each building JSON records its `source`, `source_url` and
-`license`. The remainder of the original corpus (mostly CC-BY-NC / research-only) is **not**
-redistributed here — see [`rag/PROVENANCE_AUDIT.md`](rag/PROVENANCE_AUDIT.md). Minecraft is a
-trademark of Mojang/Microsoft; this project is unaffiliated and non-commercial.
+The **code** in this repository is released under the MIT License (see [`LICENSE`](LICENSE)). The
+MIT license covers the code only; it does **not** cover the knowledge base, whose assets carry
+their own (mixed) terms — see [Data availability](#data-availability). Minecraft is a trademark of
+Mojang/Microsoft; this project is unaffiliated and non-commercial.
 
 ---
 
@@ -232,3 +229,33 @@ trademark of Mojang/Microsoft; this project is unaffiliated and non-commercial.
 
 **Zhiqian Zhou** — BSc in Artificial Intelligence, UPC / FIB.
 Supervisor: Ramon Sangüesa Solé.
+
+---
+
+## Data availability
+
+The **source code, schemas, prompt templates and tooling** that implement, build and evaluate the
+system are openly available in this repository under the MIT License.
+
+The **knowledge base** — the skill, style, pattern and material catalogues together with the
+~2,746-building reference corpus (the RAG store) — is **not redistributed here**. It aggregates
+third-party assets under heterogeneous and largely non-redistributable licenses: the reference
+corpus is drawn from community sources that are mostly CC-BY-NC / research-only, the material
+catalogue derives from Mojang's Minecraft 1.16.5 game assets and the community wiki, and the
+pattern catalogue paraphrases copyrighted works by Christopher Alexander. We are permitted to
+*use* these materials for academic research but **not to *redistribute* them**, so bundling the
+knowledge base here would violate those terms.
+
+What this means in practice:
+
+- The repository remains fully functional as code: the ingest tools (`tools/ingest_*.py`), the
+  corpus/retrieval builders, the cross-reference verifier and the evaluator are all included, so
+  the knowledge base can be **reconstructed from its original sources**.
+- Provenance and per-collection licensing are documented in
+  [`docs/PROVENANCE_AUDIT.md`](docs/PROVENANCE_AUDIT.md).
+- The curated knowledge base and reference corpus are available **from the author on reasonable
+  request, for non-commercial academic research use**, subject to the original sources' license
+  terms.
+
+To request access, open an issue on this repository or contact the author at
+**zhiqian.zhou@estudiantat.upc.edu**.

@@ -1,6 +1,6 @@
 # HomeCraft v2 — Visor RAG-E
 
-Visor web local para inspeccionar los edificios voxel del corpus RAG-E y cualquier edificio generado. Este repo público incluye una muestra de 61 edificios (licencia MIT); el corpus completo de desarrollo tiene ~2.746.
+Visor web local para inspeccionar cualquier edificio voxel en formato `ReferenceBuilding` JSON (los que genera el pipeline, o el corpus RAG-E). **El corpus de referencia no se incluye en este repo** (ver *Data availability* en el [README](../README.md#data-availability)); abre cualquier edificio con `?file=<ruta>` o coloca tus JSON en `rag/reference_buildings/processed/` y regenera el índice.
 
 ## Cómo arrancar
 
