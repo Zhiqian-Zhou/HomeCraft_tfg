@@ -8,9 +8,9 @@ con Unsloth (QLoRA), descarga el adapter y **destruye la instancia al terminar**
 
 | key | modelo | plantilla | max_seq_len |
 |---|---|---|---|
-| `gemma-4-e2b` | `google/gemma-4-E2B-it` | gemma-3 | 24576 |
-| `gemma-4-e4b` | `google/gemma-4-E4B-it` | gemma-3 | 16384 |
-| `qwen3.5-9b`  | `Qwen/Qwen3.5-9B`       | qwen3   | 16384 |
+| `gemma-4-e2b` | `google/gemma-4-E2B-it` | gemma-3 | 8192 |
+| `gemma-4-e4b` | `google/gemma-4-E4B-it` | gemma-3 | 8192 |
+| `qwen3.5-9b`  | `Qwen/Qwen3.5-9B`       | qwen3   | 8192 |
 
 (`max_seq_len` por modelo según su tamaño; edítalo en `models.json` si quieres
 más/menos cobertura del dataset — ver tabla en `../README.md`.)

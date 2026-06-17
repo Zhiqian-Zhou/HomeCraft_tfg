@@ -5,9 +5,9 @@
 > del Experimento 2 y **no se publican**; el `RESULT_EMAIL` se ha dejado en blanco. Los
 > resultados y el análisis de este estudio (RQ5) están en [`../correlacion_humano/`](../correlacion_humano/).
 
-Web (SPA) donde ~10 jugadores de Minecraft **exploran en primera persona** los
+Web (SPA) donde 13 jugadores de Minecraft **exploran en primera persona** los
 20 edificios del Experimento 2 (los mismos de `Test_Arquitecto/test.md`) y los
-**puntúan de 1 a 10** en las 8 dimensiones de calidad. Las respuestas se envían
+**puntúan de 1 a 10** en las 6 dimensiones de calidad. Las respuestas se envían
 a una hoja de Google Sheets (y se pueden descargar en CSV) para correlacionarlas
 (Spearman) con el evaluador automático.
 
@@ -132,14 +132,14 @@ muestra un aviso y no carga; el pointer lock no existe en táctil).
 src/
 ├── App.jsx                  # layout 80/20
 ├── store.js                 # zustand: edificio actual, scores, modo, envíos
-├── config.js                # APPS_SCRIPT_URL + las 8 dimensiones
+├── config.js                # APPS_SCRIPT_URL + las 6 dimensiones
 ├── components/
 │   ├── World.jsx            # <Canvas>: cielo, luces, terreno, PointerLockControls
 │   ├── VoxelBuilding.jsx    # InstancedMesh por entrada de paleta
 │   ├── Player.jsx           # WASD + gravedad/colisiones o vuelo SUPER
 │   ├── Sidebar.jsx          # lista de 20, prompt ES/EN/中文, pasos guiados
 │   ├── FloorPlan.jsx        # plano 2D por planta (roles + jugador), sigue tu altura
-│   ├── ScorePanel.jsx       # 8 × botones 1–10, no guarda hasta 8/8
+│   ├── ScorePanel.jsx       # 6 × botones 1–10, no guarda hasta 6/6
 │   └── Hud.jsx              # crosshair, overlays, bienvenida, botón SUPER
 └── lib/
     ├── blocks/              # handlers de forma por familia (del visor del TFG)
