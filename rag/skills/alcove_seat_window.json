@@ -1,0 +1,41 @@
+{
+  "id": "alcove_seat_window",
+  "name": "Window alcove seat",
+  "kind": "decorative",
+  "description": "Single alcove stair seat with accent back — reading nook.",
+  "typical_dimensions": {
+    "min": [
+      4,
+      3,
+      4
+    ],
+    "preferred": [
+      8,
+      4,
+      8
+    ],
+    "max": [
+      16,
+      9,
+      16
+    ]
+  },
+  "tags": {
+    "category": "any",
+    "style": [
+      "medieval",
+      "rustic",
+      "fantasy",
+      "gothic",
+      "renaissance",
+      "modern",
+      "minimalist",
+      "japanese",
+      "chinese",
+      "mediterranean"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.alcove_seat_window.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_decoration",
+  "schema_version": "2.0"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "yellow-terracotta",
+  "block_id": "minecraft:yellow_terracotta",
+  "category": "terracotta",
+  "color": "yellow",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": [
+    "mediterranean",
+    "fantasy",
+    "modern"
+  ]
+}

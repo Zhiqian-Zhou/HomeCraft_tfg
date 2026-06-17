@@ -1,0 +1,14 @@
+{
+  "id": "flower-pot",
+  "block_id": "minecraft:flower_pot",
+  "category": "decorative",
+  "color": "tan",
+  "transparent": true,
+  "light_emission": 0,
+  "is_solid": false,
+  "used_by_styles": [
+    "cottagecore",
+    "rustic",
+    "modern"
+  ]
+}

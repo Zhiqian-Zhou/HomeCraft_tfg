@@ -1,0 +1,135 @@
+{
+  "id": "perimeter_wall_fortified",
+  "name": "Fortified perimeter (curtain) wall",
+  "kind": "exterior",
+  "description": "Defensive curtain wall around an AABB perimeter. A 2-block-thick double shell of @primary forms the wall; a 1-block-wide allure (walkway) of @floor sits along the inner top edge; alternating merlons and crenels form the battlements along the outer top ring; a stepped foundation of @secondary rises 1 block taller than the y0 wall course; arrow slits (2-tall) are cut every 5 blocks along each face. Evokes medieval castle fortifications.",
+  "typical_dimensions": {
+    "min": [
+      6,
+      4,
+      6
+    ],
+    "preferred": [
+      16,
+      6,
+      16
+    ],
+    "max": [
+      30,
+      8,
+      30
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "wall",
+      "count": 1,
+      "rule": "Two-block-thick curtain wall via two concentric FillHollow shells of @primary."
+    },
+    {
+      "item": "walkway",
+      "count": 1,
+      "rule": "Allure of @floor blocks 1-2 blocks wide along the top inner edge, just below the merlons."
+    },
+    {
+      "item": "battlement",
+      "count": "8..60",
+      "rule": "Alternating merlons (@primary, every other position around the outer top ring) and crenels (gaps)."
+    },
+    {
+      "item": "merlon",
+      "count": "8..60",
+      "rule": "1-block-tall @primary blocks placed every other position around the outer top perimeter."
+    },
+    {
+      "item": "crenel",
+      "count": "8..60",
+      "rule": "Gaps (air) between merlons; archers shoot through these."
+    },
+    {
+      "item": "foundation",
+      "count": 1,
+      "rule": "Stepped @secondary base; the foundation course rises 1 block taller than the y0 wall course."
+    },
+    {
+      "item": "arrow_slits",
+      "count": "4..24",
+      "rule": "Vertical 2-tall slit of cave_air every 5 blocks along each wall, above the stepped foundation and below the merlons."
+    }
+  ],
+  "placement_rules": [
+    "Wall is 2 blocks thick (two concentric hollow shells)",
+    "Walkway just below merlons",
+    "Walkway sits 1 block in from the outer wall (1-2 blocks wide)",
+    "Battlements alternate merlons and crenels around the outer top ring",
+    "Foundation 1 block taller than y0 wall",
+    "Arrow slits every 5 blocks along the wall, 2 blocks tall",
+    "Arrow slits clear of corners (no slit within 3 blocks of a corner)"
+  ],
+  "lighting_ventilation": "Arrow slits along all four faces provide minimal but functional ventilation and sight lines; defensive priority over interior light. No glazed openings.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:stone_bricks",
+        "secondary": "minecraft:cobblestone",
+        "accent": "minecraft:mossy_stone_bricks",
+        "floor": "minecraft:stone_bricks"
+      },
+      "notes": "Classic stone-brick curtain wall with cobblestone footing; mossy stone accents for age."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:blackstone",
+        "secondary": "minecraft:mossy_cobblestone",
+        "accent": "minecraft:purpur_block",
+        "floor": "minecraft:dark_oak_planks"
+      },
+      "notes": "Dark blackstone fortress with mossy footing and dark-oak allure planks."
+    },
+    "viking": {
+      "palette_overrides": {
+        "primary": "minecraft:cobblestone",
+        "secondary": "minecraft:stone",
+        "accent": "minecraft:spruce_log",
+        "floor": "minecraft:spruce_planks"
+      },
+      "notes": "Rough cobblestone palisade with timber allure floor and log accents."
+    },
+    "gothic": {
+      "palette_overrides": {
+        "primary": "minecraft:polished_blackstone_bricks",
+        "secondary": "minecraft:blackstone",
+        "accent": "minecraft:gilded_blackstone",
+        "floor": "minecraft:polished_blackstone"
+      },
+      "notes": "Forbidding blackstone curtain with gilded accents along the merlons."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_stone",
+        "secondary": "minecraft:polished_andesite",
+        "accent": "minecraft:smooth_quartz",
+        "floor": "minecraft:polished_andesite"
+      },
+      "notes": "Brutalist re-reading: smooth-stone curtain with andesite footing."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "building-edge"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "other",
+    "style": [
+      "medieval",
+      "fantasy",
+      "viking",
+      "gothic",
+      "modern"
+    ]
+  },
+  "python_skill_signature": "build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0",
+  "style_affinity": "Medieval / fortified-military motif. Coherent in medieval/castle/rustic/fantasy/gothic. Out of place in Modern, Minimalist, East-Asian, Classical/Renaissance buildings."
+}

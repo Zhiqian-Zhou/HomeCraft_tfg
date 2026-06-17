@@ -1,0 +1,10 @@
+{
+  "id": "cauldron",
+  "block_id": "minecraft:cauldron",
+  "category": "utility",
+  "color": "dark iron grey",
+  "transparent": true,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": ["medieval", "modern", "fantasy", "rustic"]
+}

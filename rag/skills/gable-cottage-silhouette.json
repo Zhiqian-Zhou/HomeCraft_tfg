@@ -1,0 +1,68 @@
+{
+  "id": "gable-cottage-silhouette",
+  "name": "Gable cottage silhouette",
+  "kind": "structural",
+  "description": "A small-to-medium rectangular dwelling, one or two storeys tall, capped by a steeply pitched gable roof whose ridge runs along the building's long axis. The footprint is roughly 1.5 to 2 times longer than it is wide, giving the cottage its characteristic elongated profile. Eaves overhang the long sides to shed rain away from the walls, while the two short sides terminate in triangular gable walls. The main entrance is traditionally placed on a gable end, framed under the peak, with most windows distributed along the long sides to light the interior rooms. Common across medieval villages, rustic farmsteads, and storybook-fantasy hamlets, this silhouette also adapts well to small barns and outbuildings.",
+  "typical_dimensions": {
+    "min": [5, 5, 7],
+    "preferred": [7, 8, 12],
+    "max": [10, 12, 18]
+  },
+  "placement_rules": [
+    "Long axis of the footprint determines roof ridge orientation.",
+    "Aspect ratio (length:width) should stay between 1.5 and 2.0 — narrower than 1.5 reads as a square hut, wider than 2.0 as a longhouse or barn.",
+    "Place the main entrance on one of the short (gable) ends, centered under the peak.",
+    "Distribute windows along the long sides at regular intervals; gable ends host at most one window or a small loft opening.",
+    "Eaves should overhang the long sides by 1 block to protect walls from rainfall.",
+    "Wall height is 1 storey (4-5 blocks) for cottages, 2 storeys (7-9 blocks) for larger variants before the roof rises above."
+  ],
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:oak_planks",
+        "accent": "minecraft:cobblestone",
+        "roof": "minecraft:dark_oak_stairs",
+        "trim": "minecraft:oak_log"
+      },
+      "notes": "Timber-frame walls with cobblestone base; steep dark-wood roof; exposed corner posts."
+    },
+    "rustic": {
+      "palette_overrides": {
+        "primary": "minecraft:spruce_planks",
+        "accent": "minecraft:stripped_spruce_log",
+        "roof": "minecraft:spruce_stairs",
+        "trim": "minecraft:spruce_log"
+      },
+      "notes": "All-timber farmstead cottage; shallow eaves; weathered spruce throughout."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "accent": "minecraft:mossy_cobblestone",
+        "roof": "minecraft:dark_oak_stairs",
+        "trim": "minecraft:dark_oak_log"
+      },
+      "notes": "Very steep storybook pitch; tall narrow gable; mossy stone foundation suggesting age."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "sheltering-roof",
+    "building-edge"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "residential",
+    "style": ["medieval", "rustic", "fantasy"]
+  },
+  "applicable_to": ["residential", "barn"],
+  "parameters": {
+    "footprint_shape": "rectangle",
+    "aspect_ratio": "1.5-2.0",
+    "preferred_floors": "1-2",
+    "roof_orientation": "long_axis",
+    "entrance_side": "gable_end"
+  },
+  "python_skill_signature": null,
+  "skill_category": "global_silhouette",
+  "schema_version": "2.0"
+}

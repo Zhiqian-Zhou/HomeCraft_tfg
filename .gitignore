@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Editor
+.idea/
+.vscode/
+*.swp
+
+# Generated / reproducible artifacts (regenerable from tools/)
+scratch/material_frequencies.json
+scratch/style_palettes.json
+scratch/corpus_evaluations/
+scratch/skill_previews/
+scratch/generations/
+output/
+
+# Experiment outputs (only the harness CODE is tracked, never the results)
+scratch/experimento/results*
+scratch/experimento/*.jsonl
+scratch/experimento/builds*/
+scratch/experimento/plots*/
+scratch/experimento/*.log
+scratch/experimento/RESULTADOS*.md
+scratch/experimento/EXPERIMENTO_*.md
+scratch/experimento/_*/
+
+# Reference buildings: raw schematics are license-mixed and not redistributable
+rag/reference_buildings/raw/
+rag/reference_buildings/index/

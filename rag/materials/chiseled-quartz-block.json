@@ -1,0 +1,14 @@
+{
+  "id": "chiseled-quartz-block",
+  "block_id": "minecraft:chiseled_quartz_block",
+  "category": "stone",
+  "color": "white",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": [
+    "modern",
+    "renaissance",
+    "mediterranean"
+  ]
+}

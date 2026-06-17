@@ -1,0 +1,42 @@
+{
+  "id": "torii_lantern_path",
+  "name": "Torii-lined path",
+  "kind": "exterior",
+  "description": "Lantern-lined path — approach to a shrine.",
+  "typical_dimensions": {
+    "min": [
+      3,
+      2,
+      3
+    ],
+    "preferred": [
+      10,
+      2,
+      5
+    ],
+    "max": [
+      30,
+      3,
+      12
+    ]
+  },
+  "tags": {
+    "category": "any",
+    "style": [
+      "medieval",
+      "rustic",
+      "fantasy",
+      "gothic",
+      "renaissance",
+      "modern",
+      "minimalist",
+      "japanese",
+      "chinese",
+      "mediterranean"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.torii_lantern_path.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0",
+  "style_affinity": "East-Asian (Japanese/Chinese) motif. Coherent in japanese/chinese (and fantasy). Out of place in Western, Gothic, Renaissance, Modern, Mediterranean buildings — use only if the building is East-Asian."
+}

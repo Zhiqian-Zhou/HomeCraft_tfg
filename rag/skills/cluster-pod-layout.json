@@ -1,0 +1,39 @@
+{
+  "id": "cluster-pod-layout",
+  "name": "Cluster pod layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "Floor-layout strategy that groups rooms into 2-4 small clusters called pods, each holding 2-3 rooms that share a function and are linked together by a short hallway or archway. Every pod becomes a micro-zone of the building: a sleeping pod gathers bedrooms with their bathroom, a working pod fuses study and library, a service pod consolidates kitchen and pantry. Pods themselves are connected by brief circulation segments rather than one long corridor, so each cluster reads as a semi-private precinct. The pattern fits modern apartments where activity zones are deliberately separated, and monastic plans where cells ring a chapter house and refectory clusters sit apart from dormitory cells.",
+  "typical_dimensions": {
+    "min": [10, 4, 10],
+    "preferred": [14, 5, 14],
+    "max": [20, 6, 20]
+  },
+  "tags": {
+    "category": "hallway",
+    "style": ["modern", "minimalist", "medieval"]
+  },
+  "applicable_to": ["residential", "temple"],
+  "parameters": {
+    "pod_count": "2-4",
+    "rooms_per_pod": "2-3",
+    "pod_connectors": "short_corridor_or_archway",
+    "pods_typed": "sleep|work|service"
+  },
+  "placement_rules": [
+    "Define 2 to 4 pods on the footprint before placing any room; fewer collapses into a single open plan, more dissolves the clustering into a generic floor.",
+    "Each pod must contain 2 or 3 rooms that share a function (sleep, work, service); mixing unrelated rooms inside one pod breaks the micro-zone logic.",
+    "Rooms within the same pod open onto a shared antechamber or directly onto each other, so internal pod traffic never crosses another pod.",
+    "Link adjacent pods with a short corridor or archway no longer than 3 blocks; longer connectors turn the plan back into a hallway-spine layout.",
+    "Keep at least one block of wall thickness or a door threshold between pods so each cluster reads as an enclosed precinct rather than a continuous space.",
+    "Assign one pod-type per cluster (sleeping pod, working pod, service pod) and label it consistently in the floor plan metadata so downstream agents place furniture coherently.",
+    "Locate service pods (kitchen, pantry, bathroom) adjacent to external walls for plumbing/venting; sleeping pods should sit furthest from the entrance to honour the intimacy gradient."
+  ],
+  "alexander_patterns_relevant": [
+    "intimacy-gradient",
+    "the-family-room"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

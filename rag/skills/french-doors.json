@@ -1,0 +1,28 @@
+{
+  "id": "french-doors",
+  "name": "French doors",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "connector_template",
+  "description": "A symmetric pair of glazed doors hinged on opposite outer jambs so the two leaves swing outward together, opening the full width of the bay. Invented at Versailles to dissolve the wall between salon and parterre, the type now serves any threshold where a room should read as continuous with what lies beyond it: dining-to-garden, study-to-terrace, salon-to-loggia, or two interior rooms enfilade. Each leaf is typically two blocks wide with multi-pane glazing, set in a shared frame with a continuous lintel above. Unlike a single grand-entrance double door, the leaves are co-equal — neither dominant — and the opening is read as a transparent aperture rather than a portal.",
+  "typical_dimensions": {
+    "min": [3, 3, 1],
+    "preferred": [4, 3, 1],
+    "max": [5, 4, 1]
+  },
+  "tags": {
+    "category": "door",
+    "style": ["renaissance", "victorian", "modern"]
+  },
+  "applicable_to": ["residential", "monument"],
+  "parameters": {
+    "door_count": 2,
+    "leaf_width": "2_each",
+    "hinge_side": "outer_both",
+    "glazing": "multipane_or_solid",
+    "interior_or_exterior": "both",
+    "openness": "double_outward"
+  },
+  "alexander_patterns_relevant": ["light-on-two-sides", "main-entrance"],
+  "python_skill_signature": null
+}

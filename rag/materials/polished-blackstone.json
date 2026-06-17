@@ -1,0 +1,18 @@
+{
+  "id": "polished-blackstone",
+  "block_id": "minecraft:polished_blackstone",
+  "category": "stone",
+  "color": "black",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:polished_blackstone_stairs",
+    "slab": "minecraft:polished_blackstone_slab",
+    "wall": "minecraft:polished_blackstone_wall"
+  },
+  "used_by_styles": [
+    "gothic",
+    "fantasy"
+  ]
+}

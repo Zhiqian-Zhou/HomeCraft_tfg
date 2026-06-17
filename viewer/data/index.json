@@ -1,0 +1,1370 @@
+{
+ "generated_at": "2026-06-18T13:07:17",
+ "count": 61,
+ "entries": [
+  {
+   "id": "alice-two-story-house-syn-egyptian",
+   "title": "Alice two-story house (synthetic egyptian)",
+   "file": "alice-two-story-house-syn-egyptian.json",
+   "category": "residential",
+   "style": [
+    "egyptian"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    13,
+    15,
+    21
+   ],
+   "volume": 4095,
+   "voxel_count": 1487,
+   "palette_size": 73,
+   "interior_populated": true,
+   "furniture_blocks": 56,
+   "synthetic": true
+  },
+  {
+   "id": "alice-two-story-house-syn-futuristic",
+   "title": "Alice two-story house (synthetic futuristic)",
+   "file": "alice-two-story-house-syn-futuristic.json",
+   "category": "residential",
+   "style": [
+    "futuristic"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    13,
+    15,
+    21
+   ],
+   "volume": 4095,
+   "voxel_count": 1487,
+   "palette_size": 74,
+   "interior_populated": true,
+   "furniture_blocks": 56,
+   "synthetic": true
+  },
+  {
+   "id": "alice-two-story-house-syn-industrial",
+   "title": "Alice two-story house (synthetic industrial)",
+   "file": "alice-two-story-house-syn-industrial.json",
+   "category": "residential",
+   "style": [
+    "industrial"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    13,
+    15,
+    21
+   ],
+   "volume": 4095,
+   "voxel_count": 1487,
+   "palette_size": 74,
+   "interior_populated": true,
+   "furniture_blocks": 56,
+   "synthetic": true
+  },
+  {
+   "id": "alice-two-story-house-syn-mediterranean",
+   "title": "Alice two-story house (synthetic mediterranean)",
+   "file": "alice-two-story-house-syn-mediterranean.json",
+   "category": "residential",
+   "style": [
+    "mediterranean"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    13,
+    15,
+    21
+   ],
+   "volume": 4095,
+   "voxel_count": 1487,
+   "palette_size": 74,
+   "interior_populated": true,
+   "furniture_blocks": 56,
+   "synthetic": true
+  },
+  {
+   "id": "alice-two-story-house-syn-viking",
+   "title": "Alice two-story house (synthetic viking)",
+   "file": "alice-two-story-house-syn-viking.json",
+   "category": "residential",
+   "style": [
+    "viking"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    13,
+    15,
+    21
+   ],
+   "volume": 4095,
+   "voxel_count": 1487,
+   "palette_size": 74,
+   "interior_populated": true,
+   "furniture_blocks": 56,
+   "synthetic": true
+  },
+  {
+   "id": "alice-two-story-house",
+   "title": "Alice two-story house",
+   "file": "alice-two-story-house.json",
+   "category": "residential",
+   "style": [
+    "medieval",
+    "fantasy"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    13,
+    15,
+    21
+   ],
+   "volume": 4095,
+   "voxel_count": 1487,
+   "palette_size": 74,
+   "interior_populated": true,
+   "furniture_blocks": 56,
+   "synthetic": false
+  },
+  {
+   "id": "apiary-cottage",
+   "title": "Apiary cottage",
+   "file": "apiary-cottage.json",
+   "category": "residential",
+   "style": [
+    "medieval",
+    "rustic"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    23,
+    14,
+    15
+   ],
+   "volume": 4830,
+   "voxel_count": 1813,
+   "palette_size": 60,
+   "interior_populated": true,
+   "furniture_blocks": 37,
+   "synthetic": false
+  },
+  {
+   "id": "astronomy-observatory",
+   "title": "Astronomy observatory",
+   "file": "astronomy-observatory.json",
+   "category": "tower",
+   "style": [
+    "medieval",
+    "fantasy"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    21,
+    20,
+    18
+   ],
+   "volume": 7560,
+   "voxel_count": 1585,
+   "palette_size": 52,
+   "interior_populated": true,
+   "furniture_blocks": 30,
+   "synthetic": false
+  },
+  {
+   "id": "betterpalegarden_haunted_house",
+   "title": "Pale Garden Haunted House",
+   "file": "betterpalegarden_haunted_house.json",
+   "category": "residential",
+   "style": [
+    "gothic",
+    "fantasy",
+    "medieval"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    12,
+    10,
+    11
+   ],
+   "volume": 1320,
+   "voxel_count": 636,
+   "palette_size": 60,
+   "interior_populated": false,
+   "furniture_blocks": 16,
+   "synthetic": false
+  },
+  {
+   "id": "coastal-lighthouse",
+   "title": "Coastal lighthouse",
+   "file": "coastal-lighthouse.json",
+   "category": "lighthouse",
+   "style": [
+    "medieval",
+    "rustic"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    15,
+    33,
+    14
+   ],
+   "volume": 6930,
+   "voxel_count": 1207,
+   "palette_size": 46,
+   "interior_populated": false,
+   "furniture_blocks": 15,
+   "synthetic": false
+  },
+  {
+   "id": "darklotus_mountain_cottage_1",
+   "title": "Mountain Cottage 1",
+   "file": "darklotus_mountain_cottage_1.json",
+   "category": "residential",
+   "style": [
+    "rustic",
+    "medieval"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    16,
+    13,
+    17
+   ],
+   "volume": 3536,
+   "voxel_count": 1004,
+   "palette_size": 126,
+   "interior_populated": true,
+   "furniture_blocks": 62,
+   "synthetic": false
+  },
+  {
+   "id": "david-small-home",
+   "title": "David small home",
+   "file": "david-small-home.json",
+   "category": "residential",
+   "style": [
+    "medieval"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    13,
+    11,
+    11
+   ],
+   "volume": 1573,
+   "voxel_count": 529,
+   "palette_size": 44,
+   "interior_populated": true,
+   "furniture_blocks": 39,
+   "synthetic": false
+  },
+  {
+   "id": "hobbit-hole",
+   "title": "Hobbit hole",
+   "file": "hobbit-hole.json",
+   "category": "residential",
+   "style": [
+    "fantasy",
+    "rustic"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    13,
+    8,
+    15
+   ],
+   "volume": 1560,
+   "voxel_count": 398,
+   "palette_size": 39,
+   "interior_populated": false,
+   "furniture_blocks": 6,
+   "synthetic": false
+  },
+  {
+   "id": "jungle-treehouse",
+   "title": "Jungle treehouse",
+   "file": "jungle-treehouse.json",
+   "category": "residential",
+   "style": [
+    "fantasy",
+    "rustic"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    20,
+    33,
+    14
+   ],
+   "volume": 9240,
+   "voxel_count": 1157,
+   "palette_size": 69,
+   "interior_populated": false,
+   "furniture_blocks": 11,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-castle-base",
+   "title": "MCS Chinese Castle (Base)",
+   "file": "mcs-castle-base.json",
+   "category": "castle",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    31,
+    37,
+    31
+   ],
+   "volume": 35557,
+   "voxel_count": 13026,
+   "palette_size": 347,
+   "interior_populated": true,
+   "furniture_blocks": 357,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-castle-top",
+   "title": "MCS Chinese Castle (Top)",
+   "file": "mcs-castle-top.json",
+   "category": "castle",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    31,
+    18,
+    31
+   ],
+   "volume": 17298,
+   "voxel_count": 1945,
+   "palette_size": 79,
+   "interior_populated": true,
+   "furniture_blocks": 30,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-chinese-tower-1",
+   "title": "MCS Chinese Tower 1",
+   "file": "mcs-chinese-tower-1.json",
+   "category": "tower",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    47,
+    44,
+    47
+   ],
+   "volume": 97196,
+   "voxel_count": 28057,
+   "palette_size": 282,
+   "interior_populated": true,
+   "furniture_blocks": 438,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-chinese-tower-2",
+   "title": "MCS Chinese Tower 2",
+   "file": "mcs-chinese-tower-2.json",
+   "category": "tower",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    47,
+    36,
+    47
+   ],
+   "volume": 79524,
+   "voxel_count": 15975,
+   "palette_size": 124,
+   "interior_populated": true,
+   "furniture_blocks": 253,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-chinese-tower-3",
+   "title": "MCS Chinese Tower 3",
+   "file": "mcs-chinese-tower-3.json",
+   "category": "tower",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    47,
+    36,
+    47
+   ],
+   "volume": 79524,
+   "voxel_count": 6347,
+   "palette_size": 112,
+   "interior_populated": false,
+   "furniture_blocks": 18,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-fleet-center",
+   "title": "MCS Fleet Center",
+   "file": "mcs-fleet-center.json",
+   "category": "other",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    3,
+    1,
+    8
+   ],
+   "volume": 24,
+   "voxel_count": 3,
+   "palette_size": 1,
+   "interior_populated": false,
+   "furniture_blocks": 0,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-ship-1-bulk",
+   "title": "MCS Junk Ship 1 (Bulk)",
+   "file": "mcs-ship-1-bulk.json",
+   "category": "other",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    19,
+    48,
+    48
+   ],
+   "volume": 43776,
+   "voxel_count": 5345,
+   "palette_size": 199,
+   "interior_populated": true,
+   "furniture_blocks": 227,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-ship-1-front",
+   "title": "MCS Junk Ship 1 (Front)",
+   "file": "mcs-ship-1-front.json",
+   "category": "other",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    19,
+    48,
+    11
+   ],
+   "volume": 10032,
+   "voxel_count": 459,
+   "palette_size": 31,
+   "interior_populated": false,
+   "furniture_blocks": 1,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-ship-2-bulk",
+   "title": "MCS Junk Ship 2 (Bulk)",
+   "file": "mcs-ship-2-bulk.json",
+   "category": "other",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    18,
+    47,
+    48
+   ],
+   "volume": 40608,
+   "voxel_count": 4832,
+   "palette_size": 203,
+   "interior_populated": true,
+   "furniture_blocks": 271,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-ship-2-front",
+   "title": "MCS Junk Ship 2 (Front)",
+   "file": "mcs-ship-2-front.json",
+   "category": "other",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    18,
+    47,
+    12
+   ],
+   "volume": 10152,
+   "voxel_count": 569,
+   "palette_size": 38,
+   "interior_populated": false,
+   "furniture_blocks": 6,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-ship-3",
+   "title": "MCS Junk Ship 3",
+   "file": "mcs-ship-3.json",
+   "category": "other",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    14,
+    48,
+    45
+   ],
+   "volume": 30240,
+   "voxel_count": 3784,
+   "palette_size": 131,
+   "interior_populated": true,
+   "furniture_blocks": 128,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-shrine",
+   "title": "MCS Shrine",
+   "file": "mcs-shrine.json",
+   "category": "temple",
+   "style": [
+    "japanese",
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    7,
+    13,
+    7
+   ],
+   "volume": 637,
+   "voxel_count": 331,
+   "palette_size": 23,
+   "interior_populated": false,
+   "furniture_blocks": 2,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-sky-palace-1",
+   "title": "MCS Sky Palace 1",
+   "file": "mcs-sky-palace-1.json",
+   "category": "castle",
+   "style": [
+    "chinese",
+    "fantasy"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    25,
+    48,
+    23
+   ],
+   "volume": 27600,
+   "voxel_count": 6691,
+   "palette_size": 56,
+   "interior_populated": false,
+   "furniture_blocks": 17,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-sky-palace-2",
+   "title": "MCS Sky Palace 2",
+   "file": "mcs-sky-palace-2.json",
+   "category": "castle",
+   "style": [
+    "chinese",
+    "fantasy"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    17,
+    22,
+    33
+   ],
+   "volume": 12342,
+   "voxel_count": 1992,
+   "palette_size": 91,
+   "interior_populated": true,
+   "furniture_blocks": 40,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-sky-palace-3",
+   "title": "MCS Sky Palace 3",
+   "file": "mcs-sky-palace-3.json",
+   "category": "castle",
+   "style": [
+    "chinese",
+    "fantasy"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    17,
+    20,
+    32
+   ],
+   "volume": 10880,
+   "voxel_count": 1794,
+   "palette_size": 84,
+   "interior_populated": true,
+   "furniture_blocks": 20,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-sky-palace-4",
+   "title": "MCS Sky Palace 4",
+   "file": "mcs-sky-palace-4.json",
+   "category": "castle",
+   "style": [
+    "chinese",
+    "fantasy"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    22,
+    46,
+    23
+   ],
+   "volume": 23276,
+   "voxel_count": 6120,
+   "palette_size": 85,
+   "interior_populated": true,
+   "furniture_blocks": 41,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-temple-cherry",
+   "title": "MCS Cherry Grove Temple",
+   "file": "mcs-temple-cherry.json",
+   "category": "temple",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    26,
+    11,
+    15
+   ],
+   "volume": 4290,
+   "voxel_count": 816,
+   "palette_size": 37,
+   "interior_populated": false,
+   "furniture_blocks": 2,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-temple-forest",
+   "title": "MCS Forest Temple",
+   "file": "mcs-temple-forest.json",
+   "category": "temple",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    17,
+    12,
+    19
+   ],
+   "volume": 3876,
+   "voxel_count": 1287,
+   "palette_size": 67,
+   "interior_populated": false,
+   "furniture_blocks": 2,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-temple-hills",
+   "title": "MCS Hills Temple",
+   "file": "mcs-temple-hills.json",
+   "category": "temple",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    21,
+    32,
+    21
+   ],
+   "volume": 14112,
+   "voxel_count": 2413,
+   "palette_size": 102,
+   "interior_populated": false,
+   "furniture_blocks": 15,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-temple-plains",
+   "title": "MCS Plains Temple",
+   "file": "mcs-temple-plains.json",
+   "category": "temple",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    17,
+    14,
+    21
+   ],
+   "volume": 4998,
+   "voxel_count": 1542,
+   "palette_size": 66,
+   "interior_populated": false,
+   "furniture_blocks": 9,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-temple-savanna",
+   "title": "MCS Savanna Temple",
+   "file": "mcs-temple-savanna.json",
+   "category": "temple",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    19,
+    14,
+    21
+   ],
+   "volume": 5586,
+   "voxel_count": 1436,
+   "palette_size": 56,
+   "interior_populated": false,
+   "furniture_blocks": 9,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-temple-snow",
+   "title": "MCS Snowy Temple",
+   "file": "mcs-temple-snow.json",
+   "category": "temple",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    13,
+    13,
+    17
+   ],
+   "volume": 2873,
+   "voxel_count": 1184,
+   "palette_size": 73,
+   "interior_populated": true,
+   "furniture_blocks": 49,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-temple-snowyplains",
+   "title": "MCS Snowy Plains Temple",
+   "file": "mcs-temple-snowyplains.json",
+   "category": "temple",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    9,
+    8,
+    10
+   ],
+   "volume": 720,
+   "voxel_count": 446,
+   "palette_size": 30,
+   "interior_populated": true,
+   "furniture_blocks": 20,
+   "synthetic": false
+  },
+  {
+   "id": "mcs-temple-sunflower",
+   "title": "MCS Sunflower Temple",
+   "file": "mcs-temple-sunflower.json",
+   "category": "temple",
+   "style": [
+    "chinese"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    21,
+    20,
+    19
+   ],
+   "volume": 7980,
+   "voxel_count": 2726,
+   "palette_size": 95,
+   "interior_populated": true,
+   "furniture_blocks": 50,
+   "synthetic": false
+  },
+  {
+   "id": "overgrown-home",
+   "title": "Overgrown home",
+   "file": "overgrown-home.json",
+   "category": "residential",
+   "style": [
+    "fantasy",
+    "rustic"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    13,
+    11,
+    25
+   ],
+   "volume": 3575,
+   "voxel_count": 1464,
+   "palette_size": 79,
+   "interior_populated": true,
+   "furniture_blocks": 43,
+   "synthetic": false
+  },
+  {
+   "id": "pet-palace",
+   "title": "Pet palace",
+   "file": "pet-palace.json",
+   "category": "residential",
+   "style": [
+    "fantasy"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    21,
+    22,
+    20
+   ],
+   "volume": 9240,
+   "voxel_count": 2982,
+   "palette_size": 106,
+   "interior_populated": true,
+   "furniture_blocks": 38,
+   "synthetic": false
+  },
+  {
+   "id": "small-stone-castle-syn-egyptian",
+   "title": "Small stone castle (synthetic egyptian)",
+   "file": "small-stone-castle-syn-egyptian.json",
+   "category": "castle",
+   "style": [
+    "egyptian"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    15,
+    16,
+    15
+   ],
+   "volume": 3600,
+   "voxel_count": 754,
+   "palette_size": 30,
+   "interior_populated": false,
+   "furniture_blocks": 18,
+   "synthetic": true
+  },
+  {
+   "id": "small-stone-castle-syn-futuristic",
+   "title": "Small stone castle (synthetic futuristic)",
+   "file": "small-stone-castle-syn-futuristic.json",
+   "category": "castle",
+   "style": [
+    "futuristic"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    15,
+    16,
+    15
+   ],
+   "volume": 3600,
+   "voxel_count": 754,
+   "palette_size": 30,
+   "interior_populated": false,
+   "furniture_blocks": 18,
+   "synthetic": true
+  },
+  {
+   "id": "small-stone-castle-syn-industrial",
+   "title": "Small stone castle (synthetic industrial)",
+   "file": "small-stone-castle-syn-industrial.json",
+   "category": "castle",
+   "style": [
+    "industrial"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    15,
+    16,
+    15
+   ],
+   "volume": 3600,
+   "voxel_count": 754,
+   "palette_size": 30,
+   "interior_populated": false,
+   "furniture_blocks": 18,
+   "synthetic": true
+  },
+  {
+   "id": "small-stone-castle-syn-mediterranean",
+   "title": "Small stone castle (synthetic mediterranean)",
+   "file": "small-stone-castle-syn-mediterranean.json",
+   "category": "castle",
+   "style": [
+    "mediterranean"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    15,
+    16,
+    15
+   ],
+   "volume": 3600,
+   "voxel_count": 754,
+   "palette_size": 30,
+   "interior_populated": false,
+   "furniture_blocks": 18,
+   "synthetic": true
+  },
+  {
+   "id": "small-stone-castle-syn-viking",
+   "title": "Small stone castle (synthetic viking)",
+   "file": "small-stone-castle-syn-viking.json",
+   "category": "castle",
+   "style": [
+    "viking"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    15,
+    16,
+    15
+   ],
+   "volume": 3600,
+   "voxel_count": 754,
+   "palette_size": 30,
+   "interior_populated": false,
+   "furniture_blocks": 18,
+   "synthetic": true
+  },
+  {
+   "id": "small-stone-castle",
+   "title": "Small stone castle",
+   "file": "small-stone-castle.json",
+   "category": "castle",
+   "style": [
+    "medieval"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    15,
+    16,
+    15
+   ],
+   "volume": 3600,
+   "voxel_count": 754,
+   "palette_size": 30,
+   "interior_populated": false,
+   "furniture_blocks": 18,
+   "synthetic": false
+  },
+  {
+   "id": "stone-windmill",
+   "title": "Stone windmill",
+   "file": "stone-windmill.json",
+   "category": "windmill",
+   "style": [
+    "medieval",
+    "rustic"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    17,
+    19,
+    18
+   ],
+   "volume": 5814,
+   "voxel_count": 944,
+   "palette_size": 79,
+   "interior_populated": false,
+   "furniture_blocks": 14,
+   "synthetic": false
+  },
+  {
+   "id": "stonevaults_big_library",
+   "title": "Pillager Dungeon Library",
+   "file": "stonevaults_big_library.json",
+   "category": "other",
+   "style": [
+    "medieval",
+    "fantasy"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    20,
+    10,
+    9
+   ],
+   "volume": 1800,
+   "voxel_count": 997,
+   "palette_size": 33,
+   "interior_populated": true,
+   "furniture_blocks": 28,
+   "synthetic": false
+  },
+  {
+   "id": "stonevaults_husk_temple",
+   "title": "Husk Desert Temple Chamber",
+   "file": "stonevaults_husk_temple.json",
+   "category": "temple",
+   "style": [
+    "egyptian"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    13,
+    6,
+    13
+   ],
+   "volume": 1014,
+   "voxel_count": 655,
+   "palette_size": 32,
+   "interior_populated": false,
+   "furniture_blocks": 1,
+   "synthetic": false
+  },
+  {
+   "id": "stonevaults_igloo",
+   "title": "Stonevaults Igloo",
+   "file": "stonevaults_igloo.json",
+   "category": "other",
+   "style": [
+    "viking",
+    "rustic"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    24,
+    9,
+    24
+   ],
+   "volume": 5184,
+   "voxel_count": 1171,
+   "palette_size": 10,
+   "interior_populated": false,
+   "furniture_blocks": 1,
+   "synthetic": false
+  },
+  {
+   "id": "stonevaults_magetower_entrance",
+   "title": "Mage Tower Entrance",
+   "file": "stonevaults_magetower_entrance.json",
+   "category": "tower",
+   "style": [
+    "fantasy",
+    "medieval"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    13,
+    6,
+    13
+   ],
+   "volume": 1014,
+   "voxel_count": 457,
+   "palette_size": 17,
+   "interior_populated": false,
+   "furniture_blocks": 0,
+   "synthetic": false
+  },
+  {
+   "id": "stonevaults_mooshroom_king",
+   "title": "Mooshroom King Treasure Vault",
+   "file": "stonevaults_mooshroom_king.json",
+   "category": "monument",
+   "style": [
+    "fantasy"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    13,
+    6,
+    13
+   ],
+   "volume": 1014,
+   "voxel_count": 493,
+   "palette_size": 9,
+   "interior_populated": false,
+   "furniture_blocks": 6,
+   "synthetic": false
+  },
+  {
+   "id": "stonevaults_pillager_lobby",
+   "title": "Pillager Outpost Lobby",
+   "file": "stonevaults_pillager_lobby.json",
+   "category": "castle",
+   "style": [
+    "medieval",
+    "rustic"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    13,
+    8,
+    13
+   ],
+   "volume": 1352,
+   "voxel_count": 466,
+   "palette_size": 9,
+   "interior_populated": false,
+   "furniture_blocks": 8,
+   "synthetic": false
+  },
+  {
+   "id": "telepathic_rundown_house_left",
+   "title": "Run-Down House Left Side",
+   "file": "telepathic_rundown_house_left.json",
+   "category": "ruin",
+   "style": [
+    "rustic",
+    "medieval"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    11,
+    9,
+    11
+   ],
+   "volume": 1089,
+   "voxel_count": 367,
+   "palette_size": 60,
+   "interior_populated": false,
+   "furniture_blocks": 5,
+   "synthetic": false
+  },
+  {
+   "id": "telepathic_rundown_house_right",
+   "title": "Run-Down House Right Side",
+   "file": "telepathic_rundown_house_right.json",
+   "category": "ruin",
+   "style": [
+    "rustic",
+    "medieval"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    10,
+    9,
+    11
+   ],
+   "volume": 990,
+   "voxel_count": 352,
+   "palette_size": 50,
+   "interior_populated": false,
+   "furniture_blocks": 0,
+   "synthetic": false
+  },
+  {
+   "id": "tree-library-syn-egyptian",
+   "title": "Tree library (synthetic egyptian)",
+   "file": "tree-library-syn-egyptian.json",
+   "category": "residential",
+   "style": [
+    "egyptian"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    25,
+    22,
+    24
+   ],
+   "volume": 13200,
+   "voxel_count": 4119,
+   "palette_size": 79,
+   "interior_populated": true,
+   "furniture_blocks": 270,
+   "synthetic": true
+  },
+  {
+   "id": "tree-library-syn-futuristic",
+   "title": "Tree library (synthetic futuristic)",
+   "file": "tree-library-syn-futuristic.json",
+   "category": "residential",
+   "style": [
+    "futuristic"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    25,
+    22,
+    24
+   ],
+   "volume": 13200,
+   "voxel_count": 4119,
+   "palette_size": 80,
+   "interior_populated": true,
+   "furniture_blocks": 270,
+   "synthetic": true
+  },
+  {
+   "id": "tree-library-syn-industrial",
+   "title": "Tree library (synthetic industrial)",
+   "file": "tree-library-syn-industrial.json",
+   "category": "residential",
+   "style": [
+    "industrial"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    25,
+    22,
+    24
+   ],
+   "volume": 13200,
+   "voxel_count": 4119,
+   "palette_size": 80,
+   "interior_populated": true,
+   "furniture_blocks": 270,
+   "synthetic": true
+  },
+  {
+   "id": "tree-library-syn-mediterranean",
+   "title": "Tree library (synthetic mediterranean)",
+   "file": "tree-library-syn-mediterranean.json",
+   "category": "residential",
+   "style": [
+    "mediterranean"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    25,
+    22,
+    24
+   ],
+   "volume": 13200,
+   "voxel_count": 4119,
+   "palette_size": 80,
+   "interior_populated": true,
+   "furniture_blocks": 270,
+   "synthetic": true
+  },
+  {
+   "id": "tree-library-syn-viking",
+   "title": "Tree library (synthetic viking)",
+   "file": "tree-library-syn-viking.json",
+   "category": "residential",
+   "style": [
+    "viking"
+   ],
+   "license": "MIT",
+   "source": "synthetic",
+   "size": [
+    25,
+    22,
+    24
+   ],
+   "volume": 13200,
+   "voxel_count": 4119,
+   "palette_size": 80,
+   "interior_populated": true,
+   "furniture_blocks": 270,
+   "synthetic": true
+  },
+  {
+   "id": "tree-library",
+   "title": "Tree library",
+   "file": "tree-library.json",
+   "category": "residential",
+   "style": [
+    "fantasy"
+   ],
+   "license": "MIT",
+   "source": "github",
+   "size": [
+    25,
+    22,
+    24
+   ],
+   "volume": 13200,
+   "voxel_count": 4119,
+   "palette_size": 80,
+   "interior_populated": true,
+   "furniture_blocks": 270,
+   "synthetic": false
+  }
+ ]
+}

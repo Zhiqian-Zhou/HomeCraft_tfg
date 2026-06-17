@@ -1,0 +1,11 @@
+{
+  "id": "chiseled-stone-bricks",
+  "block_id": "minecraft:chiseled_stone_bricks",
+  "category": "brick",
+  "color": "gray",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["gothic", "medieval", "castle", "fantasy", "decorative"]
+}

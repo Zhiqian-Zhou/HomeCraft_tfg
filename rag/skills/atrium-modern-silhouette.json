@@ -1,0 +1,74 @@
+{
+  "id": "atrium-modern-silhouette",
+  "name": "Atrium modern silhouette",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "global_silhouette",
+  "description": "Overall silhouette of a mid-rise modern building organized around a central skylit atrium that cuts vertically through two or more floors. The footprint is square or near-square (aspect ratio close to 1.0) and a smaller interior void — roughly 10-25% of the floor area — is carved out of the centre, leaving the upper levels as galleries that ring the open shaft and overlook the ground level below. The roof above the void is flat and capped with a glass or glowstone skylight so daylight floods the heart of the plan. The main entrance sits axially on one facade and opens directly onto the atrium, giving the building a strong central focus typical of modern offices, minimalist apartment blocks and light-industrial lofts.",
+  "typical_dimensions": {
+    "min": [14, 8, 14],
+    "preferred": [18, 10, 18],
+    "max": [28, 15, 28]
+  },
+  "tags": {
+    "category": "residential",
+    "style": ["modern", "minimalist", "industrial"]
+  },
+  "applicable_to": ["residential", "shop"],
+  "parameters": {
+    "footprint_shape": "near_square_with_central_void",
+    "atrium_ratio": "0.10-0.25",
+    "preferred_floors": "2-4",
+    "roof_type": "flat_with_skylight",
+    "entrance_side": "facade_axial",
+    "interior_galleries": true
+  },
+  "placement_rules": [
+    "Outer footprint is square or near-square (aspect ratio between 1.0 and 1.2) so the central void reads as a balanced focal point.",
+    "Central atrium void occupies 10-25% of the footprint area, centred on both axes; below that it reads as a lightwell, above it weakens the surrounding floor plates.",
+    "Atrium shaft runs continuously through 2 or more floors — never partially capped — so the gallery levels truly overlook the ground.",
+    "Upper floors form a continuous gallery (corridor or balcony) around all four sides of the void; gallery width is at least 2 blocks for circulation.",
+    "Roof is flat and the area directly above the atrium is glazed (glass, stained glass or glowstone) to admit daylight; the surrounding roof remains opaque.",
+    "Main entrance is placed axially on one facade and aligns with the centre of the atrium so the visitor sees the full vertical volume on arrival.",
+    "Total height is 2-4 storeys (8-15 blocks); below that the atrium loses drama, above it the silhouette stops reading as mid-rise."
+  ],
+  "style_variants": {
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "accent": "minecraft:polished_andesite",
+        "roof": "minecraft:smooth_stone",
+        "skylight": "minecraft:glass",
+        "trim": "minecraft:dark_oak_planks"
+      },
+      "notes": "Crisp white quartz volume with polished andesite trim, large glazed atrium roof and clean cantilevered eaves on the gallery edges."
+    },
+    "minimalist": {
+      "palette_overrides": {
+        "primary": "minecraft:white_concrete",
+        "accent": "minecraft:light_gray_concrete",
+        "roof": "minecraft:white_concrete",
+        "skylight": "minecraft:glass",
+        "trim": "minecraft:smooth_stone"
+      },
+      "notes": "Flat unbroken white concrete envelope, minimal trim, atrium reads as a single bright void cut through the mass; galleries lined with thin smooth-stone parapets."
+    },
+    "industrial": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_stone",
+        "accent": "minecraft:iron_block",
+        "roof": "minecraft:gray_concrete",
+        "skylight": "minecraft:glass_pane",
+        "trim": "minecraft:dark_oak_log"
+      },
+      "notes": "Concrete-and-iron loft warehouse converted to galleried apartments; exposed steel ringing the atrium and a gridded glass-pane skylight overhead."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "common-areas-at-the-heart",
+    "high-places",
+    "interior-windows"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

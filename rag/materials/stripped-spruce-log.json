@@ -1,0 +1,14 @@
+{
+  "id": "stripped-spruce-log",
+  "block_id": "minecraft:stripped_spruce_log",
+  "category": "wood",
+  "color": "tan",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": [
+    "rustic",
+    "japanese",
+    "medieval"
+  ]
+}

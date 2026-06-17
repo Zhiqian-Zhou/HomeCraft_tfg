@@ -1,0 +1,41 @@
+{
+  "id": "threshold_inset",
+  "name": "Threshold floor inset",
+  "kind": "decorative",
+  "description": "Small accent inset on the floor where an entry would be.",
+  "typical_dimensions": {
+    "min": [
+      4,
+      3,
+      4
+    ],
+    "preferred": [
+      8,
+      4,
+      8
+    ],
+    "max": [
+      16,
+      9,
+      16
+    ]
+  },
+  "tags": {
+    "category": "any",
+    "style": [
+      "medieval",
+      "rustic",
+      "fantasy",
+      "gothic",
+      "renaissance",
+      "modern",
+      "minimalist",
+      "japanese",
+      "chinese",
+      "mediterranean"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.threshold_inset.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_decoration",
+  "schema_version": "2.0"
+}

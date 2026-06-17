@@ -1,0 +1,68 @@
+{
+  "id": "hip-roof-villa-silhouette",
+  "name": "Hip-roof villa silhouette",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "global_silhouette",
+  "description": "Overall silhouette of a spreading single- or two-storey villa capped by a hip roof whose four sides all slope inward to meet the walls. The footprint is rectangular and close to square (aspect ratio 1.0-1.5), giving a low, grounded, horizontal massing typical of Mediterranean villas, suburban ranches, colonial bungalows and modern rustic homes. Wide eaves project on all four sides for shade and weather protection, the ridge runs along the longer axis when not square, and the main entrance sits at the center of one long facade, usually under a porch or shallow pediment. Consumed by the global_designer to fix the building envelope before space_planner subdivides floors.",
+  "typical_dimensions": {
+    "min": [9, 6, 7],
+    "preferred": [15, 9, 12],
+    "max": [25, 14, 20]
+  },
+  "tags": {
+    "category": "residential",
+    "style": ["mediterranean", "modern", "rustic"]
+  },
+  "applicable_to": ["residential"],
+  "parameters": {
+    "footprint_shape": "rectangle",
+    "aspect_ratio": "1.0-1.5",
+    "preferred_floors": "1-2",
+    "roof_orientation": "hip_all_sides",
+    "entrance_side": "long_side_center"
+  },
+  "placement_rules": [
+    "Footprint is a single rectangle with aspect ratio between 1.0 and 1.5 (near-square to moderately elongated).",
+    "Hip roof: all four sides slope down to the wall tops; ridge runs along the longer axis.",
+    "Wide eaves overhang every wall by 1-2 blocks for shade and weather protection.",
+    "Main entrance placed at the center of the longer facade, ideally under a porch or pediment.",
+    "Building height is 1 or 2 storeys (6-14 blocks) so the horizontal massing dominates the vertical."
+  ],
+  "style_variants": {
+    "mediterranean": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_sandstone",
+        "accent": "minecraft:red_terracotta",
+        "roof": "minecraft:granite",
+        "trim": "minecraft:oak_log"
+      },
+      "notes": "Pale stucco walls, terracotta-tile hip roof, deep eaves shading whitewashed facades."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "accent": "minecraft:polished_andesite",
+        "roof": "minecraft:smooth_stone",
+        "trim": "minecraft:dark_oak_planks"
+      },
+      "notes": "Clean rectangular footprint, shallow hip pitch, wide cantilevered eaves, large glazed openings on the long facade."
+    },
+    "rustic": {
+      "palette_overrides": {
+        "primary": "minecraft:oak_planks",
+        "accent": "minecraft:cobblestone",
+        "roof": "minecraft:spruce_planks",
+        "trim": "minecraft:stripped_spruce_log"
+      },
+      "notes": "Timber-and-stone walls under a shingled hip roof; sheltered porch at the center of the long side."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "sheltering-roof",
+    "main-entrance",
+    "building-edge"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

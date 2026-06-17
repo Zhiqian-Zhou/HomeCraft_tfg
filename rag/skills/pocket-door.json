@@ -1,0 +1,29 @@
+{
+  "id": "pocket-door",
+  "name": "Pocket door",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "connector_template",
+  "description": "An interior door that slides horizontally into a hidden cavity within the adjacent wall rather than swinging on hinges, leaving zero swing arc and reclaiming the floor space a conventional door would sterilize. The doorway reads as a single flush opening flanked by a thicker partition that conceals the parked leaf; a slim track at the head and a recessed pull at the leading edge are the only outward cues. Particularly suited to tight rooms, en-suite bathrooms, and walk-in closets, and to formal arrangements where two parlors are linked by a wide bay that should disappear completely when open. Historically common in Victorian double-parlor plans and reborn in modern minimalist interiors. Single-leaf for narrow openings, double-leaf converging from both jambs for wide ceremonial bays.",
+  "typical_dimensions": {
+    "min": [2, 3, 1],
+    "preferred": [3, 3, 1],
+    "max": [4, 4, 1]
+  },
+  "tags": {
+    "category": "door",
+    "style": ["modern", "victorian", "minimalist"]
+  },
+  "applicable_to": ["residential"],
+  "parameters": {
+    "slide_direction": "into_wall_cavity",
+    "leaf_count": "1_or_2",
+    "wall_thickness_required": "2",
+    "saves_swing_arc": true,
+    "position": "interior_partition_only"
+  },
+  "alexander_patterns_relevant": [
+    "intimacy-gradient"
+  ],
+  "python_skill_signature": null
+}

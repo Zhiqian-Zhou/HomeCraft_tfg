@@ -1,0 +1,14 @@
+{
+  "id": "polished-granite",
+  "block_id": "minecraft:polished_granite",
+  "category": "stone",
+  "color": "smooth pinkish brown",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:polished_granite_stairs",
+    "slab": "minecraft:polished_granite_slab"
+  },
+  "used_by_styles": ["modern", "mediterranean"]
+}

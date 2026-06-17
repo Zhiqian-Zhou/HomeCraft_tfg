@@ -1,0 +1,27 @@
+{
+  "id": "dormer-window",
+  "name": "Dormer window",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "wall_fitting",
+  "description": "A vertical window-housing that projects outward from a sloped roof plane, carving usable headroom and daylight into an attic floor that would otherwise be hemmed in by the rafters. The dormer reads as a small box pushed through the roof: a short vertical wall section frames a 1-2 wide by 2 tall window, flanked by cheek walls tying back into the main roof, and crowned by its own pitched mini-roof (gable, hip, or shed). The cladding matches the main roof material so the dormer reads as carved out of the same shell rather than bolted on. Typically arranged in a rhythmic row of 1-3 per facade, dormers turn dead loft into a habitable upper room while preserving the sheltering silhouette of the house.",
+  "typical_dimensions": {
+    "min": [2, 2, 2],
+    "preferred": [3, 3, 2],
+    "max": [5, 4, 3]
+  },
+  "tags": {
+    "category": "window",
+    "style": ["victorian", "rustic", "medieval"]
+  },
+  "applicable_to": ["residential", "barn"],
+  "parameters": {
+    "placement": "projecting_from_sloped_roof",
+    "roof_type": "gable_or_hip_or_shed",
+    "window_size": "1_to_2_wide_x_2_tall",
+    "count_per_facade": "1_to_3",
+    "style_block": "matches_main_roof"
+  },
+  "alexander_patterns_relevant": ["window-place", "sheltering-roof"],
+  "python_skill_signature": null
+}

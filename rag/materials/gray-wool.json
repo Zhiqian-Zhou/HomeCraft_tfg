@@ -1,0 +1,11 @@
+{
+  "id": "gray-wool",
+  "block_id": "minecraft:gray_wool",
+  "category": "wool",
+  "color": "gray",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["modern", "fantasy"]
+}

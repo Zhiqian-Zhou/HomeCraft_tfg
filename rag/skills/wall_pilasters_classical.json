@@ -1,0 +1,42 @@
+{
+  "id": "wall_pilasters_classical",
+  "name": "Classical pilasters",
+  "kind": "decorative",
+  "description": "Wider pilaster spacing of @secondary — sober temple or basilica feel.",
+  "typical_dimensions": {
+    "min": [
+      4,
+      3,
+      4
+    ],
+    "preferred": [
+      8,
+      4,
+      8
+    ],
+    "max": [
+      16,
+      9,
+      16
+    ]
+  },
+  "tags": {
+    "category": "any",
+    "style": [
+      "medieval",
+      "rustic",
+      "fantasy",
+      "gothic",
+      "renaissance",
+      "modern",
+      "minimalist",
+      "japanese",
+      "chinese",
+      "mediterranean"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.wall_pilasters_classical.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_decoration",
+  "schema_version": "2.0",
+  "style_affinity": "Greco-Roman / Classical motif. Coherent in renaissance/mediterranean (and some modern). Out of place in East-Asian, Gothic, medieval, rustic buildings."
+}

@@ -1,0 +1,131 @@
+{
+  "id": "nursery",
+  "name": "Nursery",
+  "kind": "room",
+  "description": "A small children's bedroom. Contains a single (child-sized) bed against a wall, a toy chest, 1-2 stairs blocks acting as pint-sized chairs, a small picture-book bookshelf, a cake as a stuffed-animal/toy display proxy, a bright play-mat carpet, at least one flower pot, two or more warm lanterns, and a small window. The ceiling is left open as beams.",
+  "typical_dimensions": {
+    "min": [
+      4,
+      3,
+      4
+    ],
+    "preferred": [
+      5,
+      4,
+      5
+    ],
+    "max": [
+      7,
+      5,
+      7
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "child_bed",
+      "count": 1,
+      "rule": "single bed against a wall, head toward the north"
+    },
+    {
+      "item": "minecraft:chest",
+      "count": 1,
+      "rule": "toy box; on the floor near the foot of the bed"
+    },
+    {
+      "item": "small_chairs",
+      "count": "1..2",
+      "rule": "1-2 @stairs blocks acting as child-scale chairs, near the bookshelf"
+    },
+    {
+      "item": "minecraft:bookshelf",
+      "count": 1,
+      "rule": "picture books along the wall opposite the bed"
+    },
+    {
+      "item": "minecraft:cake",
+      "count": 1,
+      "rule": "proxy for a stuffed animal / toy display, on the south wall"
+    },
+    {
+      "item": "@carpet",
+      "count": 1,
+      "rule": "bright play-mat rug in the centre — yellow_carpet (modern), pink_carpet (fantasy), red_carpet (medieval); resolved via style_variants.palette_overrides.carpet"
+    },
+    {
+      "item": "minecraft:flower_pot",
+      "count": "1..2",
+      "rule": "on the floor by the window, or at the bed head"
+    },
+    {
+      "item": "minecraft:lantern",
+      "count": "2..3",
+      "rule": "warm light — at least two lanterns hanging from the ceiling beams; never torches"
+    },
+    {
+      "item": "minecraft:glass_pane",
+      "count": 1,
+      "rule": "small 1x1 window on the wall opposite the bed"
+    }
+  ],
+  "placement_rules": [
+    "Small bed against a wall (child bed — single block footprint visually).",
+    "Soft warm lighting (lanterns not torches), at least two, near the ceiling beams.",
+    "Bright carpet rug for play, centred and never under the bed.",
+    "Child-scale furniture: stairs blocks as chairs, single bookshelf, single chest.",
+    "Window kept small (1×1) and placed on the wall opposite the bed (Light on Two Sides).",
+    "Leave the ceiling open: render the roof as Line-op beams between the wall tops."
+  ],
+  "lighting_ventilation": "At least two lanterns hanging from beams for warm, soft light — no torches in a nursery. One small window on the wall opposite the bed; cross-ventilation comes from the bed-wall side at eye height.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:oak_planks",
+        "floor": "minecraft:oak_planks",
+        "roof": "minecraft:dark_oak_planks",
+        "bed": "minecraft:red_bed",
+        "carpet": "minecraft:red_carpet",
+        "stairs": "minecraft:oak_stairs"
+      },
+      "notes": "Warm oak nursery with a red bed and red play-mat; oak stair chairs."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "floor": "minecraft:polished_andesite",
+        "roof": "minecraft:smooth_stone_slab",
+        "bed": "minecraft:white_bed",
+        "carpet": "minecraft:yellow_carpet",
+        "stairs": "minecraft:smooth_quartz_stairs"
+      },
+      "notes": "Bright, clean quartz nursery with a white bed and yellow play-mat."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "floor": "minecraft:dark_oak_planks",
+        "roof": "minecraft:purpur_block",
+        "bed": "minecraft:pink_bed",
+        "carpet": "minecraft:pink_carpet",
+        "stairs": "minecraft:dark_oak_stairs"
+      },
+      "notes": "Storybook dark-oak nursery with a pink bed and pink play-mat."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "childrens-realm",
+    "bed-alcove",
+    "light-on-two-sides"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "bedroom",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.nursery.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_role",
+  "schema_version": "2.0"
+}

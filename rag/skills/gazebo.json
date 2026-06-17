@@ -1,0 +1,112 @@
+{
+  "id": "gazebo",
+  "name": "Gazebo",
+  "kind": "exterior",
+  "description": "A small round/octagonal outdoor pavilion: an octagonal stone or wood floor about 5 blocks across, six to eight corner posts rising three blocks, a pyramidal roof of inward-facing stairs capped by an apex block, and a single hanging lantern under the apex. Perimeter benches face inward toward the centre and one or two flower pots dress the floor — the gazebo is the canonical 'public outdoor room' for a garden or plaza.",
+  "typical_dimensions": {
+    "min": [
+      5,
+      4,
+      5
+    ],
+    "preferred": [
+      7,
+      5,
+      7
+    ],
+    "max": [
+      9,
+      6,
+      9
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "octagonal_floor",
+      "count": 1,
+      "rule": "A 5x5 @floor square with its four corners removed, leaving an 8-sided footprint centred on (cx, cz) at y0."
+    },
+    {
+      "item": "posts",
+      "count": "6..8",
+      "rule": "Six to eight @primary posts rising 3 blocks from the octagon's outer vertices — four cardinal edge midpoints plus four diagonal vertices when the footprint allows it."
+    },
+    {
+      "item": "pyramid_roof",
+      "count": 1,
+      "rule": "Pyramidal roof above the posts: @roof corner caps on each post column, four @stairs blocks on the cardinal edges facing inward, and one @roof apex block at the very top."
+    },
+    {
+      "item": "central_lantern",
+      "count": 1,
+      "rule": "One `minecraft:lantern[hanging=true]` hanging from the underside of the apex, directly above the centre of the floor."
+    },
+    {
+      "item": "benches",
+      "count": "4..6",
+      "rule": "@stairs blocks placed on the floor between the cardinal posts, facing inward toward the centre. Two additional diagonal benches are added when the AABB is at least 7 wide and 7 deep."
+    },
+    {
+      "item": "flower_pots",
+      "count": "1..2",
+      "rule": "One or two `minecraft:flower_pot` decorations on the floor, tucked between benches and never on the lantern column."
+    }
+  ],
+  "placement_rules": [
+    "Octagonal or circular footprint",
+    "Pyramidal roof",
+    "Central hanging lantern",
+    "Perimeter benches facing inward",
+    "Posts sit at the octagon vertices so the open sides between them stay walkable.",
+    "Lantern hangs from the apex so light pools at the centre of the floor (Pools of Light).",
+    "Flower pots dress the floor without blocking sightlines across the pavilion."
+  ],
+  "lighting_ventilation": "The hanging lantern under the apex provides the full night-light budget on Java 1.16.5; the open sides between the eight posts give complete cross-ventilation and sightlines out into the surrounding garden or plaza.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "@primary": "minecraft:oak_log",
+        "@roof": "minecraft:dark_oak_planks",
+        "@stairs": "minecraft:oak_stairs",
+        "@floor": "minecraft:cobblestone"
+      },
+      "notes": "Oak-log posts under a dark-oak pyramid — a village-green gazebo on a cobblestone pad."
+    },
+    "modern": {
+      "palette_overrides": {
+        "@primary": "minecraft:smooth_stone",
+        "@roof": "minecraft:smooth_stone_slab",
+        "@stairs": "minecraft:smooth_quartz_stairs",
+        "@floor": "minecraft:polished_andesite"
+      },
+      "notes": "Smooth-stone posts and stairs on a polished-andesite pad — a minimal pavilion for a city park."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "@primary": "minecraft:dark_oak_log",
+        "@roof": "minecraft:purpur_block",
+        "@stairs": "minecraft:dark_oak_stairs",
+        "@floor": "minecraft:dark_oak_planks",
+        "@light": "minecraft:sea_lantern"
+      },
+      "notes": "Dark-oak posts under a purpur apex with a sea-lantern glow — an enchanted gazebo at the heart of a moonlit garden."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "common-areas-at-the-heart",
+    "tree-places",
+    "public-outdoor-room"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "monument",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.gazebo.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "furnace",
+  "block_id": "minecraft:furnace",
+  "category": "utility",
+  "color": "grey stone with dark front",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": ["medieval", "modern", "fantasy", "rustic"]
+}

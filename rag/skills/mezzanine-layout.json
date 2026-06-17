@@ -1,0 +1,41 @@
+{
+  "id": "mezzanine-layout",
+  "name": "Mezzanine layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "Floor-layout strategy that inserts a small intermediate gallery floor partway up a tall single-volume space, covering only 20-40% of the footprint so the double-height void below remains the dominant room. The mezzanine reads as a balcony or loft hanging over the main hall rather than a true second storey: it is reached by a single staircase or spiral, edged by a continuous railing, and serves a quiet secondary use — a library second tier, a theater balcony, a home office or reading lounge above a modern living room. Because the deck does not span the full footprint, light and sound still travel up through the open portion, keeping the two levels perceptually one room.",
+  "typical_dimensions": {
+    "min": [6, 3, 8],
+    "preferred": [8, 3, 10],
+    "max": [12, 4, 16]
+  },
+  "tags": {
+    "category": "library",
+    "style": ["modern", "victorian", "industrial"]
+  },
+  "applicable_to": ["residential", "shop"],
+  "parameters": {
+    "coverage_ratio": "0.20-0.40",
+    "height_above_ground_floor": "4_to_6_blocks",
+    "access_via": "staircase_or_spiral",
+    "railing": "required",
+    "use": "library_or_office_or_lounge"
+  },
+  "placement_rules": [
+    "Restrict the mezzanine deck to 20-40% of the ground-floor footprint; above 40% it stops reading as a gallery and becomes a half-floor, below 20% it cannot host useful furniture.",
+    "Anchor the deck against one or two walls (typically a back wall or an L corner) and leave the long open edge facing the tallest part of the void below so the balcony overlooks the main space.",
+    "Hold the mezzanine soffit 4 to 6 blocks above the ground floor: 4 blocks is the minimum that still feels generous beneath, 6 blocks lets a tall living-room volume read as monumental.",
+    "Provide exactly one access point — a straight or quarter-turn staircase, or a spiral stair in tight footprints — landing on the deck against a wall, never in the middle of the gallery.",
+    "Edge the entire open perimeter with a continuous railing or low parapet (1-block tall minimum) — this is not optional, the deck must read as safely enclosed from the void.",
+    "Keep the upstairs use quiet and visual: bookshelves and a reading chair, a desk facing the railing, a small lounge — never plumbing, never the bed, never a kitchen.",
+    "Align the deck so at least one tall window on the double-height wall passes the mezzanine at eye level, giving the gallery its own framed view rather than just borrowing light from below."
+  ],
+  "alexander_patterns_relevant": [
+    "high-ceilings",
+    "interior-windows",
+    "common-areas-at-the-heart"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

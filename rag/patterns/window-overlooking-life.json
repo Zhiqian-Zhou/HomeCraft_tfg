@@ -1,0 +1,25 @@
+{
+  "id": "window-overlooking-life",
+  "name": "Windows Overlooking Life",
+  "source_work": "A Pattern Language",
+  "paraphrase": "Place windows in positions that give the best possible views out over life: activity in the streets, quiet gardens, anything different from the indoor scene. Alexander argues that rooms without a view of something living and changing become prisons for those who must stay in them; conversely, when the principal windows look onto activity the interior feels connected to the world outside.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "889-892",
+    "edition": "Oxford University Press 1977",
+    "isbn": "0-19-501919-9"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "window_view_activity_score"
+  },
+  "skills_embodying": [
+    "living_room",
+    "kitchen",
+    "dining_room",
+    "bedroom",
+    "study",
+    "balcony",
+    "window_bay",
+    "stained_glass_window"
+  ]
+}

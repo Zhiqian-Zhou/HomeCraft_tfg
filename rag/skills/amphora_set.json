@@ -1,0 +1,42 @@
+{
+  "id": "amphora_set",
+  "name": "Amphora row",
+  "kind": "exterior",
+  "description": "Series of flower-pot urns along a path — amphora row.",
+  "typical_dimensions": {
+    "min": [
+      3,
+      2,
+      3
+    ],
+    "preferred": [
+      10,
+      2,
+      5
+    ],
+    "max": [
+      30,
+      3,
+      12
+    ]
+  },
+  "tags": {
+    "category": "any",
+    "style": [
+      "medieval",
+      "rustic",
+      "fantasy",
+      "gothic",
+      "renaissance",
+      "modern",
+      "minimalist",
+      "japanese",
+      "chinese",
+      "mediterranean"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.amphora_set.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0",
+  "style_affinity": "Greco-Roman / Classical motif. Coherent in renaissance/mediterranean (and some modern). Out of place in East-Asian, Gothic, medieval, rustic buildings."
+}

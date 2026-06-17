@@ -1,0 +1,13 @@
+{
+  "id": "black-stained-glass",
+  "block_id": "minecraft:black_stained_glass",
+  "category": "glass",
+  "color": "black",
+  "transparent": true,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "pane": "minecraft:black_stained_glass_pane"
+  },
+  "used_by_styles": ["modern", "gothic"]
+}

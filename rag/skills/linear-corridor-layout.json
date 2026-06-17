@@ -1,0 +1,69 @@
+{
+  "id": "linear-corridor-layout",
+  "name": "Linear corridor layout",
+  "kind": "structural",
+  "description": "A single straight corridor runs the long axis of the floor plan, acting as the sole circulation spine from which all rooms branch off. Rooms may attach to one side (single-loaded corridor, typical of narrow buildings against an external wall) or to both sides (double-loaded corridor, maximising room count per unit footprint). The corridor is usually 2 blocks wide to allow two occupants to pass, and runs uninterrupted from one short end of the building to the other, often terminating in a window or door to admit natural light. This layout underlies the Roman atrium-flanked domus, monastic dormitories, modern motels, school wings, and barn stables, where a uniform sequence of repeated rooms is the organising idea rather than a centred common space.",
+  "typical_dimensions": {
+    "min": [6, 4, 12],
+    "preferred": [8, 4, 18],
+    "max": [12, 5, 30]
+  },
+  "placement_rules": [
+    "Corridor orientation follows the building's long axis so that the room sequence reads end-to-end.",
+    "Keep corridor width at 2 blocks for residential and dormitory use; widen to 3 only for public-scale taverns or barn aisles.",
+    "Double-loaded corridors require the footprint to be at least corridor_width + 2 * min_room_depth wide (typically >= 8 blocks).",
+    "Single-loaded corridors place the corridor against the long external wall so all rooms face the same exterior side for light.",
+    "Terminate the corridor with a window or door on the short end to avoid a dead-end and to bring in daylight.",
+    "Doors to rooms should alternate along the corridor walls rather than sit directly opposite each other, preserving privacy between rooms across the hall.",
+    "Room count per side stays between 2 and 4 in domestic buildings; larger institutional variants extend the corridor rather than adding more rooms per side."
+  ],
+  "lighting_ventilation": "Natural light enters from windows on the short end walls of the corridor, supplemented by transom openings or louvres above each room door. In darker double-loaded variants, place torches or lanterns every 4-5 blocks along the corridor ceiling or upper walls.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "floor": "minecraft:oak_planks",
+        "wall": "minecraft:cobblestone",
+        "trim": "minecraft:oak_log",
+        "ceiling": "minecraft:oak_planks"
+      },
+      "notes": "Stone corridor walls with timber floor and ceiling beams; lit by iron lanterns or torches at regular intervals."
+    },
+    "modern": {
+      "palette_overrides": {
+        "floor": "minecraft:smooth_stone",
+        "wall": "minecraft:white_concrete",
+        "trim": "minecraft:light_gray_concrete",
+        "ceiling": "minecraft:white_concrete"
+      },
+      "notes": "Clean white plaster walls; flush ceiling lights via sea_lantern or glowstone behind glass; uniform door spacing."
+    },
+    "rustic": {
+      "palette_overrides": {
+        "floor": "minecraft:spruce_planks",
+        "wall": "minecraft:spruce_planks",
+        "trim": "minecraft:stripped_spruce_log",
+        "ceiling": "minecraft:spruce_planks"
+      },
+      "notes": "All-timber corridor for farmstead dwellings and barn stable aisles; exposed spruce beams overhead."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "intimacy-gradient",
+    "common-areas-at-the-heart"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "hallway",
+    "style": ["medieval", "modern", "rustic"]
+  },
+  "applicable_to": ["residential", "tavern", "barn"],
+  "parameters": {
+    "corridor_orientation": "long_axis",
+    "corridor_width": 2,
+    "room_side": "both_or_one",
+    "room_count_per_side": "2-4"
+  },
+  "python_skill_signature": null,
+  "skill_category": "floor_layout",
+  "schema_version": "2.0"
+}

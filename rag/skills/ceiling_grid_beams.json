@@ -1,0 +1,41 @@
+{
+  "id": "ceiling_grid_beams",
+  "name": "Cross-beam ceiling grid",
+  "kind": "decorative",
+  "description": "Grid of @secondary beams one Y below the ceiling, every third cell on both axes.",
+  "typical_dimensions": {
+    "min": [
+      4,
+      3,
+      4
+    ],
+    "preferred": [
+      8,
+      4,
+      8
+    ],
+    "max": [
+      16,
+      9,
+      16
+    ]
+  },
+  "tags": {
+    "category": "any",
+    "style": [
+      "medieval",
+      "rustic",
+      "fantasy",
+      "gothic",
+      "renaissance",
+      "modern",
+      "minimalist",
+      "japanese",
+      "chinese",
+      "mediterranean"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.ceiling_grid_beams.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_decoration",
+  "schema_version": "2.0"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "open-plan-loft-layout",
+  "name": "Open plan loft layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "Floor-layout strategy in which the entire habitable footprint is treated as one continuous open volume with at most a handful of low partitions, and the functional zones — kitchen, dining and living area, sometimes a sleeping nook — are read off the arrangement of furniture, rugs and pendant lighting instead of walls. The ceiling is held deliberately tall (4 or 5 blocks clear) to reinforce the loft character, plumbing and services are pushed against a single back wall so the rest of the slab stays uninterrupted, and only the bathroom is fully enclosed. This is the canonical plan of converted warehouse lofts, modern studio apartments, minimalist open houses and small open-front shops, where spatial generosity matters more than room count.",
+  "typical_dimensions": {
+    "min": [8, 4, 8],
+    "preferred": [12, 5, 14],
+    "max": [20, 7, 24]
+  },
+  "tags": {
+    "category": "living-room",
+    "style": ["modern", "minimalist", "industrial"]
+  },
+  "applicable_to": ["residential", "shop"],
+  "parameters": {
+    "partition_count": "0-2",
+    "zoning_method": "furniture_and_lighting",
+    "ceiling_height": "tall_4_or_5_blocks",
+    "services_against_one_wall": true
+  },
+  "placement_rules": [
+    "Keep the main slab as a single uninterrupted volume; allow at most 2 partial partitions (half-height walls, freestanding shelves or planters), never a floor-to-ceiling wall except around the bathroom.",
+    "Hold ceiling height at 4 or 5 blocks clear so the volume reads as a loft; below 4 blocks it collapses back into a normal room and above 5 it loses domestic scale at this footprint.",
+    "Push the kitchen counter, sink and any service risers against one single wall (the 'service wall') so plumbing and ducts share one chase and the rest of the perimeter stays clear for windows.",
+    "Zone the kitchen, dining and living areas by furniture grouping and a dedicated pendant light or lamp over each cluster — no internal walls, no door frames, no thresholds between zones.",
+    "Place the dining zone between the kitchen and the living zone so it acts as the transitional buffer that ties the two together.",
+    "Maintain at least 2 blocks of unfurnished circulation running diagonally across the slab from the entrance to the service wall so the open volume is actually walkable.",
+    "Allow windows on at least two non-adjacent facades so daylight reaches deep into the open volume; a single-aspect loft feels cavernous at these depths."
+  ],
+  "alexander_patterns_relevant": [
+    "common-areas-at-the-heart",
+    "light-on-two-sides",
+    "the-family-room"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

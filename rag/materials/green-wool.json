@@ -1,0 +1,11 @@
+{
+  "id": "green-wool",
+  "block_id": "minecraft:green_wool",
+  "category": "wool",
+  "color": "green",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["modern", "fantasy"]
+}

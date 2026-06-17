@@ -1,0 +1,108 @@
+{
+  "id": "balcony",
+  "name": "Balcony",
+  "kind": "structural",
+  "description": "A small balcony that protrudes 2-3 blocks outward from a flat wall section, supported by decorative @stairs corbels underneath and ringed by a @fence railing on the 3 free edges. A @fence_gate sits in the middle of the far edge for optional access; flower pots crown the two far corners and a small @primary overhang above the deck carries a hanging lantern. Builds a 3-5 wide, 2-3 deep deck extruded along the chosen `protrude_axis` ('+z' by default), so the balcony reads as a lived-in threshold between room and street.",
+  "typical_dimensions": {
+    "min": [
+      3,
+      3,
+      2
+    ],
+    "preferred": [
+      4,
+      4,
+      2
+    ],
+    "max": [
+      6,
+      4,
+      3
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "floor_slab",
+      "count": "6..15",
+      "rule": "@floor rectangle (3-5 wide x 2-3 deep) protruding from the wall — the balcony deck."
+    },
+    {
+      "item": "underside_corbel",
+      "count": "4..10",
+      "rule": "@stairs[half=top] facing back toward the wall, placed one row below the deck along the free edges as decorative brackets."
+    },
+    {
+      "item": "railing_fence",
+      "count": "6..14",
+      "rule": "@fence on the 3 free edges of the deck, one row above the floor; the wall-side edge stays open for room access."
+    },
+    {
+      "item": "gate",
+      "count": "0..1",
+      "rule": "minecraft:oak_fence_gate centred on the far edge of the railing — optional access onto the balcony itself (e.g. from a ladder)."
+    },
+    {
+      "item": "flower_pots",
+      "count": 2,
+      "rule": "minecraft:flower_pot on top of the two far-edge corner fence posts."
+    },
+    {
+      "item": "lantern",
+      "count": 1,
+      "rule": "minecraft:lantern[hanging=true] suspended from a small @primary overhang stub two rows above the deck — lights the balcony at night."
+    }
+  ],
+  "placement_rules": [
+    "Floor protrudes from wall along outward axis (kwarg `protrude_axis`: '+x', '-x', '+z', '-z'; default '+z'); deck is 3-5 wide on the wall plane and 2-3 deep along the protrude axis.",
+    "Railing on 3 free edges — the wall-side edge stays open so the balcony connects to the interior; a fence gate is centred on the far edge for optional outdoor access.",
+    "Corbel underneath for visual support — @stairs blocks with `half=top` facing back toward the wall, placed one row below the deck along the protruding edges, reading as cantilever brackets.",
+    "Flower pots at corners — one pot atop each of the two far-edge corner fence posts; the planters mark the balcony's outermost silhouette.",
+    "Defensive on AABBs from 3x3x2 up to 6x4x3 — out-of-range inputs are clamped to this envelope, never raised."
+  ],
+  "lighting_ventilation": "The hanging lantern under the small overhang provides interior light (light level 15) and marks the balcony as inhabited at night. Open to the outside on three sides, the balcony also serves as a natural air-and-view extension of the adjoining room.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "@floor": "minecraft:oak_planks",
+        "@stairs": "minecraft:oak_stairs",
+        "@fence": "minecraft:oak_fence",
+        "@primary": "minecraft:oak_planks"
+      },
+      "notes": "Oak deck on oak corbels with an oak railing — fits cottages, inns, half-timbered houses."
+    },
+    "modern": {
+      "palette_overrides": {
+        "@floor": "minecraft:polished_andesite",
+        "@stairs": "minecraft:smooth_quartz_stairs",
+        "@fence": "minecraft:iron_bars",
+        "@primary": "minecraft:smooth_quartz"
+      },
+      "notes": "Polished andesite deck with iron-bar railing — minimalist French balcony over a smooth-stone corbel."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "@floor": "minecraft:dark_oak_planks",
+        "@stairs": "minecraft:dark_oak_stairs",
+        "@fence": "minecraft:dark_oak_fence",
+        "@primary": "minecraft:dark_oak_planks"
+      },
+      "notes": "Dark oak deck on dark oak corbels with a dark oak railing — fits towers, taverns, wizard studies."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "building-edge",
+    "window-place"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "other",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.balcony.build(aabb, materials, style, *, protrude_axis='+z') -> List[Op]",
+  "skill_category": "wall_fitting",
+  "schema_version": "2.0"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "chinese",
+  "name": "Chinese",
+  "description": "Traditional Chinese architecture: curved upturned eaves, vermilion red columns, jade green glazed tile roofs and pagoda silhouettes. Evokes imperial halls, temples and courtyard dwellings with hierarchical bracket systems and decorative roof ridges.",
+  "palette": {
+    "primary": [
+      "minecraft:red_concrete",
+      "minecraft:dark_oak_planks"
+    ],
+    "secondary": [
+      "minecraft:smooth_quartz",
+      "minecraft:smooth_stone"
+    ],
+    "accent": [
+      "minecraft:gold_block",
+      "minecraft:yellow_terracotta"
+    ],
+    "roof": [
+      "minecraft:green_terracotta",
+      "minecraft:prismarine_bricks"
+    ],
+    "floor": [
+      "minecraft:smooth_stone",
+      "minecraft:polished_diorite"
+    ],
+    "glass": [
+      "minecraft:red_stained_glass_pane",
+      "minecraft:yellow_stained_glass_pane"
+    ],
+    "light": [
+      "minecraft:lantern",
+      "minecraft:sea_lantern"
+    ]
+  },
+  "signature_elements": [
+    "upturned eaves",
+    "red columns",
+    "green or yellow glazed tile roof",
+    "stone lion/dragon guardians",
+    "pagoda multi-tier roof",
+    "courtyard layout"
+  ],
+  "ratios": {
+    "story_height": 4,
+    "wall_thickness": 1,
+    "window_width": 2,
+    "roof_pitch": 0.8
+  },
+  "alexander_patterns": [
+    "sheltering-roof",
+    "strong-centers",
+    "main-entrance"
+  ]
+}

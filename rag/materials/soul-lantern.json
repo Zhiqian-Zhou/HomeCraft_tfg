@@ -1,0 +1,10 @@
+{
+  "id": "soul-lantern",
+  "block_id": "minecraft:soul_lantern",
+  "category": "light-source",
+  "color": "cool cyan-blue",
+  "transparent": true,
+  "light_emission": 10,
+  "is_solid": false,
+  "used_by_styles": ["fantasy"]
+}

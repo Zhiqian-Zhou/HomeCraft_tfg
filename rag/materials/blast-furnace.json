@@ -1,0 +1,10 @@
+{
+  "id": "blast-furnace",
+  "block_id": "minecraft:blast_furnace",
+  "category": "utility",
+  "color": "dark grey iron-clad stone",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": ["medieval", "modern", "fantasy", "rustic"]
+}

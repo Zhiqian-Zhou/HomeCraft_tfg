@@ -1,0 +1,13 @@
+{
+  "id": "cobweb",
+  "block_id": "minecraft:cobweb",
+  "category": "decorative",
+  "color": "white",
+  "transparent": true,
+  "light_emission": 0,
+  "is_solid": false,
+  "used_by_styles": [
+    "gothic",
+    "fantasy"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "enfilade-layout",
+  "name": "Enfilade layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "A chain of rooms arranged in a single line along the building's long axis, with every doorway placed on a shared centreline so that opening all the doors yields an uninterrupted view from the first room to the last. There is no separate corridor: the rooms themselves are the circulation, and visitors traverse the sequence by walking through each space in turn. This is the defining layout of Baroque palaces, Versailles and the Hermitage, where the diminishing perspective of aligned thresholds dramatises arrival and hierarchy. Three to six rooms is typical, often progressing in privacy or grandeur from public ante-chamber to private cabinet at the far end, and each doorway is widened and framed to emphasise the axial vista.",
+  "typical_dimensions": {
+    "min": [6, 5, 16],
+    "preferred": [8, 5, 22],
+    "max": [12, 6, 32]
+  },
+  "tags": {
+    "category": "great-hall",
+    "style": ["renaissance", "victorian", "gothic"]
+  },
+  "applicable_to": ["residential", "monument", "castle"],
+  "parameters": {
+    "room_chain": "linear",
+    "door_alignment": "perfect_axial",
+    "room_count": "3-6",
+    "no_corridor": true,
+    "axis_orientation": "long_axis"
+  },
+  "placement_rules": [
+    "All inter-room doorways must lie on the same centreline parallel to the long axis; any door offset breaks the enfilade vista and defeats the layout.",
+    "Do not insert a corridor or vestibule between rooms — the rooms themselves are the circulation, and an intervening passage converts the layout into a double-loaded corridor plan.",
+    "Chain three to six rooms in series; fewer than three reads as a pair of connected rooms, more than six makes the terminal vista too distant to register.",
+    "Orient the chain along the building's long axis so room depths can stay generous while the overall footprint remains slender.",
+    "Widen the axial doorways (typically 2 blocks wide, 3 blocks tall with a lintel or arch) so the view through the sequence is unobstructed by jamb framing.",
+    "Progress room size or ceremonial weight from one end to the other — antechamber → salon → cabinet — so the sequence reads as a gradient rather than a repetition.",
+    "Terminate the far end of the enfilade with a window, mirror, or focal feature so the long view resolves into something rather than dead-ending on a blank wall.",
+    "Place secondary service doors on the side walls rather than the axial wall, so service circulation does not interrupt the axial thresholds."
+  ],
+  "lighting_ventilation": "Each room in the chain receives its own exterior windows on the long facades (typically both sides, since there is no corridor consuming one flank), giving cross-ventilation room by room. The axial doorways themselves carry borrowed light from room to room, and the terminal room at the far end of the vista is often given an enlarged window or a mirror so the sequence resolves into brightness; supplement axial sightlines at night with chandelier-style sea_lantern or glowstone fixtures centred above each threshold.",
+  "style_variants": {
+    "renaissance": {
+      "palette_overrides": {
+        "floor": "minecraft:polished_andesite",
+        "wall": "minecraft:smooth_sandstone",
+        "trim": "minecraft:chiseled_sandstone",
+        "ceiling": "minecraft:smooth_sandstone"
+      },
+      "notes": "Palazzo or Baroque palace enfilade with stone-flagged floor, plastered sandstone walls and chiseled pilaster framing around each axial doorway."
+    },
+    "victorian": {
+      "palette_overrides": {
+        "floor": "minecraft:dark_oak_planks",
+        "wall": "minecraft:red_terracotta",
+        "trim": "minecraft:dark_oak_log",
+        "ceiling": "minecraft:white_terracotta"
+      },
+      "notes": "Town-house parlour suite with parquet floor, deep red wall coverings and heavy dark oak architraves around each pocket-door threshold."
+    },
+    "gothic": {
+      "palette_overrides": {
+        "floor": "minecraft:cobblestone",
+        "wall": "minecraft:stone_bricks",
+        "trim": "minecraft:chiseled_stone_bricks",
+        "ceiling": "minecraft:dark_oak_planks"
+      },
+      "notes": "Castle state-room sequence with flagstone floor, stone-brick walls and pointed-arch openings framed in chiseled stone between adjoining halls."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "sequence-of-sitting-spaces",
+    "intimacy-gradient",
+    "levels-of-scale"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

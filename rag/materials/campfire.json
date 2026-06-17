@@ -1,0 +1,10 @@
+{
+  "id": "campfire",
+  "block_id": "minecraft:campfire",
+  "category": "light-source",
+  "color": "warm orange-red flame on dark wood",
+  "transparent": true,
+  "light_emission": 15,
+  "is_solid": false,
+  "used_by_styles": ["rustic", "medieval", "cottagecore", "japanese"]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "pathway_cobble",
+  "name": "Cobblestone path",
+  "kind": "exterior",
+  "description": "Single-cell-wide cobblestone path along the longer plot axis.",
+  "typical_dimensions": {
+    "min": [
+      3,
+      2,
+      3
+    ],
+    "preferred": [
+      10,
+      2,
+      5
+    ],
+    "max": [
+      30,
+      3,
+      12
+    ]
+  },
+  "tags": {
+    "category": "any",
+    "style": [
+      "medieval",
+      "rustic",
+      "fantasy",
+      "gothic",
+      "renaissance",
+      "modern",
+      "minimalist",
+      "japanese",
+      "chinese",
+      "mediterranean"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.pathway_cobble.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0",
+  "style_affinity": "Medieval / fortified-military motif. Coherent in medieval/castle/rustic/fantasy/gothic. Out of place in Modern, Minimalist, East-Asian, Classical/Renaissance buildings."
+}

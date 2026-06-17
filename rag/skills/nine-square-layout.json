@@ -1,0 +1,30 @@
+{
+  "id": "nine-square-layout",
+  "name": "Nine-square layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "Floor-layout strategy that divides the footprint into a strict 3x3 grid of nine equal cells, locking the plan into bilateral and diagonal symmetry. The central cell almost always carries a special role — courtyard, atrium, great hall or sanctum — while the eight perimeter cells host smaller rooms, chapels, ancillary services or circulation. This composition descends directly from Andrea Palladio's quadripartite villa plans (Villa Rotonda, Villa Emo) and from countless Renaissance and Beaux-Arts schemes; it is also a staple of axial temple plans and of minimalist modern pavilions that pursue diagrammatic clarity. The uniform grid module (typically 3 to 5 blocks per cell) makes the structure trivially gridable, simplifies the roof, and turns every cross-axis into a legible enfilade through the centre.",
+  "typical_dimensions": {
+    "min": [12, 5, 12],
+    "preferred": [18, 6, 18],
+    "max": [27, 8, 27]
+  },
+  "tags": {
+    "category": "hallway",
+    "style": ["renaissance", "modern", "minimalist"]
+  },
+  "applicable_to": ["residential", "monument", "temple"],
+  "parameters": {
+    "grid_dim": "3x3",
+    "center_cell_role": "special_courtyard_or_hall",
+    "grid_cell_size": "uniform_3_to_5_blocks",
+    "axial_symmetry": true
+  },
+  "alexander_patterns_relevant": [
+    "common-areas-at-the-heart",
+    "levels-of-scale",
+    "intimacy-gradient"
+  ],
+  "python_skill_signature": null
+}

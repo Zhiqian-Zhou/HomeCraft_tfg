@@ -1,0 +1,75 @@
+{
+  "id": "basement-vault-layout",
+  "name": "Basement vault layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "Floor-layout strategy for an underground or semi-buried storey carved beneath the main living floors of a building. The plan is dominated by very thick load-bearing stone walls supporting an arched ceiling — either a continuous barrel vault running the length of the room or a sequence of groin vaults springing from squat piers — so that the masonry above can rest safely on the cellar. Exterior windows are either absent or reduced to narrow slits set high under the springing line, giving cool, dim, dry storage that suits a wine cellar, a fortress dungeon, a sacred crypt, or a medieval undercroft. Access is restricted to a single exterior stair, an interior trapdoor or a guarded door, reinforcing the strict intimacy gradient from public ground floor down to private vault.",
+  "typical_dimensions": {
+    "min": [6, 3, 8],
+    "preferred": [10, 4, 12],
+    "max": [16, 5, 18]
+  },
+  "tags": {
+    "category": "basement",
+    "style": ["medieval", "gothic", "fantasy"]
+  },
+  "applicable_to": ["residential", "castle", "temple"],
+  "parameters": {
+    "below_grade": true,
+    "ceiling_type": "barrel_vault_or_groin_vault",
+    "wall_thickness": "2_to_3_blocks",
+    "windows": "none_or_high_slits",
+    "access_via": "exterior_stair_or_trapdoor"
+  },
+  "placement_rules": [
+    "The finished floor of the vault sits at least 3 blocks below the surrounding ground level so that the storey reads as truly buried, not merely a low-walled outbuilding.",
+    "Perimeter walls are 2 to 3 blocks thick in solid stone masonry; no timber-framed or thin partition walls are permitted on the exterior envelope.",
+    "The ceiling is a single barrel vault when the room is narrow (interior width up to 6 blocks) or a sequence of groin vaults springing from interior piers when the room is wider, never a flat plank ceiling.",
+    "Any exterior windows are limited to narrow slits no more than 1 block wide, placed within the top 2 blocks of the wall just under the springing of the vault.",
+    "Access is restricted to one or two controlled points — an exterior cellar stair from the courtyard, an interior trapdoor on the floor above, or a single guarded door — never an open public threshold.",
+    "Interior piers and supporting columns align on a regular grid so that each bay of the groin vault is roughly square in plan, keeping the masonry geometry buildable.",
+    "Floor finish is stone, gravel or coarse dirt; no carpets, planks or fragile finishes that would betray the damp, cool character of an underground room."
+  ],
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:cobblestone",
+        "secondary": "minecraft:stone_bricks",
+        "vault": "minecraft:stone_bricks",
+        "pier": "minecraft:stone_bricks",
+        "floor": "minecraft:gravel",
+        "trim": "minecraft:dark_oak_planks"
+      },
+      "notes": "Castle undercroft beneath the great hall: rough cobblestone perimeter walls 3 blocks thick, a continuous stone-brick barrel vault, gravel floor and a single steep stair down from the bailey — lit by sparse iron lanterns hung on chains at each bay."
+    },
+    "gothic": {
+      "palette_overrides": {
+        "primary": "minecraft:stone_bricks",
+        "secondary": "minecraft:chiseled_stone_bricks",
+        "vault": "minecraft:polished_andesite",
+        "pier": "minecraft:chiseled_stone_bricks",
+        "floor": "minecraft:smooth_stone",
+        "trim": "minecraft:polished_blackstone_bricks"
+      },
+      "notes": "Cathedral crypt under the choir: chiseled-stone-brick piers carry pointed groin vaults faced in pale polished andesite, narrow lancet slits high in the wall admit thin shafts of light onto a smooth-stone floor — a procession of bays each marked by a sarcophagus or reliquary niche."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:mossy_cobblestone",
+        "secondary": "minecraft:cracked_stone_bricks",
+        "vault": "minecraft:mossy_stone_bricks",
+        "pier": "minecraft:cobblestone",
+        "floor": "minecraft:coarse_dirt",
+        "trim": "minecraft:dark_oak_planks"
+      },
+      "notes": "Forgotten dungeon vault: mossy cobblestone perimeter, cracked-stone-brick piers and a mossy-stone-brick groin vault sagging with age, coarse-dirt floor strewn with rubble, iron-bar grilles over the few high slit windows and soul-lanterns marking the descent of a single twisting stair."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "pools-of-light",
+    "intimacy-gradient"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

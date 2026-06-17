@@ -1,0 +1,14 @@
+{
+  "id": "blue-carpet",
+  "block_id": "minecraft:blue_carpet",
+  "category": "decorative",
+  "color": "blue",
+  "transparent": true,
+  "light_emission": 0,
+  "is_solid": false,
+  "used_by_styles": [
+    "medieval",
+    "renaissance",
+    "vanilla"
+  ]
+}

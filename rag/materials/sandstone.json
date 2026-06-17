@@ -1,0 +1,15 @@
+{
+  "id": "sandstone",
+  "block_id": "minecraft:sandstone",
+  "category": "stone",
+  "color": "pale tan with horizontal banding",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:sandstone_stairs",
+    "slab": "minecraft:sandstone_slab",
+    "wall": "minecraft:sandstone_wall"
+  },
+  "used_by_styles": ["mediterranean", "egyptian", "rustic"]
+}

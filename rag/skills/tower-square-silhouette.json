@@ -1,0 +1,89 @@
+{
+  "id": "tower-square-silhouette",
+  "name": "Square tower silhouette",
+  "kind": "structural",
+  "description": "A tall, slender structure built on a square footprint whose height significantly exceeds its width, giving a height-to-width ratio between 1.5 and 4. Walls rise vertically as a uniform prism with little or no setback, terminating either in a crenellated parapet — a battlemented walkway suitable for lookouts and defenders — or in a pyramidal hip roof that sheds rain on all four sides. The single entrance is placed on the ground floor of one face, often raised slightly or fronted by a short stair. Interior floors typically number three to seven, connected by a central or wall-hugging spiral stair. This silhouette is the canonical form of medieval castle keeps, isolated watchtowers, gothic bell towers, and the proud merchant towers of San Gimignano in Tuscan Italy.",
+  "typical_dimensions": {
+    "min": [
+      6,
+      12,
+      6
+    ],
+    "preferred": [
+      10,
+      26,
+      10
+    ],
+    "max": [
+      20,
+      48,
+      20
+    ]
+  },
+  "placement_rules": [
+    "Footprint is strictly square (length equals width); any deviation breaks the keep silhouette.",
+    "Height-to-width ratio must stay between 1.5 and 4.0 — below 1.5 reads as a blockhouse, above 4.0 as a spire or chimney.",
+    "Place the main entrance on the ground floor of one face, centered or slightly off-centre, optionally on a raised plinth.",
+    "Distribute narrow windows or arrow slits sparsely along the upper storeys, typically one per face per floor.",
+    "Terminate the top with either crenellations (parapet wall with regular battlements) or a four-sided pyramid roof at a 45-60 degree pitch.",
+    "Reserve the highest floor for the lookout, bell chamber, or lord's hall — it gets the most window area."
+  ],
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:cobblestone",
+        "accent": "minecraft:stone_bricks",
+        "roof": "minecraft:stone_brick_stairs",
+        "trim": "minecraft:oak_log"
+      },
+      "notes": "Rough cobblestone walls with stone-brick corner quoins; crenellated parapet; small arrow-slit windows."
+    },
+    "gothic": {
+      "palette_overrides": {
+        "primary": "minecraft:stone_bricks",
+        "accent": "minecraft:chiseled_stone_bricks",
+        "roof": "minecraft:cobblestone_stairs",
+        "trim": "minecraft:dark_oak_log"
+      },
+      "notes": "Tall narrow profile with steep pyramidal slate roof; pointed-arch upper windows; chiseled-stone trim."
+    },
+    "renaissance": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_stone",
+        "accent": "minecraft:stone_bricks",
+        "roof": "minecraft:brick_stairs",
+        "trim": "minecraft:polished_andesite"
+      },
+      "notes": "Refined San-Gimignano merchant tower; smoother ashlar walls; flat or low pyramid cap; regular fenestration on upper floors."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "tower",
+    "main-entrance"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "tower",
+    "style": [
+      "medieval",
+      "gothic",
+      "renaissance"
+    ]
+  },
+  "applicable_to": [
+    "tower",
+    "castle"
+  ],
+  "parameters": {
+    "footprint_shape": "square",
+    "aspect_ratio": "1.0",
+    "h_w_ratio": "1.5-4.0",
+    "preferred_floors": "3-7",
+    "roof_type": "crenellated_or_pyramid",
+    "entrance_side": "ground_floor",
+    "floor_progression": "setback"
+  },
+  "python_skill_signature": null,
+  "skill_category": "global_silhouette",
+  "schema_version": "2.0"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "chiseled-red-sandstone",
+  "block_id": "minecraft:chiseled_red_sandstone",
+  "category": "stone",
+  "color": "rust red with carved wither-skull relief",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["egyptian", "mediterranean"]
+}

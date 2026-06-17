@@ -1,0 +1,42 @@
+{
+  "id": "light_brazier_corners",
+  "name": "Corner braziers (lit)",
+  "kind": "decorative",
+  "description": "Corner posts (height 2) capped with lantern.",
+  "typical_dimensions": {
+    "min": [
+      4,
+      3,
+      4
+    ],
+    "preferred": [
+      8,
+      4,
+      8
+    ],
+    "max": [
+      16,
+      9,
+      16
+    ]
+  },
+  "tags": {
+    "category": "any",
+    "style": [
+      "medieval",
+      "rustic",
+      "fantasy",
+      "gothic",
+      "renaissance",
+      "modern",
+      "minimalist",
+      "japanese",
+      "chinese",
+      "mediterranean"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.light_brazier_corners.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_decoration",
+  "schema_version": "2.0",
+  "style_affinity": "Medieval / fortified-military motif. Coherent in medieval/castle/rustic/fantasy/gothic. Out of place in Modern, Minimalist, East-Asian, Classical/Renaissance buildings."
+}

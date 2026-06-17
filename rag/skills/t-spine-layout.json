@@ -1,0 +1,70 @@
+{
+  "id": "t-spine-layout",
+  "name": "T-spine layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "A T-shaped circulation spine in which a long main corridor is met at right angles by a shorter perpendicular branch, producing a single T-intersection that becomes the natural anchor of the plan. The main arm carries most of the circulation flow and is typically about three times the length of the branch, lining repeated private rooms along its sides, while the branch arm reaches deeper into the footprint to serve a secondary cluster of rooms or a service wing. The intersection itself widens into a shared great hall, atrium or vestibule that acts as the social heart of the building and as the visual focus on entry. This layout is common in larger houses, manor halls, school wings, temple complexes and public buildings where two functional zones must meet at a clearly hierarchical common space.",
+  "typical_dimensions": {
+    "min": [12, 4, 12],
+    "preferred": [18, 4, 16],
+    "max": [26, 5, 22]
+  },
+  "placement_rules": [
+    "Place the T-intersection roughly one-third of the way along the main arm so the longer leg reads as the dominant axis and the branch as a subordinate wing.",
+    "Main arm length is approximately three times the branch arm length; below 2x the plan reads as a cross, above 4x the branch feels vestigial.",
+    "Widen the intersection bay to at least 4x4 so it functions as a shared great hall, atrium or vestibule rather than as a mere corner of two corridors.",
+    "Keep both corridor arms at a uniform 2-block width for residential use; widen to 3 blocks in temples and public buildings to handle higher traffic.",
+    "Attach 2-4 rooms per side along each arm; concentrate the more public rooms near the intersection and place the more private rooms toward the far ends of the arms.",
+    "Terminate each arm with a window, door or feature room so no corridor dead-ends in a blank wall.",
+    "Align the main entrance on the axis of either the main arm or the branch so that arrival leads directly into the shared intersection space."
+  ],
+  "lighting_ventilation": "Daylight enters through windows at the three arm-ends and, where possible, through a clerestory or skylight over the intersection so the shared hall stays brighter than the flanking corridors. Supplement with lanterns or torches at the intersection corners and every 4-5 blocks along each arm.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "floor": "minecraft:oak_planks",
+        "wall": "minecraft:cobblestone",
+        "trim": "minecraft:oak_log",
+        "ceiling": "minecraft:oak_planks"
+      },
+      "notes": "Stone-walled corridors with timber floor and exposed oak ceiling beams; the T-intersection opens into a timber-framed great hall with a central hearth and iron lanterns."
+    },
+    "renaissance": {
+      "palette_overrides": {
+        "floor": "minecraft:polished_andesite",
+        "wall": "minecraft:smooth_stone",
+        "trim": "minecraft:stone_brick_wall",
+        "ceiling": "minecraft:smooth_stone"
+      },
+      "notes": "Symmetrical stone corridors with pilasters at the intersection; the shared bay becomes a formal vestibule with axial sightlines down all three arms."
+    },
+    "modern": {
+      "palette_overrides": {
+        "floor": "minecraft:smooth_stone",
+        "wall": "minecraft:white_concrete",
+        "trim": "minecraft:light_gray_concrete",
+        "ceiling": "minecraft:white_concrete"
+      },
+      "notes": "Flush white plaster corridors meeting at an open atrium; sea_lantern or glowstone uplighting at the intersection and uniform door spacing along both arms."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "common-areas-at-the-heart",
+    "intimacy-gradient"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "hallway",
+    "style": ["medieval", "renaissance", "modern"]
+  },
+  "applicable_to": ["residential", "castle", "temple"],
+  "parameters": {
+    "spine_shape": "T",
+    "intersection_role": "shared_great_hall_or_atrium",
+    "main_arm": "longer_3x",
+    "branch_arm": "shorter_perpendicular",
+    "rooms_per_arm": "2-4"
+  },
+  "python_skill_signature": null
+}

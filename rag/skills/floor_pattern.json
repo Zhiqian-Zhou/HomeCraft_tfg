@@ -1,0 +1,26 @@
+{
+  "id": "floor_pattern",
+  "name": "Decorative floor pattern",
+  "kind": "decorative",
+  "description": "A style-varied decorative floor treatment for ANY room of ANY building. Lays a central rug bounded by a perimeter border (carpet + planks/stone/concrete). Auto-scales with the room AABB; skips rooms too small for the inset.",
+  "typical_dimensions": {
+    "min":       [4, 3, 4],
+    "preferred": [8, 3, 8],
+    "max":       [20, 6, 20]
+  },
+  "placement_rules": [
+    "Lays the border on y0+1 one cell inset from each wall.",
+    "Centre rug fills the inner rectangle when both interior axes are > 4."
+  ],
+  "lighting_ventilation": "No effect on lighting/ventilation.",
+  "alexander_patterns_relevant": ["pools-of-light"],
+  "examples": [],
+  "tags": {
+    "category": "any",
+    "style": ["medieval", "rustic", "fantasy", "gothic", "renaissance",
+              "modern", "minimalist", "japanese", "chinese", "mediterranean"]
+  },
+  "python_skill_signature": "pipeline.skills.floor_pattern.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_decoration",
+  "schema_version": "2.0"
+}

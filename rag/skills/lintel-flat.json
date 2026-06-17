@@ -1,0 +1,27 @@
+{
+  "id": "lintel-flat",
+  "name": "Flat lintel",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "wall_fitting",
+  "description": "A flat horizontal beam — a single course of stripped log, smooth stone, or stone slab — laid directly above a door or window opening to span the gap and transfer the wall load above onto the jambs at either side. The lintel is the simplest possible spanning element: no arch, no relieving triangle, no keystone, just a straight bearing member. It is the dominant opening detail in vernacular cottage construction (oak or spruce log lintels over plank doors), in rustic timber-frame work, and in modern flat-headed openings (smooth-stone or concrete-equivalent beams above aluminium-look frames). Spans are short — up to five blocks — because a flat beam in bending is weaker than an arch in compression. The lintel may sit flush with the wall or project one block beyond the jambs as a shallow shelf, reading as a small canopy.",
+  "typical_dimensions": {
+    "min": [2, 1, 1],
+    "preferred": [3, 1, 1],
+    "max": [5, 1, 1]
+  },
+  "tags": {
+    "category": "door",
+    "style": ["medieval", "modern", "rustic"]
+  },
+  "applicable_to": ["residential", "castle", "monument"],
+  "parameters": {
+    "span_max": 5,
+    "block": "stripped_spruce_log_or_smooth_stone",
+    "placement_above": "door_or_window",
+    "height_above_opening": 0,
+    "projection_beyond_jamb": "0_or_1"
+  },
+  "alexander_patterns_relevant": ["window-place"],
+  "python_skill_signature": null
+}

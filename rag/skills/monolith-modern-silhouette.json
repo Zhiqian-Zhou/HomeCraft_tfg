@@ -1,0 +1,74 @@
+{
+  "id": "monolith-modern-silhouette",
+  "name": "Modern monolithic silhouette",
+  "kind": "structural",
+  "description": "A strictly geometric dwelling read as one or two interlocking rectangular volumes with a flat (or barely sloped) roof, capping the building as a clean horizontal plane. Walls are taut planar surfaces broken by large glazed openings — full-height windows, ribbon glazing, or sliding-door bays — that emphasize mass over ornament. The footprint is a rectangle, or two boxes of slightly different heights joined along one edge to break the silhouette without compromising orthogonality. Upper floors may cantilever 1-2 blocks beyond the ground floor to cast a shadow line and signal the structural frame. Common in Bauhaus and International-Style references, contemporary villas, and minimalist gallery-houses; the entrance sits on a long side, offset from center to preserve the asymmetric composition.",
+  "typical_dimensions": {
+    "min": [10, 5, 10],
+    "preferred": [16, 7, 12],
+    "max": [26, 10, 18]
+  },
+  "placement_rules": [
+    "Footprint is a single rectangle or two rectangles joined along one full edge — never an L, T, or freeform shape.",
+    "Aspect ratio (length:width) stays between 1.0 and 1.8; squarer reads as a cube pavilion, longer as a slab block.",
+    "Roof is strictly flat or sloped at most 1 block of rise across the whole span — no gables, hips, or pitched forms.",
+    "Walls are unbroken planar surfaces; window openings are large (2-4 blocks wide, 2-3 tall) and aligned in horizontal bands or full-height bays.",
+    "Main entrance is placed on a long side, offset from the geometric center by at least 2 blocks to preserve asymmetric composition.",
+    "When two volumes are used, the upper or rear volume may cantilever 1-2 blocks beyond the lower box on one face; supports are implied by the box itself, no visible columns.",
+    "Building height ranges from 1 storey (4-5 blocks) for pavilions to 3 storeys (9-10 blocks) for stacked villas before reading as a tower."
+  ],
+  "style_variants": {
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:white_concrete",
+        "accent": "minecraft:light_gray_concrete",
+        "roof": "minecraft:smooth_stone_slab",
+        "trim": "minecraft:polished_andesite",
+        "glazing": "minecraft:glass"
+      },
+      "notes": "Crisp white volumes with light-gray accent box; flat slab roof line; full-height glass bays on the long side facing the view."
+    },
+    "minimalist": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "accent": "minecraft:white_concrete",
+        "roof": "minecraft:smooth_quartz_slab",
+        "trim": "minecraft:iron_block",
+        "glazing": "minecraft:glass"
+      },
+      "notes": "Monochrome quartz envelope; near-invisible trim; openings reduced to a few oversized rectangles to maximize blank wall."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:polished_diorite",
+        "accent": "minecraft:smooth_quartz",
+        "roof": "minecraft:smooth_quartz_slab",
+        "trim": "minecraft:polished_andesite",
+        "glazing": "minecraft:glass"
+      },
+      "notes": "Off-world Bauhaus pavilion; pale stone volumes set against landscape; same orthogonal logic but with mineral palette."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "building-edge",
+    "main-entrance",
+    "window-place"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "residential",
+    "style": ["modern", "minimalist"]
+  },
+  "applicable_to": ["residential"],
+  "parameters": {
+    "footprint_shape": "rectangle_or_two_boxes",
+    "aspect_ratio": "1.0-1.8",
+    "preferred_floors": "1-3",
+    "roof_type": "flat_or_slight_slope",
+    "entrance_side": "long_side_offset_from_center",
+    "cantilever_allowed": true
+  },
+  "python_skill_signature": null,
+  "skill_category": "global_silhouette",
+  "schema_version": "2.0"
+}

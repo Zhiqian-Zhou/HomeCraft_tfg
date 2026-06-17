@@ -1,0 +1,118 @@
+{
+  "id": "chapel",
+  "name": "Chapel",
+  "kind": "room",
+  "description": "Small intimate religious room: a tall, narrow chamber with an altar on a raised dais against the far short wall, a central carpet aisle, two or three rows of pews facing the altar, tall stained-glass windows punched through the long side walls, a hanging lantern chandelier at the nave centre, and wall torches between the windows. Ceiling is either a flat slab lid or, when room allows, a small stepped vault of accent blocks over the centre.",
+  "typical_dimensions": {
+    "min": [
+      5,
+      5,
+      8
+    ],
+    "preferred": [
+      7,
+      6,
+      12
+    ],
+    "max": [
+      10,
+      7,
+      16
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "altar",
+      "count": 1,
+      "rule": "A 2 wide × 1 tall × 1 deep Fill of @accent against the far short wall (z = z0+1), centered on the room's x axis. Topped with a single minecraft:enchanting_table on the centre cell of the dais."
+    },
+    {
+      "item": "pew",
+      "count": "2..3",
+      "rule": "Rows of @stairs[facing=north] on the floor (y0+1), spanning the interior width minus the aisle column, evenly spaced along z between the altar and the entrance. 3 rows when depth ≥ 12, else 2."
+    },
+    {
+      "item": "chandelier",
+      "count": "3..4",
+      "rule": "A cluster of minecraft:lantern[hanging=true] one block below the ceiling lid, arranged in a + pattern around the room centre. Always at least 3 lanterns total."
+    },
+    {
+      "item": "wall_torch",
+      "count": "4..6",
+      "rule": "minecraft:wall_torch blocks on the interior faces of the long (east + west) walls, oriented away from the wall, placed between the stained-glass window columns. 2-3 per side."
+    },
+    {
+      "item": "aisle_carpet",
+      "count": 1,
+      "rule": "A single 1-wide @carpet runner one block above the floor, centred on x, running from the entrance row (z1-2) to the foot of the altar dais (z0+2)."
+    },
+    {
+      "item": "stained_glass_window",
+      "count": "4..6",
+      "rule": "Tall 2-3 block vertical columns of @glass punched through the east and west long walls, evenly distributed along z. Height = 3 when room height ≥ 6, else 2. 2 or 3 windows per side."
+    }
+  ],
+  "placement_rules": [
+    "Altar at far end, raised on dais",
+    "Pews face altar",
+    "Tall narrow windows on side walls",
+    "Aisle runs entrance-to-altar",
+    "Chandelier hangs above the nave centre",
+    "Wall torches sit between the window columns, never overlap them"
+  ],
+  "lighting_ventilation": "Layered lighting: hanging lantern chandelier at the conceptual nave centre below the ceiling, wall torches on the long walls between windows, and tall stained-glass windows on both side walls flood the nave with coloured daylight. Tall room (≥ 5 high) keeps the volume vertical and contemplative.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:stone_bricks",
+        "accent": "minecraft:polished_andesite",
+        "floor": "minecraft:oak_planks",
+        "stairs": "minecraft:oak_stairs",
+        "slab": "minecraft:stone_brick_slab",
+        "glass": "minecraft:red_stained_glass_pane",
+        "carpet": "minecraft:red_carpet"
+      },
+      "notes": "Romanesque chapel: oak pews, stone-brick walls, red stained glass, oak floor; the enchanting table reads as a stone altar."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "accent": "minecraft:smooth_stone",
+        "floor": "minecraft:polished_andesite",
+        "stairs": "minecraft:smooth_quartz_stairs",
+        "slab": "minecraft:smooth_stone_slab",
+        "glass": "minecraft:white_stained_glass_pane",
+        "carpet": "minecraft:white_carpet"
+      },
+      "notes": "Minimalist civic chapel: quartz + smooth stone, white glazing, recessed lantern chandelier; pew rows in smooth-stone stairs read as benches."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "accent": "minecraft:purpur_block",
+        "floor": "minecraft:dark_oak_planks",
+        "stairs": "minecraft:dark_oak_stairs",
+        "slab": "minecraft:purpur_slab",
+        "glass": "minecraft:purple_stained_glass_pane",
+        "carpet": "minecraft:purple_carpet"
+      },
+      "notes": "Dark-oak shrine with purpur altar dais, purple stained-glass windows, sea-lantern chandelier (overrides the @light slot); the enchanting table reads as an arcane focus."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "light-on-two-sides",
+    "main-entrance",
+    "pools-of-light"
+  ],
+  "tags": {
+    "category": "chapel",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.chapel.build(aabb, materials, style, **kwargs) -> List[Op]",
+  "skill_category": "room_role",
+  "schema_version": "2.0"
+}

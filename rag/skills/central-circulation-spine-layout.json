@@ -1,0 +1,41 @@
+{
+  "id": "central-circulation-spine-layout",
+  "name": "Central circulation spine",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "A floor plan organized around a continuous circulation spine running along the building's main axis, with all rooms branching from it via doored walls. The spine is 2-3 blocks wide and works equally for medieval inns, modern apartments, Japanese ryokan, and Renaissance palaces — wherever rooms must connect coherently without dead-end pockets. Common rooms (kitchen, living, dining, great_hall) sit at the spine's center, private rooms at its ends, following Alexander's intimacy gradient. Vertical connectors (staircases) reserve their footprint ON the spine, never inside a habitable room, so multi-floor circulation stacks cleanly. Applicable to residential, tavern, temple, monument, and shop categories whenever the floor plate exceeds roughly 8×8 cells. The spine pattern is the simplest layout primitive that guarantees the voxel_connectivity invariant: every room reachable from every entry_point.",
+  "typical_dimensions": {
+    "min": [8, 4, 8],
+    "preferred": [14, 5, 10],
+    "max": [40, 10, 30]
+  },
+  "tags": {
+    "category": "hallway",
+    "style": ["medieval", "modern", "rustic", "japanese", "renaissance", "gothic", "mediterranean"]
+  },
+  "applicable_to": ["residential", "tavern", "temple", "monument", "shop"],
+  "parameters": {
+    "spine_orientation": "long_axis|short_axis|axial",
+    "spine_width": "2-3",
+    "room_count_per_side": "2-4",
+    "common_room_position": "center|midspan|both_ends",
+    "branch_pattern": "perpendicular_only|perpendicular_or_diagonal",
+    "stair_on_spine": "true_or_false"
+  },
+  "placement_rules": [
+    "Lay a hallway corridor along the building's main axis, 2-3 cells wide, spanning ≥70% of the building length.",
+    "Common rooms (kitchen, living_room, dining_room, great_hall) attach to the spine's CENTER on either side.",
+    "Private rooms (bedroom, bathroom, study) attach to the spine's ENDS, away from the entry.",
+    "Every habitable room MUST share ≥3 wall cells with the spine — the door lives there.",
+    "Exterior entry_points open onto the entry_hall, which is the first cell of the spine.",
+    "When multi-floor, reserved_footprints for stairs sit ON the spine (never inside a habitable room)."
+  ],
+  "alexander_patterns_relevant": [
+    "common-areas-at-the-heart",
+    "intimacy-gradient",
+    "entrance-transition"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

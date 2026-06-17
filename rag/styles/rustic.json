@@ -1,0 +1,34 @@
+{
+  "id": "rustic",
+  "name": "Rustic",
+  "description": "Rough natural materials, weathered wood, mossy stone, and a cosy cottage feel with irregular shapes that hug the land.",
+  "palette": {
+    "primary": ["minecraft:oak_planks", "minecraft:spruce_planks"],
+    "secondary": ["minecraft:cobblestone", "minecraft:mossy_cobblestone"],
+    "accent": ["minecraft:dark_oak_log", "minecraft:stripped_oak_log"],
+    "roof": ["minecraft:oak_planks", "minecraft:dark_oak_planks"],
+    "floor": ["minecraft:oak_planks", "minecraft:dirt"],
+    "glass": ["minecraft:glass_pane"],
+    "light": ["minecraft:torch", "minecraft:lantern", "minecraft:campfire"]
+  },
+  "signature_elements": [
+    "exposed beams",
+    "mossy stone foundations",
+    "thatched roof (slabs)",
+    "irregular wooden fences",
+    "vegetable gardens (saplings/flowers)",
+    "stone hearth",
+    "small windows"
+  ],
+  "ratios": {
+    "story_height": 4,
+    "wall_thickness": 1,
+    "window_width": 1,
+    "roof_pitch": 1.2
+  },
+  "alexander_patterns": [
+    "the-farmhouse-kitchen",
+    "sheltering-roof",
+    "garden-growing-wild"
+  ]
+}

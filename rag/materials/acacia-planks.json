@@ -1,0 +1,15 @@
+{
+  "id": "acacia-planks",
+  "block_id": "minecraft:acacia_planks",
+  "category": "wood",
+  "color": "#A85B33",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:acacia_stairs",
+    "slab": "minecraft:acacia_slab",
+    "fence": "minecraft:acacia_fence"
+  },
+  "used_by_styles": ["savanna", "desert", "mediterranean", "southwestern", "egyptian"]
+}

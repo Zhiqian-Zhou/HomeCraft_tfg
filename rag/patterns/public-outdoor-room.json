@@ -1,0 +1,20 @@
+{
+  "id": "public-outdoor-room",
+  "name": "Public Outdoor Room",
+  "source_work": "A Pattern Language",
+  "paraphrase": "Build in every neighbourhood and within easy walking distance of every house a partially enclosed outdoor room: a place open to the sky but bounded enough by walls, columns, trellises or planting that it reads as a room rather than as open ground. Alexander argues that people will only linger outdoors when the space gives them the same sense of enclosure as an indoor room, and that without such public outdoor rooms casual outdoor sociability disappears.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "348-351",
+    "edition": "Oxford University Press 1977",
+    "isbn": "0-19-501919-9"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "outdoor_enclosure_ratio"
+  },
+  "skills_embodying": [
+    "courtyard_indoor",
+    "garden_bed",
+    "gazebo"
+  ]
+}

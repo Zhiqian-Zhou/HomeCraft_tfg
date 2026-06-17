@@ -1,0 +1,88 @@
+{
+  "id": "sprawling-organic-silhouette",
+  "name": "Sprawling organic silhouette",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "global_silhouette",
+  "description": "Overall silhouette of a dwelling whose footprint reads as 3 to 5 rectangular volumes of unequal scale, meeting at irregular angles, jogs, or short stepped offsets rather than resolving into a single geometric shape. The composition simulates organic growth: a primary main-house volume anchors the plan, secondary wings attach perpendicular or askew, and one or two smaller additions (scullery, mudroom, lean-to) cling to the perimeter at different heights. Roof pitches and ridge directions vary per volume, producing a broken, accreted skyline characteristic of medieval town houses, English country manors, and old rustic farmsteads grown by generations of inhabitants. Consumed by the global_designer to seed an irregular envelope before space_planner subdivides interiors per volume.",
+  "typical_dimensions": {
+    "min": [
+      14,
+      5,
+      14
+    ],
+    "preferred": [
+      28,
+      9,
+      26
+    ],
+    "max": [
+      52,
+      14,
+      48
+    ]
+  },
+  "tags": {
+    "category": "residential",
+    "style": [
+      "medieval",
+      "victorian",
+      "rustic"
+    ]
+  },
+  "applicable_to": [
+    "residential"
+  ],
+  "parameters": {
+    "footprint_shape": "irregular_composition",
+    "volume_count": "3-5",
+    "roof_variation": "mixed_per_volume",
+    "preferred_floors": "1-2_mixed",
+    "entrance_side": "main_volume_facade"
+  },
+  "placement_rules": [
+    "Compose the footprint from 3 to 5 rectangular volumes of distinctly different scales; avoid making any two volumes identical in size or aspect.",
+    "Designate the largest rectangle as the main volume; attach secondary wings either perpendicular to it, at small angular offsets, or shifted by 1-3 block jogs along the shared edge.",
+    "Vary storey count between volumes: the main volume is 2 storeys, at least one secondary wing is 1 storey to break the skyline.",
+    "Give each volume its own roof: combine gabled, hipped, or shed pitches so ridges run in different directions and meet at irregular junctions.",
+    "Place the main entrance on the facade of the largest volume, never at a junction between volumes.",
+    "Small additions (lean-to, scullery, mudroom) should sit at lower height than the volume they attach to and may share a wall rather than stand free.",
+    "Avoid mirror symmetry of the global outline; the silhouette must read as accreted over time, not designed in one stroke."
+  ],
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:oak_planks",
+        "accent": "minecraft:cobblestone",
+        "roof": "minecraft:dark_oak_stairs",
+        "trim": "minecraft:oak_log"
+      },
+      "notes": "Timber-frame wings on cobblestone bases; each volume's roof in dark wood at a different pitch; jettied upper storey on the main volume."
+    },
+    "victorian": {
+      "palette_overrides": {
+        "primary": "minecraft:bricks",
+        "accent": "minecraft:smooth_stone",
+        "roof": "minecraft:dark_oak_stairs",
+        "trim": "minecraft:dark_oak_log"
+      },
+      "notes": "Brick main block with stone-trimmed bay wings; tall narrow chimneys mark each volume; steep slate-look roofs."
+    },
+    "rustic": {
+      "palette_overrides": {
+        "primary": "minecraft:spruce_planks",
+        "accent": "minecraft:mossy_cobblestone",
+        "roof": "minecraft:spruce_stairs",
+        "trim": "minecraft:stripped_spruce_log"
+      },
+      "notes": "Weathered timber farmstead grown by generations: shed-roofed lean-tos in spruce, mossy stone footings, low eaves on the smaller volumes."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "building-edge",
+    "wings-of-light",
+    "common-areas-at-the-heart"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

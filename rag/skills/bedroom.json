@@ -1,0 +1,116 @@
+{
+  "id": "bedroom",
+  "name": "Bedroom",
+  "kind": "room",
+  "description": "A private sleeping room. Contains a bed against a wall, a nightstand with a light source, a storage chest, optional crafting table, a central carpet rug, and a window on the wall opposite the bed. The ceiling is left open as a beamed roof.",
+  "typical_dimensions": {
+    "min": [
+      5,
+      5,
+      5
+    ],
+    "preferred": [
+      7,
+      5,
+      7
+    ],
+    "max": [
+      12,
+      6,
+      12
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "@bed",
+      "count": 1,
+      "rule": "placed against a wall, 2 blocks long along that wall (resolved via style_variants.palette_overrides.bed → colored *_bed block)"
+    },
+    {
+      "item": "minecraft:chest",
+      "count": 1,
+      "rule": "against the wall opposite or adjacent to the bed"
+    },
+    {
+      "item": "nightstand",
+      "count": "1..2",
+      "rule": "single block of @primary or @accent next to the bed head (and foot if medium+)"
+    },
+    {
+      "item": "minecraft:lantern",
+      "count": "1..2",
+      "rule": "on the nightstand, plus at least one extra light source (lantern or torch) on a wall"
+    },
+    {
+      "item": "@carpet",
+      "count": 1,
+      "rule": "a small central patch as a rug, not overlapping the bed footprint (resolved via style_variants.palette_overrides.carpet → colored *_carpet block)"
+    },
+    {
+      "item": "minecraft:crafting_table",
+      "count": "0..1",
+      "rule": "only included on medium+ rooms (interior width and depth >= 8)"
+    }
+  ],
+  "placement_rules": [
+    "Place the bed against a perimeter wall, 2 blocks long along that wall.",
+    "Place a window on the wall opposite the bed (Alexander: 'Light on Two Sides').",
+    "Place primary lighting (lantern) on the nightstand, immediately next to the bed.",
+    "Place the chest against the wall opposite the bed, near a corner.",
+    "Leave the ceiling open: render the roof as Line-op beams between the wall tops, not a solid slab.",
+    "Center the carpet rug in the remaining free floor area; never under the bed."
+  ],
+  "lighting_ventilation": "At least one lantern on the nightstand and one window on the wall opposite the bed. Aim for two light sources on different sides of the bed; on small rooms a wall torch substitutes the second lantern.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:oak_planks",
+        "floor": "minecraft:oak_planks",
+        "roof": "minecraft:dark_oak_planks",
+        "bed": "minecraft:red_bed",
+        "carpet": "minecraft:red_carpet",
+        "accent": "minecraft:stone_bricks"
+      },
+      "notes": "Cozy oak-and-stone room with a red bed and a dark-oak beamed roof."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "floor": "minecraft:polished_andesite",
+        "roof": "minecraft:smooth_stone_slab",
+        "bed": "minecraft:white_bed",
+        "carpet": "minecraft:gray_carpet",
+        "accent": "minecraft:smooth_stone"
+      },
+      "notes": "Clean quartz walls, white bed, gray rug, minimalist exposed beams."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "floor": "minecraft:dark_oak_planks",
+        "roof": "minecraft:purpur_block",
+        "bed": "minecraft:purple_bed",
+        "carpet": "minecraft:purple_carpet",
+        "accent": "minecraft:purpur_block"
+      },
+      "notes": "Dark-oak chamber with a purple bed, purpur beams, and sea-lantern lighting."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "bed-alcove",
+    "light-on-two-sides",
+    "sleeping-to-the-east"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "bedroom",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.bedroom.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_role",
+  "schema_version": "2.0"
+}

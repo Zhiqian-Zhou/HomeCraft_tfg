@@ -1,0 +1,6 @@
+# HomeCraft pipeline runtime.
+# For corpus / ingest / analysis tooling, also install tools/requirements.txt.
+
+openai>=1.0          # LLM calls via OpenRouter (OpenAI-compatible client)
+jsonschema>=4.21     # schema validation for RAG collections & buildings
+numpy>=1.26          # evaluator geometry & voxel math

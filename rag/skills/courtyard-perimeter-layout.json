@@ -1,0 +1,72 @@
+{
+  "id": "courtyard-perimeter-layout",
+  "name": "Courtyard perimeter layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "Floor plan organised as a ring of habitable rooms wrapping a central open-air courtyard. The plan reads as a hollow square (or near-square) footprint: the exterior wall encloses the perimeter, an inner ring of rooms one or two bays deep faces inward, and the geometric centre is carved out as an unroofed patio that takes 20-40% of the total floor area. Doors and the principal windows of each room open onto the courtyard rather than the street, turning the void into the social and climatic heart of the building. This layout is the schematic ancestor of the Mediterranean villa, the monastic cloister, the Andalusian patio house and the Chinese siheyuan, and it works equally well for residential dwellings, temples and small monumental compounds.",
+  "typical_dimensions": {
+    "min": [12, 4, 12],
+    "preferred": [16, 4, 16],
+    "max": [24, 5, 24]
+  },
+  "tags": {
+    "category": "courtyard",
+    "style": ["mediterranean", "chinese", "renaissance"]
+  },
+  "applicable_to": ["residential", "temple", "monument"],
+  "parameters": {
+    "courtyard_position": "geometric_center",
+    "courtyard_ratio": "0.20-0.40",
+    "rooms_facing_inward": true,
+    "perimeter_walls_exterior": true
+  },
+  "placement_rules": [
+    "Outer footprint is square or near-square (aspect ratio between 1.0 and 1.3) so the inner ring of rooms has roughly even depth on all four sides.",
+    "Central courtyard void is centred on both axes and occupies 20-40% of the footprint area; below that it reads as a lightwell, above it the surrounding rooms become too shallow to inhabit.",
+    "Inner ring of rooms is between 3 and 5 blocks deep — enough for a usable room with furniture against the exterior wall and a door opening to the courtyard.",
+    "Each perimeter room places its principal door, and at least one window, on the wall facing the courtyard; exterior-facing walls receive only small high windows or none at all.",
+    "Perimeter exterior wall is continuous and load-bearing — the building presents a closed face to the street and opens entirely toward the inner patio.",
+    "A covered gallery, arcade or veranda one block wide may line the courtyard edge so circulation between rooms stays sheltered from rain and direct sun.",
+    "The main entrance from outside lands on an axis (a vestibule or zaguan) that pierces one side of the ring and frames a view of the courtyard on arrival, rather than opening directly into a room."
+  ],
+  "style_variants": {
+    "mediterranean": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_sandstone",
+        "secondary": "minecraft:white_terracotta",
+        "roof": "minecraft:granite",
+        "trim": "minecraft:oak_log",
+        "courtyard_paving": "minecraft:smooth_stone"
+      },
+      "notes": "Whitewashed terracotta and sandstone walls, low pitched terracotta-tile (granite/red-stained) roofs over the perimeter rooms, an arcaded gallery of square columns ringing the patio and a small fountain or planted bed at the centre."
+    },
+    "chinese": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "secondary": "minecraft:red_terracotta",
+        "roof": "minecraft:dark_prismarine",
+        "trim": "minecraft:dark_oak_log",
+        "courtyard_paving": "minecraft:stone_bricks"
+      },
+      "notes": "Siheyuan-style ring of timber-framed pavilions on a stone-brick plinth, red-painted walls between dark-oak log posts, upswept dark prismarine (glazed-tile) roofs and a strict four-sided symmetry around a stone-paved central court."
+    },
+    "renaissance": {
+      "palette_overrides": {
+        "primary": "minecraft:polished_andesite",
+        "secondary": "minecraft:smooth_stone",
+        "roof": "minecraft:bricks",
+        "trim": "minecraft:polished_diorite",
+        "courtyard_paving": "minecraft:polished_andesite"
+      },
+      "notes": "Italianate palazzo cloister: a two-storey ring of rooms behind a carefully proportioned colonnade of polished-stone columns, classical entablature in diorite trim and a geometric stone-paved courtyard with a central well or statue."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "public-outdoor-room",
+    "common-areas-at-the-heart",
+    "courtyards-which-live"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

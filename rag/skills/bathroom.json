@@ -1,0 +1,102 @@
+{
+  "id": "bathroom",
+  "name": "Cuarto de baño",
+  "kind": "room",
+  "description": "Cuarto de baño compacto con suelo de losa de piedra (resistente a la humedad), paredes de bloque primario y techo plano de losa. En Minecraft 1.16.5 no existe el bloque inodoro, así que el cauldron actúa como lavabo/bañera y el brewing_stand como proxy de jabón/pociones.",
+  "typical_dimensions": {
+    "min": [
+      4,
+      5,
+      4
+    ],
+    "preferred": [
+      6,
+      4,
+      6
+    ],
+    "max": [
+      10,
+      5,
+      10
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "minecraft:cauldron",
+      "count": 1,
+      "rule": "Pegado a una pared interior, idealmente en el lado más alejado de la puerta."
+    },
+    {
+      "item": "minecraft:water",
+      "count": 1,
+      "rule": "Bloque fuente de agua adyacente al cauldron, dentro del interior."
+    },
+    {
+      "item": "minecraft:brewing_stand",
+      "count": 1,
+      "rule": "Sobre el suelo, junto al cauldron, sustituye al jabón/perfumería."
+    },
+    {
+      "item": "minecraft:chest",
+      "count": 1,
+      "rule": "Almacén de toallas; pegado a la pared opuesta al cauldron."
+    },
+    {
+      "item": "minecraft:lantern",
+      "count": "1..2",
+      "rule": "Iluminación de pared a la altura de la cabeza; en estilo medieval puede sustituirse por torch."
+    }
+  ],
+  "placement_rules": [
+    "Cauldron against wall, water source adjacent",
+    "Hard floor (stone slab) for moisture",
+    "Flat slab ceiling — bathrooms rarely have pitched roofs",
+    "Chest opposite the bathtub to keep towels dry",
+    "Avoid placing lanterns directly above water sources"
+  ],
+  "lighting_ventilation": "Una sola lámpara/antorcha de pared basta para una sala de 4×4 a 6×6; en estancias mayores añadir una segunda luz cerca de la entrada. Una ventana opcional en la pared opuesta al cauldron mejora la ventilación.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "@primary": "minecraft:oak_planks",
+        "@secondary": "minecraft:cobblestone",
+        "@slab": "minecraft:oak_slab",
+        "@light": "minecraft:torch"
+      },
+      "notes": "Bañera de cobre rústica: cauldron sobre piedra basta; iluminación con antorchas."
+    },
+    "modern": {
+      "palette_overrides": {
+        "@primary": "minecraft:smooth_quartz",
+        "@secondary": "minecraft:polished_andesite",
+        "@slab": "minecraft:smooth_stone_slab",
+        "@light": "minecraft:redstone_lamp"
+      },
+      "notes": "Acabados lisos y monocromos; el lantern queda mejor empotrado en el techo."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "@primary": "minecraft:dark_oak_planks",
+        "@secondary": "minecraft:mossy_cobblestone",
+        "@slab": "minecraft:dark_oak_slab",
+        "@light": "minecraft:sea_lantern"
+      },
+      "notes": "Espacio tipo termas; añadir un par de bloques de musgo cerca del cauldron."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "intimacy-gradient"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "bathroom",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.bathroom.build(aabb, materials, style, **kwargs) -> list[Op]",
+  "skill_category": "room_role",
+  "schema_version": "2.0"
+}

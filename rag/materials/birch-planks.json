@@ -1,0 +1,15 @@
+{
+  "id": "birch-planks",
+  "block_id": "minecraft:birch_planks",
+  "category": "wood",
+  "color": "#D7C485",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:birch_stairs",
+    "slab": "minecraft:birch_slab",
+    "fence": "minecraft:birch_fence"
+  },
+  "used_by_styles": ["scandinavian", "modern", "japanese", "cottagecore", "nordic"]
+}

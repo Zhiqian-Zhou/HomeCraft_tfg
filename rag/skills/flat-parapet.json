@@ -1,0 +1,51 @@
+{
+  "id": "flat-parapet",
+  "name": "Flat parapet",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "wall_fitting",
+  "description": "A continuous low wall running around the edge of a flat roof or terrace, serving both as a fall-prevention barrier and as a clean visual termination of the building volume against the sky. Unlike a crenellated battlement, the flat parapet stays smooth and unbroken along its length — a one- or two-block-tall ribbon of smooth quartz, smooth stone, or concrete blocks following the entire roof perimeter. An optional coping course (slab or stair) caps the top to shed water and crisp the silhouette. The flat parapet is the canonical roof-edge detail of modern, minimalist, and Mediterranean mid-rise architecture, where the roof reads as a usable horizontal surface rather than a pitched cover, and the parapet hides rooftop equipment while framing the terrace.",
+  "typical_dimensions": {
+    "min": [
+      3,
+      1,
+      1
+    ],
+    "preferred": [
+      8,
+      1,
+      1
+    ],
+    "max": [
+      20,
+      2,
+      1
+    ]
+  },
+  "tags": {
+    "category": "other",
+    "style": [
+      "modern",
+      "mediterranean",
+      "minimalist"
+    ]
+  },
+  "applicable_to": [
+    "residential",
+    "monument",
+    "shop"
+  ],
+  "parameters": {
+    "height": "1_or_2",
+    "block": "smooth_quartz_or_concrete",
+    "coping_top": "stair_or_slab",
+    "placement": "roof_edge_perimeter",
+    "continuous": true
+  },
+  "alexander_patterns_relevant": [
+    "building-edge",
+    "roof-layout"
+  ],
+  "python_skill_signature": null,
+  "style_affinity": "Medieval / fortified-military motif. Coherent in medieval/castle/rustic/fantasy/gothic. Out of place in Modern, Minimalist, East-Asian, Classical/Renaissance buildings."
+}

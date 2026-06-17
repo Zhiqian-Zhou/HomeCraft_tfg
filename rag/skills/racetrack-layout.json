@@ -1,0 +1,70 @@
+{
+  "id": "racetrack-layout",
+  "name": "Racetrack layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "Floor-layout strategy in which an elongated single-loop corridor wraps continuously around a central core, with all habitable rooms attached only to the OUTER perimeter so every room reaches an external wall. The inner core is reserved exclusively for services (toilets, ducts, electrical), mechanical risers and a lobby or lift bank; no inhabited rooms sit inside it. Because the corridor is a closed loop it provides two independent egress paths from any room, which is why this is the canonical layout of mid-rise office floors, hotels with central elevators and any plan that must meet fire-rated dual-egress requirements. The core typically occupies 15-25% of the floor plate and the loop corridor stays 2-3 blocks wide.",
+  "typical_dimensions": {
+    "min": [10, 5, 14],
+    "preferred": [14, 5, 20],
+    "max": [22, 6, 30]
+  },
+  "tags": {
+    "category": "hallway",
+    "style": ["modern", "industrial", "minimalist"]
+  },
+  "applicable_to": ["residential", "shop"],
+  "parameters": {
+    "corridor_shape": "elongated_loop",
+    "core_is_services_only": true,
+    "perimeter_rooms_only": true,
+    "core_to_floor_ratio": "0.15-0.25"
+  },
+  "placement_rules": [
+    "Place the core so its centroid coincides with the geometric centre of the floor footprint; offsets break the loop symmetry and produce one corridor leg that is too narrow to walk.",
+    "Size the core between 15% and 25% of the floor area — below that the services and lobby will not fit, above that the perimeter room depths collapse below habitable width.",
+    "Restrict the core to services only: toilets, mechanical shafts, electrical risers, lift bank and a lobby; never place a bedroom, office or other habitable room inside the core.",
+    "Attach habitable rooms only to the OUTER perimeter walls so every room has at least one external facade and one window; the inner corridor wall stays solid except for the room door.",
+    "Run the corridor as a continuous closed loop around the core with no dead ends, so two independent egress paths exist from every room — this is the defining fire-rated property of the layout.",
+    "Keep loop corridor width between 2 and 3 blocks; 2 for residential and small offices, 3 where elevator lobby clearance or stretcher access is required.",
+    "Elongate the loop along the building's long axis so the two long corridor legs carry most rooms and the two short legs act mainly as connectors at the ends.",
+    "Total footprint must satisfy long_axis >= short_axis + 4 blocks so the loop reads as elongated rather than square; otherwise use central-core-layout instead."
+  ],
+  "lighting_ventilation": "All habitable rooms sit on the outer perimeter and receive their own exterior windows on the facade. The loop corridor is interior and must be lit artificially with sea_lantern or glowstone fixtures every 4-5 blocks. The core itself is fully interior and windowless — acceptable because it only contains services, which need mechanical ventilation rather than daylight.",
+  "style_variants": {
+    "modern": {
+      "palette_overrides": {
+        "floor": "minecraft:smooth_stone",
+        "wall": "minecraft:white_concrete",
+        "trim": "minecraft:light_gray_concrete",
+        "ceiling": "minecraft:white_concrete"
+      },
+      "notes": "Corporate office floor with a flush white-plaster loop corridor, sea-lantern downlights, and a glazed lift lobby cut into the core."
+    },
+    "industrial": {
+      "palette_overrides": {
+        "floor": "minecraft:polished_andesite",
+        "wall": "minecraft:gray_concrete",
+        "trim": "minecraft:iron_block",
+        "ceiling": "minecraft:smooth_stone"
+      },
+      "notes": "Loft conversion with exposed concrete loop walls, polished andesite floor and iron-block trim around the service core's mechanical risers."
+    },
+    "minimalist": {
+      "palette_overrides": {
+        "floor": "minecraft:smooth_quartz",
+        "wall": "minecraft:white_concrete",
+        "trim": "minecraft:white_concrete",
+        "ceiling": "minecraft:white_concrete"
+      },
+      "notes": "Monochrome white loop with no visible trim, recessed sea-lantern strips and a flush services core whose doors sit flush with the corridor wall."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "light-on-two-sides",
+    "intimacy-gradient"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

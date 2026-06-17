@@ -1,0 +1,115 @@
+{
+  "id": "dovecote",
+  "name": "Dovecote",
+  "kind": "exterior",
+  "description": "Small cylindrical tower designed to shelter doves (a palomar). Builds a hollow @primary cylinder of radius min(W,D)//2 inscribed in the AABB, a solid @secondary foundation disc at y0, 8-12 nesting holes punched into the upper half of the wall as `minecraft:hay_block` cells (the visible dove-holes), a conical/pointed roof made of stacked stair rings converging to a single @accent block at the apex, an optional flagpole made of a @fence post topped with a `minecraft:bone_block` dove proxy, and a single `minecraft:lantern` hanging inside near the top of the wall section for nighttime visibility.",
+  "typical_dimensions": {
+    "min": [
+      3,
+      4,
+      3
+    ],
+    "preferred": [
+      5,
+      10,
+      5
+    ],
+    "max": [
+      5,
+      12,
+      5
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "cylinder_shell",
+      "count": 1,
+      "rule": "Hollow @primary cylinder, radius = min(W,D)//2, height = wall section (AABB height minus roof_h = radius+1)."
+    },
+    {
+      "item": "foundation",
+      "count": 1,
+      "rule": "Solid @secondary disc at y0, same radius as the cylinder, forms the footing of the tower."
+    },
+    {
+      "item": "nesting_holes",
+      "count": "8..12",
+      "rule": "Replace 8-12 wall cells in the UPPER HALF of the wall with `minecraft:hay_block` to render the dove holes; spread evenly around the rim by angle, and across the available upper rows."
+    },
+    {
+      "item": "conical_roof",
+      "count": 1,
+      "rule": "Stacked @stairs rings above the wall, shrinking by 1 in radius per Y-step, each stair faces outward; converge to a single @accent block at the apex."
+    },
+    {
+      "item": "flagpole",
+      "count": 1,
+      "rule": "One @fence post directly above the apex, crowned with a `minecraft:bone_block` as the perched-dove proxy."
+    },
+    {
+      "item": "lantern",
+      "count": 1,
+      "rule": "One `minecraft:lantern` at the center of the interior near the top of the wall section (just below the roof) for night-time visibility."
+    }
+  ],
+  "placement_rules": [
+    "Cylindrical tower form",
+    "Nesting holes in upper half of wall",
+    "Pointed roof for waterproofing",
+    "Lantern inside for nighttime visibility",
+    "Foundation disc of @secondary clearly distinguishes the base from the @primary wall",
+    "Apex block of @accent + flagpole + bone_block 'dove' crowns the roof"
+  ],
+  "lighting_ventilation": "The hay-block nesting holes double as natural ventilation slits in the upper wall, letting doves enter/exit while the conical roof keeps rain off. The interior lantern at the top of the wall keeps light level above hostile-mob threshold (Java 1.16.5) so the dovecote stays mob-safe at night.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:cobblestone",
+        "secondary": "minecraft:stone_bricks",
+        "accent": "minecraft:stone_bricks",
+        "stairs": "minecraft:cobblestone_stairs",
+        "fence": "minecraft:oak_fence",
+        "light": "minecraft:lantern"
+      },
+      "notes": "Cobblestone palomar with a stone-brick footing and cap — the canonical farmstead/monastery dovecote."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "secondary": "minecraft:polished_andesite",
+        "accent": "minecraft:smooth_stone",
+        "stairs": "minecraft:smooth_quartz_stairs",
+        "fence": "minecraft:iron_bars",
+        "light": "minecraft:redstone_lamp"
+      },
+      "notes": "Smooth-quartz aviary tower on an andesite plinth with an iron flagpole — reads as a contemporary garden folly."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "secondary": "minecraft:mossy_cobblestone",
+        "accent": "minecraft:purpur_block",
+        "stairs": "minecraft:dark_oak_stairs",
+        "fence": "minecraft:dark_oak_fence",
+        "light": "minecraft:sea_lantern"
+      },
+      "notes": "Dark-timber wizard's roost on mossy footing with a purpur apex and sea-lantern interior — a witch's familiar coop."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "building-edge",
+    "pools-of-light"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "tower",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.dovecote.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0"
+}

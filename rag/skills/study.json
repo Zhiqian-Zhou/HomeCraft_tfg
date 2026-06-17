@@ -1,0 +1,94 @@
+{
+  "id": "study",
+  "name": "Study",
+  "kind": "room",
+  "description": "A small private office (despacho) for reading, writing and storing papers. Smaller than a library and dominated by a single desk pushed against a wall, with bookshelves at the writer's back, a chair facing the desk, a chest for documents and at least one generous window so the writer gets daylight on their work.",
+  "typical_dimensions": {
+    "min": [
+      4,
+      3,
+      4
+    ],
+    "preferred": [
+      6,
+      4,
+      6
+    ],
+    "max": [
+      8,
+      5,
+      8
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "desk",
+      "count": 1,
+      "rule": "2 blocks long of @primary, set against a wall, facing a window."
+    },
+    {
+      "item": "minecraft:lectern",
+      "count": 1,
+      "rule": "Sits on top of the desk; substitute minecraft:lantern when ceiling height < 4."
+    },
+    {
+      "item": "@stairs (chair)",
+      "count": 1,
+      "rule": "Facing the desk; placed on the carpet strip in front of it."
+    },
+    {
+      "item": "minecraft:bookshelf",
+      "count": "2..3",
+      "rule": "On the same wall as the desk, adjacent to it (so they read as one fitted workspace behind the chair line of sight)."
+    },
+    {
+      "item": "minecraft:chest",
+      "count": 1,
+      "rule": "On the floor next to the chair/desk for storing papers and books."
+    },
+    {
+      "item": "@carpet",
+      "count": 1,
+      "rule": "Single rug under the desk and chair, never under furniture blocks."
+    },
+    {
+      "item": "@glass (window)",
+      "count": "1..2",
+      "rule": "At least one wide (2-block) window on the wall the desk faces, for natural light."
+    }
+  ],
+  "placement_rules": [
+    "Desk facing a window",
+    "Bookshelves on wall behind chair",
+    "Carpet under desk",
+    "Chest within arm's reach of the chair",
+    "Reserve the top course of the window wall as a @primary lintel"
+  ],
+  "lighting_ventilation": "Daylight from a large @glass window on the desk-facing wall; supplemental light from a minecraft:lectern or minecraft:lantern on the desk. Single occupancy room so a single window suffices for ventilation.",
+  "style_variants": {
+    "medieval": {
+      "notes": "Oak planks shell, red carpet, a single lectern with a candle — scriptorium feel."
+    },
+    "modern": {
+      "notes": "Quartz/andesite shell, grey carpet, white-glass full-height window; lantern instead of lectern for a desk lamp."
+    },
+    "fantasy": {
+      "notes": "Dark oak shell with purple carpet and purple-stained window; lectern reads as a spellbook stand."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "workplace-enclosure",
+    "workspace-privacy"
+  ],
+  "tags": {
+    "category": "study",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.study.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_role",
+  "schema_version": "2.0"
+}

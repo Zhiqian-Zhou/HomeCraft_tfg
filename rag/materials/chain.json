@@ -1,0 +1,14 @@
+{
+  "id": "chain",
+  "block_id": "minecraft:chain",
+  "category": "metal",
+  "color": "dark-gray",
+  "transparent": true,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": [
+    "gothic",
+    "medieval",
+    "industrial"
+  ]
+}

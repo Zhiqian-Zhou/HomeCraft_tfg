@@ -1,0 +1,10 @@
+{
+  "id": "oak-log",
+  "block_id": "minecraft:oak_log",
+  "category": "wood",
+  "color": "#6E5638",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": ["medieval", "rustic", "fantasy", "cottagecore", "vanilla"]
+}

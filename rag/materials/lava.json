@@ -1,0 +1,10 @@
+{
+  "id": "lava",
+  "block_id": "minecraft:lava",
+  "category": "fluid",
+  "color": "molten orange-red",
+  "transparent": true,
+  "light_emission": 15,
+  "is_solid": false,
+  "used_by_styles": ["fantasy", "nether", "dwarven", "ruins"]
+}

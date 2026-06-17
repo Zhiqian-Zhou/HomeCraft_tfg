@@ -1,0 +1,10 @@
+{
+  "id": "crafting-table",
+  "block_id": "minecraft:crafting_table",
+  "category": "utility",
+  "color": "brown with grid pattern",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": ["medieval", "modern", "fantasy", "rustic"]
+}

@@ -1,0 +1,308 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homecraft.tfg/schemas/evaluation_report.schema.json",
+  "title": "EvaluationReport",
+  "description": "Output of pipeline.agents.evaluator. Critical evaluation of a generated voxel building against Minecraft 1.16.5 physical constraints (8 metrics) and Christopher Alexander patterns (10 metrics), plus a composite score and an LLM-generated qualitative critique.",
+  "type": "object",
+  "required": [
+    "building_id",
+    "physical",
+    "alexander",
+    "composite"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "building_id": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string",
+      "default": "1.0"
+    },
+    "physical": {
+      "type": "object",
+      "description": "8 physical Minecraft-constraint metrics. Each is {score, notes, ...extras}. score is float in [0,1] OR null if not applicable.",
+      "additionalProperties": false,
+      "properties": {
+        "structural_integrity": {
+          "$ref": "#/$defs/metric"
+        },
+        "voxel_connectivity": {
+          "$ref": "#/$defs/metric"
+        },
+        "vertical_clearance": {
+          "$ref": "#/$defs/metric"
+        },
+        "door_functionality": {
+          "$ref": "#/$defs/metric"
+        },
+        "light_coverage": {
+          "$ref": "#/$defs/metric"
+        },
+        "block_legitimacy": {
+          "$ref": "#/$defs/metric"
+        },
+        "material_consistency": {
+          "$ref": "#/$defs/metric"
+        },
+        "volume_density": {
+          "$ref": "#/$defs/metric"
+        },
+        "envelope_integrity": {
+          "$ref": "#/$defs/metric"
+        },
+        "room_furnishing": {
+          "$ref": "#/$defs/metric"
+        }
+      }
+    },
+    "alexander": {
+      "type": "object",
+      "description": "10 Christopher Alexander pattern metrics. Each is {score, notes, pattern_id, ...}.",
+      "additionalProperties": false,
+      "properties": {
+        "light_on_two_sides": {
+          "$ref": "#/$defs/metric"
+        },
+        "intimacy_gradient": {
+          "$ref": "#/$defs/metric"
+        },
+        "common_areas_at_heart": {
+          "$ref": "#/$defs/metric"
+        },
+        "sheltering_roof": {
+          "$ref": "#/$defs/metric"
+        },
+        "building_edge": {
+          "$ref": "#/$defs/metric"
+        },
+        "window_place": {
+          "$ref": "#/$defs/metric"
+        },
+        "entrance_transition": {
+          "$ref": "#/$defs/metric"
+        },
+        "main_entrance": {
+          "$ref": "#/$defs/metric"
+        },
+        "farmhouse_kitchen": {
+          "$ref": "#/$defs/metric"
+        },
+        "roof_layout": {
+          "$ref": "#/$defs/metric"
+        }
+      }
+    },
+    "appearance": {
+      "type": "object",
+      "description": "5 elaboration/appearance sub-metrics rewarding visual richness (TFGv2-class). Each is {score, notes}.",
+      "additionalProperties": false,
+      "properties": {
+        "facade_articulation": {
+          "$ref": "#/$defs/metric"
+        },
+        "fine_detail": {
+          "$ref": "#/$defs/metric"
+        },
+        "silhouette_complexity": {
+          "$ref": "#/$defs/metric"
+        },
+        "decoration_density": {
+          "$ref": "#/$defs/metric"
+        },
+        "material_richness": {
+          "$ref": "#/$defs/metric"
+        }
+      }
+    },
+    "composite": {
+      "type": "object",
+      "required": [
+        "physical_total",
+        "alexander_total",
+        "overall"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "physical_total": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "alexander_total": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "appearance_total": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "overall": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "weight_table": {
+          "type": "object"
+        },
+        "skipped_metrics": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "prompt_adherence_total": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "worst_metrics": {
+      "type": "array",
+      "description": "Metrics ranked by how much they drag the composite down (impact = effective weight × (1 − score)), with the skill_category to fix and a primary_issue locator. Traceability spine consumed by the gym.",
+      "items": {
+        "type": "object",
+        "required": [
+          "metric_id",
+          "score",
+          "impact_on_composite"
+        ],
+        "properties": {
+          "rank": {
+            "type": "integer"
+          },
+          "metric_id": {
+            "type": "string"
+          },
+          "family": {
+            "type": "string"
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "weight": {
+            "type": "number"
+          },
+          "impact_on_composite": {
+            "type": "number"
+          },
+          "suggested_skill_categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "primary_issue": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "critique": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "scope_summary": {
+      "type": "object",
+      "description": "Media de score por ámbito (interior/exterior/prompt/structural/both) para tratamiento posterior.",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "mean": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "n_metrics": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "metric_metadata": {
+      "type": "object",
+      "description": "Por métrica: qué mide, ámbito y soporte bibliográfico (defensibilidad).",
+      "additionalProperties": {
+        "type": "object"
+      }
+    },
+    "generation": {
+      "type": "object",
+      "description": "Coste de generación para comparar LLMs: tokens, llamadas, tiempo, modelo.",
+      "additionalProperties": true
+    },
+    "prompt_adherence": {
+      "type": "object",
+      "description": "Fidelidad del edificio al prompt (salas, muebles pedidos vs generados, material/color, plantas).",
+      "additionalProperties": {
+        "$ref": "#/$defs/metric"
+      }
+    }
+  },
+  "$defs": {
+    "metric": {
+      "type": "object",
+      "required": [
+        "score"
+      ],
+      "properties": {
+        "score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

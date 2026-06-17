@@ -1,0 +1,83 @@
+{
+  "id": "crenellated-parapet",
+  "name": "Crenellated parapet",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "wall_fitting",
+  "description": "A medieval battlement crowning the top of a castle wall, tower, or fortified gatehouse: a regular alternation of merlons (raised solid teeth) and crenels (gaps between them) that gives the silhouette its unmistakable saw-tooth profile. The merlons shield defenders behind the parapet while the crenels open firing slots for archers and crossbowmen, so the pattern is both ornament and function. Typically run as a continuous band along the perimeter of a flat roof or wall-walk, returning at every corner so the rhythm closes on itself. The crenellation reads from a distance as the unambiguous signal of a fortified building — without it, a square stone tower looks unfinished; with it, the building announces itself as a castle.",
+  "typical_dimensions": {
+    "min": [
+      3,
+      1,
+      1
+    ],
+    "preferred": [
+      8,
+      2,
+      1
+    ],
+    "max": [
+      16,
+      2,
+      1
+    ]
+  },
+  "tags": {
+    "category": "other",
+    "style": [
+      "medieval",
+      "gothic",
+      "fantasy"
+    ]
+  },
+  "applicable_to": [
+    "castle",
+    "tower",
+    "monument"
+  ],
+  "parameters": {
+    "pattern": "merlon_crenel_alternating",
+    "merlon_width": 1,
+    "crenel_width": 1,
+    "merlon_height": "1_or_2",
+    "placement": "wall_top_perimeter"
+  },
+  "placement_rules": [
+    "Run the parapet continuously around the full perimeter of the wall-top or roof; an interrupted crenellation reads as ruin or damage, not as a finished battlement.",
+    "Alternate merlons (one block wide, one or two blocks tall) with crenels (one block wide gaps) in a strict 1:1 rhythm so the saw-tooth pattern is regular and legible from ground level.",
+    "Begin and end each straight run with a merlon — never a crenel — so the corners read as solid teeth and the rhythm wraps cleanly around 90-degree turns.",
+    "Sit the parapet directly on the outer face of the wall (flush, not inset), so the wall-walk behind it gives defenders cover when standing upright.",
+    "Match the merlon material to the wall below (or use a slightly darker accent stone) so the crenellation reads as a vertical extension of the wall, not a hat dropped on top.",
+    "Keep merlon height proportional to the wall: 1 block tall on short curtain walls and gatehouses, 2 blocks tall on tall towers and keeps where the silhouette must remain assertive at distance."
+  ],
+  "lighting_ventilation": "The parapet itself is open masonry — the crenels are by definition gaps, so airflow over the wall-walk is unobstructed and rain drains through the gaps rather than pooling. At night the crenel gaps are the natural mounting points for torches or lanterns spaced one or two merlons apart, casting a dotted line of light along the silhouette that emphasizes the saw-tooth profile against the sky.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "@primary": "minecraft:cobblestone",
+        "@accent": "minecraft:stone_bricks"
+      },
+      "notes": "Cobblestone merlons with stone-brick caps on a stone-brick curtain wall; the slightly rougher cobble teeth read as practical fortification, not decoration."
+    },
+    "gothic": {
+      "palette_overrides": {
+        "@primary": "minecraft:stone_bricks",
+        "@accent": "minecraft:chiseled_stone_bricks"
+      },
+      "notes": "Tall (2-block) stone-brick merlons with chiseled-stone-brick caps on a cathedral or bishop's-palace tower; sharper, more vertical, more ornamental than the squat military variant."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "@primary": "minecraft:deepslate_bricks",
+        "@accent": "minecraft:polished_blackstone_bricks"
+      },
+      "notes": "Dark-stone crenellation on a wizard's tower or evil keep; tall merlons in deepslate brick with polished blackstone caps, often combined with banners hung between the teeth."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "building-edge"
+  ],
+  "examples": [],
+  "python_skill_signature": null,
+  "style_affinity": "Medieval / fortified-military motif. Coherent in medieval/castle/rustic/fantasy/gothic. Out of place in Modern, Minimalist, East-Asian, Classical/Renaissance buildings."
+}

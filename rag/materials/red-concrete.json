@@ -1,0 +1,11 @@
+{
+  "id": "red-concrete",
+  "block_id": "minecraft:red_concrete",
+  "category": "concrete",
+  "color": "red",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["modern", "contemporary"]
+}

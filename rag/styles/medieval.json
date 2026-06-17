@@ -1,0 +1,57 @@
+{
+  "id": "medieval",
+  "name": "Medieval",
+  "description": "European medieval vernacular: thick stone-brick walls with exposed dark-oak timber framing, narrow openings and steep pitched roofs. Evokes village houses, keeps and small castles from the high and late Middle Ages.",
+  "palette": {
+    "primary": [
+      "minecraft:stone_bricks",
+      "minecraft:andesite"
+    ],
+    "secondary": [
+      "minecraft:dark_oak_planks",
+      "minecraft:oak_planks",
+      "minecraft:cut_red_sandstone"
+    ],
+    "accent": [
+      "minecraft:mossy_stone_bricks",
+      "minecraft:chiseled_stone_bricks"
+    ],
+    "roof": [
+      "minecraft:dark_oak_planks",
+      "minecraft:cobblestone"
+    ],
+    "floor": [
+      "minecraft:oak_planks",
+      "minecraft:stone_bricks",
+      "minecraft:coarse_dirt"
+    ],
+    "glass": [
+      "minecraft:glass_pane"
+    ],
+    "light": [
+      "minecraft:torch",
+      "minecraft:lantern",
+      "minecraft:campfire"
+    ]
+  },
+  "signature_elements": [
+    "battlements",
+    "exposed timber beams",
+    "stone hearths",
+    "narrow window slits",
+    "wooden doors with iron bands",
+    "lanterns or torches",
+    "thatched-stone-mix walls"
+  ],
+  "ratios": {
+    "story_height": 4,
+    "wall_thickness": 1,
+    "window_width": 2,
+    "roof_pitch": 1.0
+  },
+  "alexander_patterns": [
+    "sheltering-roof",
+    "building-edge",
+    "the-farmhouse-kitchen"
+  ]
+}

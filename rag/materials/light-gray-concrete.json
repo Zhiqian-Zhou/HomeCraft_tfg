@@ -1,0 +1,11 @@
+{
+  "id": "light-gray-concrete",
+  "block_id": "minecraft:light_gray_concrete",
+  "category": "concrete",
+  "color": "light gray",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["modern", "industrial", "minimalist"]
+}

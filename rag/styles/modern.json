@@ -1,0 +1,55 @@
+{
+  "id": "modern",
+  "name": "Modern",
+  "description": "Contemporary modernist architecture: clean lines, large expanses of glass, concrete and quartz surfaces, flat roofs and open floor plans. Emphasizes horizontality and a minimalist material palette.",
+  "palette": {
+    "primary": [
+      "minecraft:smooth_quartz",
+      "minecraft:polished_andesite",
+      "minecraft:white_concrete"
+    ],
+    "secondary": [
+      "minecraft:smooth_stone",
+      "minecraft:polished_diorite"
+    ],
+    "accent": [
+      "minecraft:gray_concrete",
+      "minecraft:black_concrete"
+    ],
+    "roof": [
+      "minecraft:smooth_stone_slab"
+    ],
+    "floor": [
+      "minecraft:polished_andesite",
+      "minecraft:gray_concrete"
+    ],
+    "glass": [
+      "minecraft:white_stained_glass_pane",
+      "minecraft:glass_pane",
+      "minecraft:light_blue_stained_glass_pane"
+    ],
+    "light": [
+      "minecraft:redstone_lamp",
+      "minecraft:sea_lantern"
+    ]
+  },
+  "signature_elements": [
+    "floor-to-ceiling windows",
+    "flat roofs",
+    "concrete walls",
+    "open floor plans",
+    "minimalist palette",
+    "horizontal lines"
+  ],
+  "ratios": {
+    "story_height": 4,
+    "wall_thickness": 1,
+    "window_width": 5,
+    "roof_pitch": 0.0
+  },
+  "alexander_patterns": [
+    "light-on-two-sides",
+    "window-place",
+    "the-family-room"
+  ]
+}

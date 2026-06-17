@@ -1,0 +1,20 @@
+{
+  "id": "sheltering-roof",
+  "name": "Sheltering Roof",
+  "source_work": "A Pattern Language",
+  "paraphrase": "Slope the roof or make a vault of it, make its entire surface visible, and bring the eaves down low - as low as 6'0\" or 6'6\" - at places like the entrance where people pause. Build the top story of each wing right into the roof so that the roof does not merely cover it but actually surrounds it. Alexander insists that if the roof is hidden, or its presence cannot be felt around the building, occupants will lack a fundamental sense of shelter.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "569-574",
+    "edition": "Oxford University Press 1977",
+    "isbn": "0-19-501919-9"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "sheltering_roof_visibility"
+  },
+  "skills_embodying": [
+    "gabled_roof",
+    "hip_roof",
+    "dome_roof"
+  ]
+}

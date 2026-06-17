@@ -1,0 +1,25 @@
+{
+  "id": "window_seating",
+  "name": "Perimeter window seating",
+  "kind": "decorative",
+  "description": "A continuous bench of @stairs facing inward along the FOUR interior walls of a room, one cell off the wall, at y0+1. Guarantees that any window placed in any exterior wall has nearby seating — directly lifts the `window_place` metric. Universal: applies to ANY room of ANY building.",
+  "typical_dimensions": {
+    "min":       [4, 3, 4],
+    "preferred": [8, 5, 8],
+    "max":       [16, 9, 16]
+  },
+  "placement_rules": [
+    "Stairs face the room centre (north/south/east/west) one cell off each wall, at y0+1."
+  ],
+  "lighting_ventilation": "No effect — purely seating decoration.",
+  "alexander_patterns_relevant": ["window-place"],
+  "examples": [],
+  "tags": {
+    "category": "any",
+    "style": ["medieval", "rustic", "fantasy", "gothic", "renaissance",
+              "modern", "minimalist", "japanese", "chinese", "mediterranean"]
+  },
+  "python_skill_signature": "pipeline.skills.window_seating.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_decoration",
+  "schema_version": "2.0"
+}

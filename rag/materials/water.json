@@ -1,0 +1,10 @@
+{
+  "id": "water",
+  "block_id": "minecraft:water",
+  "category": "fluid",
+  "color": "translucent blue",
+  "transparent": true,
+  "light_emission": 0,
+  "is_solid": false,
+  "used_by_styles": ["medieval", "rustic", "fantasy", "cottagecore", "japanese", "modern", "vanilla"]
+}

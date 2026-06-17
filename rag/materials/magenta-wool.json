@@ -1,0 +1,11 @@
+{
+  "id": "magenta-wool",
+  "block_id": "minecraft:magenta_wool",
+  "category": "wool",
+  "color": "magenta",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["modern", "fantasy"]
+}

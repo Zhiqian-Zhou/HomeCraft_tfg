@@ -1,0 +1,18 @@
+{
+  "id": "blackstone",
+  "block_id": "minecraft:blackstone",
+  "category": "stone",
+  "color": "black",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:blackstone_stairs",
+    "slab": "minecraft:blackstone_slab",
+    "wall": "minecraft:blackstone_wall"
+  },
+  "used_by_styles": [
+    "gothic",
+    "fantasy"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "double-loaded-corridor-layout",
+  "name": "Double-loaded corridor layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "A single central corridor runs the full long axis of the floor plate with rooms attached to both sides, yielding the maximum number of usable rooms per unit of floor area. The corridor sits exactly on the building centreline and is 2-3 blocks wide so two occupants can pass, while each flanking room bay shares the same uniform depth so the outer walls stay flush and the structure reads as a regular comb in plan. This is the defining layout of hotels, hospital wards, dormitories, monastic cells and tenement housing, where repeating identical rooms along a shared spine is the organising idea. Doors typically alternate across the corridor to preserve acoustic privacy and the corridor itself usually terminates in a window or stair at each short end.",
+  "typical_dimensions": {
+    "min": [8, 4, 14],
+    "preferred": [10, 4, 20],
+    "max": [14, 5, 30]
+  },
+  "tags": {
+    "category": "hallway",
+    "style": ["modern", "victorian", "renaissance"]
+  },
+  "applicable_to": ["residential", "tavern", "monument"],
+  "parameters": {
+    "corridor_position": "centerline",
+    "corridor_width": "2-3",
+    "rooms_per_side": "3-5",
+    "room_depth_uniform": true
+  },
+  "placement_rules": [
+    "Corridor is centred on the building's short axis so room depths on either side are equal; offset corridors break the double-loaded symmetry.",
+    "Corridor runs the full long-axis length of the floor plate; do not stop short or jog mid-run, since the layout's value is uninterrupted repetition.",
+    "Total footprint width must satisfy width >= corridor_width + 2 * room_depth (typically >= 8 blocks); below this the room bays become too shallow to be habitable.",
+    "Keep room depth identical on both sides so the external long walls stay flush; if a deeper room is needed, give it its own bay rather than bulging one side.",
+    "Doors to opposing rooms should alternate (stagger) along the corridor rather than face each other directly, preserving acoustic and visual privacy.",
+    "Terminate the corridor at each short end with a window, stair, or service door so the long view never dead-ends into solid wall.",
+    "Use corridor_width = 2 for dormitory and residential use; widen to 3 only for hospital, hotel or monumental scales where stretcher / luggage clearance matters.",
+    "Room count per side stays between 3 and 5 per floor; beyond that the corridor becomes oppressive and a second stair core is required."
+  ],
+  "lighting_ventilation": "The corridor itself is interior and windowless along its length, so daylight must enter from glazed terminations at each short end; supplement with sea_lantern or glowstone ceiling fixtures every 4-5 blocks. Each flanking room receives its own exterior window on the long facade for cross-ventilation, since the corridor wall is shared and cannot be glazed.",
+  "style_variants": {
+    "modern": {
+      "palette_overrides": {
+        "floor": "minecraft:smooth_stone",
+        "wall": "minecraft:white_concrete",
+        "trim": "minecraft:light_gray_concrete",
+        "ceiling": "minecraft:white_concrete"
+      },
+      "notes": "Hotel-style corridor with flush white plaster walls, uniform door spacing and recessed sea-lantern ceiling fixtures behind glass."
+    },
+    "victorian": {
+      "palette_overrides": {
+        "floor": "minecraft:dark_oak_planks",
+        "wall": "minecraft:red_terracotta",
+        "trim": "minecraft:dark_oak_log",
+        "ceiling": "minecraft:white_terracotta"
+      },
+      "notes": "Tenement and boarding-house corridor with patterned terracotta wainscoting, dark oak door frames and patterned runner along the floor."
+    },
+    "renaissance": {
+      "palette_overrides": {
+        "floor": "minecraft:polished_andesite",
+        "wall": "minecraft:smooth_sandstone",
+        "trim": "minecraft:chiseled_sandstone",
+        "ceiling": "minecraft:smooth_sandstone"
+      },
+      "notes": "Monastic dormitory or palazzo service wing with stone-flagged floor, plastered sandstone walls and a coffered ceiling rhythm of chiseled trim."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "intimacy-gradient"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

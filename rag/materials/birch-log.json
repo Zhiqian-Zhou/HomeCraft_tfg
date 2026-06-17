@@ -1,0 +1,10 @@
+{
+  "id": "birch-log",
+  "block_id": "minecraft:birch_log",
+  "category": "wood",
+  "color": "#E6E1D2",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": ["scandinavian", "modern", "japanese", "cottagecore", "nordic"]
+}

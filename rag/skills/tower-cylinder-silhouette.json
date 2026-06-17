@@ -1,0 +1,90 @@
+{
+  "id": "tower-cylinder-silhouette",
+  "name": "Cylindrical tower silhouette",
+  "kind": "structural",
+  "description": "A tall, slender vertical structure with an approximately circular footprint capped by a conical or domed roof. Because Minecraft enforces an axis-aligned voxel grid, the cylinder is approximated by an octagonal or eight-step rasterised circle, with each ring offset to soften the corners. Height-to-width ratio is high (typically 2 to 4), giving the tower its distinctive vertical signature against the skyline. Walls are laid as continuous masonry with narrow slit or arched windows distributed at floor levels, and the interior is conventionally divided into 3 to 6 stacked circular rooms linked by a spiral or central ladder. A single ground-floor entrance pierces one side. Common in fantasy wizard towers, medieval keeps, coastal lighthouses, and dungeon spires.",
+  "typical_dimensions": {
+    "min": [
+      6,
+      12,
+      6
+    ],
+    "preferred": [
+      10,
+      24,
+      10
+    ],
+    "max": [
+      18,
+      44,
+      18
+    ]
+  },
+  "placement_rules": [
+    "Footprint should be near-square (aspect ratio 1.0) so the octagonal rasterisation reads as circular from all sides.",
+    "Maintain a height-to-width ratio between 2 and 4 — shorter reads as a rotunda, taller as an obelisk or spire.",
+    "Walls follow an 8-step octagonal approximation of a circle inscribed in the square footprint; each cardinal face is 2-4 blocks wide with chamfered corners.",
+    "Place the single main entrance on the ground floor, centred on one cardinal face (typically south-facing).",
+    "Distribute narrow windows (1 block wide, 2 blocks tall) one per floor per face, vertically aligned to suggest stacked floors.",
+    "Crown the tower with a conical roof (stair-stepped pyramid over the octagon) for fantasy/medieval or a domed cap for gothic/oriental variants.",
+    "Reserve the top ring (the last 2-3 blocks below the cap) for a parapet, machicolation, or open observation level when the role is a lookout or lighthouse."
+  ],
+  "style_variants": {
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:mossy_cobblestone",
+        "accent": "minecraft:stone_bricks",
+        "roof": "minecraft:purple_wool",
+        "trim": "minecraft:dark_oak_log"
+      },
+      "notes": "Wizard-tower silhouette: leaning slightly, mossy stone shaft, tall conical cap in deep purple or blue wool, crooked timber lintels."
+    },
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:stone_bricks",
+        "accent": "minecraft:cobblestone",
+        "roof": "minecraft:dark_oak_stairs",
+        "trim": "minecraft:stone_brick_stairs"
+      },
+      "notes": "Keep or watchtower: straight cylindrical shaft of stone bricks, crenellated top, shallow conical wooden roof or open battlement."
+    },
+    "gothic": {
+      "palette_overrides": {
+        "primary": "minecraft:stone_bricks",
+        "accent": "minecraft:chiseled_stone_bricks",
+        "roof": "minecraft:nether_brick_stairs",
+        "trim": "minecraft:polished_andesite"
+      },
+      "notes": "Cathedral spire: very steep narrow cone, chiseled stone bands at floor lines, pointed-arch slit windows, dark roof reading as slate."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "sheltering-roof",
+    "tower"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "tower",
+    "style": [
+      "fantasy",
+      "medieval",
+      "gothic"
+    ]
+  },
+  "applicable_to": [
+    "tower",
+    "lighthouse"
+  ],
+  "parameters": {
+    "footprint_shape": "circle",
+    "aspect_ratio": "1.0",
+    "h_w_ratio": "2.0-4.0",
+    "preferred_floors": "3-6",
+    "roof_type": "conical_or_dome",
+    "entrance_side": "ground_floor_single",
+    "floor_progression": "setback"
+  },
+  "python_skill_signature": null,
+  "skill_category": "global_silhouette",
+  "schema_version": "2.0"
+}

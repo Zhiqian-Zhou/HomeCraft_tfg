@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homecraft.tfg/schemas/architecture_plan_v4.schema.json",
+  "title": "ArchitecturePlanV4",
+  "description": "Output of the v4 architecture_planner (Stage 1d, DETERMINISTIC, no LLM). Envelope ops (walls, floors, ceilings, roof) + wall_fitting applications + per-floor adjacency propagated from floor_plans. Each op carries room_id + envelope_role for downstream connector_planner / connector_validator lookups.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "ops",
+    "style_palette",
+    "materials_usage"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "v4"
+    },
+    "ops": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "envelope_role"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "fill",
+              "fill_hollow",
+              "outline",
+              "rect",
+              "stairs",
+              "place",
+              "deferred_fitting"
+            ]
+          },
+          "envelope_role": {
+            "type": "string",
+            "enum": [
+              "foundation",
+              "floor_slab",
+              "wall",
+              "shared_wall",
+              "interior_partition",
+              "ceiling",
+              "roof",
+              "roof_feature",
+              "parapet",
+              "exterior_stair",
+              "frame",
+              "stair_void",
+              "fitting_exterior",
+              "fitting_corner",
+              "fitting_ceiling_band",
+              "fitting_floor_band",
+              "fitting_roof_edge",
+              "fitting_opening"
+            ]
+          },
+          "room_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "shared_with": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "aabb": {
+            "type": "array",
+            "minItems": 6,
+            "maxItems": 6,
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "style_palette": {
+      "type": "object",
+      "required": [
+        "primary",
+        "secondary",
+        "floor",
+        "roof"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "primary": {
+          "type": "string",
+          "pattern": "^minecraft:[a-z0-9_]+(?:\\[[^\\]]*\\])?$"
+        },
+        "secondary": {
+          "type": "string",
+          "pattern": "^minecraft:[a-z0-9_]+(?:\\[[^\\]]*\\])?$"
+        },
+        "floor": {
+          "type": "string",
+          "pattern": "^minecraft:[a-z0-9_]+(?:\\[[^\\]]*\\])?$"
+        },
+        "roof": {
+          "type": "string",
+          "pattern": "^minecraft:[a-z0-9_]+(?:\\[[^\\]]*\\])?$"
+        },
+        "accent": {
+          "type": "string",
+          "pattern": "^minecraft:[a-z0-9_]+(?:\\[[^\\]]*\\])?$"
+        }
+      }
+    },
+    "materials_usage": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "block_id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "block_id": {
+            "type": "string",
+            "pattern": "^minecraft:[a-z0-9_]+(?:\\[[^\\]]*\\])?$"
+          },
+          "palette_slot": {
+            "type": "string",
+            "pattern": "^@[a-z_]+$"
+          },
+          "envelope_roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "op_count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "wall_fittings_applied": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "fitting_id",
+          "location"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "fitting_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_-]+$"
+          },
+          "location": {
+            "type": "string",
+            "enum": [
+              "exterior_wall",
+              "interior_wall",
+              "corner",
+              "ceiling_band",
+              "floor_band",
+              "roof_edge",
+              "opening",
+              "gable"
+            ]
+          },
+          "room_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "side": {
+            "type": "string",
+            "enum": [
+              "+x",
+              "-x",
+              "+z",
+              "-z"
+            ]
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "deferred": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "adjacency_graph_per_floor": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "from_room",
+            "to_room",
+            "kind"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "from_room": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_-]*$"
+            },
+            "to_room": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_-]*$"
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "door",
+                "opening",
+                "none"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "generated_by": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "deterministic": {
+          "const": true
+        },
+        "module": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

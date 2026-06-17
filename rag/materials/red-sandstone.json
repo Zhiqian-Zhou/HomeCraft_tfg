@@ -1,0 +1,15 @@
+{
+  "id": "red-sandstone",
+  "block_id": "minecraft:red_sandstone",
+  "category": "stone",
+  "color": "rust red with horizontal banding",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:red_sandstone_stairs",
+    "slab": "minecraft:red_sandstone_slab",
+    "wall": "minecraft:red_sandstone_wall"
+  },
+  "used_by_styles": ["egyptian", "mediterranean", "rustic"]
+}

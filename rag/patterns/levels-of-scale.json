@@ -1,0 +1,27 @@
+{
+  "id": "levels-of-scale",
+  "name": "Levels of Scale",
+  "source_work": "The Nature of Order",
+  "paraphrase": "Living wholes contain a graduated series of sizes, where each level is roughly two to four times larger or smaller than the next, so that the eye can move smoothly from the largest masses down to the smallest details. When intermediate scales are missing, the form feels either monotonous or chaotic; when they are present, every level reinforces the centers above and below it.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "144-242",
+    "edition": "Center for Environmental Structure 2002",
+    "isbn": "0-9726529-0-6"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "levels_of_scale_ratio",
+    "python_path": "TFGv2.eval.levels_of_scale",
+    "expected_range": [2.0, 4.0]
+  },
+  "skills_embodying": [
+    "gabled_roof",
+    "hip_roof",
+    "dome_roof",
+    "window_bay",
+    "stained_glass_window",
+    "door_with_frame",
+    "round_tower",
+    "square_tower"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "roof_ridge_dragon",
+  "name": "Decorative ridge crest",
+  "kind": "decorative",
+  "description": "Accent ridge of @secondary along the longer roof axis.",
+  "typical_dimensions": {
+    "min": [
+      3,
+      2,
+      3
+    ],
+    "preferred": [
+      6,
+      3,
+      6
+    ],
+    "max": [
+      12,
+      5,
+      12
+    ]
+  },
+  "tags": {
+    "category": "any",
+    "style": [
+      "medieval",
+      "rustic",
+      "fantasy",
+      "gothic",
+      "renaissance",
+      "modern",
+      "minimalist",
+      "japanese",
+      "chinese",
+      "mediterranean"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.roof_ridge_dragon.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0",
+  "style_affinity": "East-Asian (Japanese/Chinese) motif. Coherent in japanese/chinese (and fantasy). Out of place in Western, Gothic, Renaissance, Modern, Mediterranean buildings — use only if the building is East-Asian."
+}

@@ -1,0 +1,79 @@
+{
+  "id": "pagoda-stack-silhouette",
+  "name": "Pagoda stack silhouette",
+  "kind": "structural",
+  "description": "A tall ceremonial tower built as a vertical stack of diminishing storeys, each capped by its own outward-flaring eave whose four corners curl gently upward. The footprint is square or octagonal and typically rises in 3, 5, or 7 floors — odd counts are auspicious in East Asian temple tradition — with every successive storey shrinking by roughly five percent of the cross-section below it, producing the characteristic stepped silhouette. The ground floor is the largest and houses the axial entrance, while upper floors carry shrines, relics, or simply lend height and presence to the monument. Wide projecting eaves shelter the walls and balconies of each level, and the topmost storey is crowned by a finial or spire. Common in Chinese Buddhist complexes and Japanese temple precincts.",
+  "typical_dimensions": {
+    "min": [
+      8,
+      15,
+      8
+    ],
+    "preferred": [
+      12,
+      28,
+      12
+    ],
+    "max": [
+      24,
+      56,
+      24
+    ]
+  },
+  "placement_rules": [
+    "Stack 3, 5, or 7 storeys — odd floor counts are canonical for pagodas.",
+    "Each storey above the ground floor should be roughly 5% smaller in plan than the one directly below, taper applied symmetrically on all sides.",
+    "Every storey carries its own flared eave with the four (or eight) corners curling upward; eaves overhang the walls by at least 1 block.",
+    "Footprint is either a square or a regular octagon; mixing shapes between floors breaks the silhouette.",
+    "Place the main entrance on the ground floor, centered on one axial face; upper floors may carry balconies or louvered openings but no additional ground-level doors.",
+    "Crown the topmost storey with a finial, spire, or stacked beacon to terminate the vertical axis."
+  ],
+  "style_variants": {
+    "chinese": {
+      "palette_overrides": {
+        "primary": "minecraft:red_terracotta",
+        "accent": "minecraft:dark_oak_log",
+        "roof": "minecraft:dark_prismarine_stairs",
+        "trim": "minecraft:gold_block"
+      },
+      "notes": "Red lacquered walls with dark timber columns; green-glazed tile roofs (approximated with dark prismarine stairs); gilded finial and corner caps."
+    },
+    "japanese": {
+      "palette_overrides": {
+        "primary": "minecraft:white_terracotta",
+        "accent": "minecraft:dark_oak_log",
+        "roof": "minecraft:dark_oak_stairs",
+        "trim": "minecraft:dark_oak_planks"
+      },
+      "notes": "Whitewashed plaster panels between dark timber framing; charcoal-grey shingled eaves with subtler corner upturns; restrained ornament."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "sheltering-roof",
+    "roof-layout"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "temple",
+    "style": [
+      "chinese",
+      "japanese"
+    ]
+  },
+  "applicable_to": [
+    "temple",
+    "tower",
+    "monument"
+  ],
+  "parameters": {
+    "footprint_shape": "square_or_octagon",
+    "floor_taper": "5_percent_per_floor",
+    "preferred_floors": "3-7",
+    "roof_per_floor": "flared_eaves_with_corner_upturn",
+    "entrance_side": "ground_floor_axial",
+    "floor_progression": "setback"
+  },
+  "python_skill_signature": null,
+  "skill_category": "global_silhouette",
+  "schema_version": "2.0"
+}

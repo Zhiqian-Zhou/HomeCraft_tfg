@@ -1,0 +1,41 @@
+{
+  "id": "pathway_gravel",
+  "name": "Gravel path",
+  "kind": "exterior",
+  "description": "Gravel path along the long axis.",
+  "typical_dimensions": {
+    "min": [
+      3,
+      2,
+      3
+    ],
+    "preferred": [
+      10,
+      2,
+      5
+    ],
+    "max": [
+      30,
+      3,
+      12
+    ]
+  },
+  "tags": {
+    "category": "any",
+    "style": [
+      "medieval",
+      "rustic",
+      "fantasy",
+      "gothic",
+      "renaissance",
+      "modern",
+      "minimalist",
+      "japanese",
+      "chinese",
+      "mediterranean"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.pathway_gravel.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0"
+}

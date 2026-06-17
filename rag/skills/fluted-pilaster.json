@@ -1,0 +1,28 @@
+{
+  "id": "fluted-pilaster",
+  "name": "Fluted pilaster",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "wall_fitting",
+  "description": "Flat decorative column that projects one block outward from the face of a wall, evoking the load-bearing shaft of a classical order without actually carrying weight. A pilaster comprises three stacked elements pressed against the wall surface: a single-block base course at floor level, a slender vertical shaft four to seven blocks tall, and a crowning capital simplified from the Doric or Ionic orders (a flat slab, optionally flared with outward-facing stairs). In voxel form, fluting is implied rather than modeled — the smooth white face of quartz or the warm grain of sandstone reads as a fluted shaft at building scale. The architecture_planner uses pilasters to articulate Renaissance and neoclassical facades, frame doorways, and rhythmize the bays of monumental interiors, providing a levels-of-scale break between plain wall and ornamented entablature.",
+  "typical_dimensions": {
+    "min": [1, 4, 1],
+    "preferred": [1, 5, 1],
+    "max": [1, 7, 1]
+  },
+  "tags": {
+    "category": "column",
+    "style": ["renaissance", "gothic", "victorian"]
+  },
+  "applicable_to": ["temple", "monument", "residential"],
+  "parameters": {
+    "projection": 1,
+    "height": "4_to_7",
+    "capital": "doric_or_ionic_simplified",
+    "base": "1_block",
+    "fluting_visible": false,
+    "block": "smooth_quartz_or_smooth_sandstone"
+  },
+  "alexander_patterns_relevant": ["levels-of-scale"],
+  "python_skill_signature": null
+}

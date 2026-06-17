@@ -1,0 +1,100 @@
+{
+  "id": "window_bay",
+  "name": "Bay Window",
+  "kind": "structural",
+  "description": "A small bay window that protrudes 1-2 blocks outward from a flat wall section. Builds a 3-wide, 2-3 tall box extruded along the chosen `protrude_axis` ('+z' by default). The front face and the two side faces are clad in @glass_pane, the top is closed with a @slab cap, and the bay floor is laid in @primary as a sill. A flower pot and a hanging lantern are placed inside so the alcove reads as a lived-in window seat.",
+  "typical_dimensions": {
+    "min": [
+      3,
+      3,
+      1
+    ],
+    "preferred": [
+      3,
+      3,
+      1
+    ],
+    "max": [
+      5,
+      4,
+      2
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "glass_pane",
+      "count": "5..10",
+      "rule": "Full @glass_pane curtain on the 3 exposed faces (front + 2 sides) of the protruding box."
+    },
+    {
+      "item": "slab_cap",
+      "count": "3..10",
+      "rule": "@slab course one row above the bay, sealing the top of the protrusion."
+    },
+    {
+      "item": "floor",
+      "count": "3..10",
+      "rule": "@primary floor across the bay footprint — doubles as the window sill."
+    },
+    {
+      "item": "flower_pot",
+      "count": 1,
+      "rule": "minecraft:flower_pot on the bay floor, centred toward the front to read from outside."
+    },
+    {
+      "item": "lantern",
+      "count": 1,
+      "rule": "minecraft:lantern[hanging=true] suspended from the underside of the slab cap (Pools of Light)."
+    }
+  ],
+  "placement_rules": [
+    "Bay protrudes from wall along outward axis (kwarg `protrude_axis`: '+x', '-x', '+z', '-z'; default '+z').",
+    "Glass on the 3 exposed faces — front face plus the two side faces; the wall-side face stays open so the bay connects to the room.",
+    "Plant + light inside: flower pot on the sill, hanging lantern beneath the slab cap.",
+    "Bay is 3 cells wide on the wall plane and 1-2 cells deep along the protrude axis; height tracks the wall section, capped at 3 rows of glass.",
+    "Defensive on AABBs from 3x3x1 up to 5x4x2 — out-of-range inputs are clamped, never raised."
+  ],
+  "lighting_ventilation": "The hanging lantern provides interior light (light level 15) and the three glass faces flood the alcove with daylight. Bay windows are a natural 'pool of light' inside an otherwise dim room.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "@primary": "minecraft:oak_planks",
+        "@glass_pane": "minecraft:glass_pane",
+        "@slab": "minecraft:oak_slab"
+      },
+      "notes": "Oak sill with plain glass — fits cottages, inns, half-timbered houses."
+    },
+    "modern": {
+      "palette_overrides": {
+        "@primary": "minecraft:smooth_quartz",
+        "@glass_pane": "minecraft:white_stained_glass_pane",
+        "@slab": "minecraft:smooth_stone_slab"
+      },
+      "notes": "Clean white panes with a quartz sill for a minimalist bay."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "@primary": "minecraft:dark_oak_planks",
+        "@glass_pane": "minecraft:purple_stained_glass_pane",
+        "@slab": "minecraft:dark_oak_slab"
+      },
+      "notes": "Stained purple glass and dark oak — fits towers and wizard studies."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "window-place",
+    "pools-of-light"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "window",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.window_bay.build(aabb, materials, style, *, protrude_axis='+z') -> List[Op]",
+  "skill_category": "wall_fitting",
+  "schema_version": "2.0"
+}

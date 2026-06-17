@@ -1,0 +1,104 @@
+{
+  "id": "moat",
+  "name": "Moat",
+  "kind": "exterior",
+  "description": "Defensive water trench encircling a building's outer footprint. The AABB defines the OUTER footprint of the moat; the trench itself is a 2-3 block wide ring hugging the outer edge. A 1-block course of @secondary forms the impermeable trench floor at y0; a 1-block-tall @secondary outer retaining wall and an equivalent inner lip contain the water on both sides; minecraft:water fills the ring at y0+1 exactly 1 block deep; 2-3 minecraft:lily_pad float on the surface and 4 minecraft:cobblestone_wall corner posts crown the outer corners as decorative bollards. Sized 6×2×6..24×3×24; below 6×6 the ring would collapse into a solid 2×2 square with no interior.",
+  "typical_dimensions": {
+    "min": [
+      6,
+      2,
+      6
+    ],
+    "preferred": [
+      16,
+      3,
+      16
+    ],
+    "max": [
+      24,
+      3,
+      24
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "trench_floor",
+      "count": 1,
+      "rule": "Ring of @secondary (stone) at y0, 2-3 blocks wide, covering the outer edge of the AABB footprint."
+    },
+    {
+      "item": "water",
+      "count": 1,
+      "rule": "Fill minecraft:water along the trench between outer wall and inner lip from y0+1 to y0+1 (single layer, 1 block deep)."
+    },
+    {
+      "item": "retaining_wall",
+      "count": 2,
+      "rule": "1-block-tall @secondary borders along BOTH the outer perimeter and the inner edge of the ring at y0+1; stone retains water on both sides."
+    },
+    {
+      "item": "lily_pads",
+      "count": "2..3",
+      "rule": "minecraft:lily_pad floating at y0+2 over water cells (middle of each outer face); never on the lips."
+    },
+    {
+      "item": "corner_posts",
+      "count": "0..4",
+      "rule": "Optional minecraft:cobblestone_wall on the four outer corners at y0+2, sitting atop the outer retaining wall."
+    }
+  ],
+  "placement_rules": [
+    "Ring 2-3 blocks wide around perimeter",
+    "Water 1 block deep",
+    "Stone retains water on both sides",
+    "Outer retaining wall flush with the AABB outer face",
+    "Inner lip separates moat from interior",
+    "Lily pads only on water cells (never on lips)",
+    "Corner posts at the four outer corners (decorative bollards)",
+    "Minimum 6×6 footprint to leave an actual ring (smaller collapses)"
+  ],
+  "lighting_ventilation": "Open-air structure; no enclosed space to ventilate. Reflected daylight off the water surface lights the immediate ground; in fantasy variants the lily-pad scatter and sea-lantern corner posts add ambient glow at night.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "secondary": "minecraft:cobblestone"
+      },
+      "notes": "Classic cobblestone-revetted ditch with plain water. Cobblestone wall corner posts complete the castle-foot reading."
+    },
+    "modern": {
+      "palette_overrides": {
+        "secondary": "minecraft:smooth_stone"
+      },
+      "notes": "Architectural reflecting-pool reading: clean smooth_stone revetment, clear water, minimal corner posts."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "secondary": "minecraft:mossy_cobblestone"
+      },
+      "furniture_overrides": [
+        {
+          "item": "extra_lily_pads",
+          "block": "minecraft:lily_pad",
+          "rule": "Bias toward 3 lily pads instead of 2; mossy water reads as enchanted."
+        }
+      ],
+      "notes": "Mossy cobblestone revetment with lily-pad-dense water; pairs with mossy curtain walls and dark-oak keeps."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "building-edge"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "other",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.moat.build(aabb, materials, style, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0",
+  "style_affinity": "Medieval / fortified-military motif. Coherent in medieval/castle/rustic/fantasy/gothic. Out of place in Modern, Minimalist, East-Asian, Classical/Renaissance buildings."
+}

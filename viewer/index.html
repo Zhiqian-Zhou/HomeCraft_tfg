@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HomeCraft v2 — Visor de edificios RAG-E</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">⬛</span>
+      <span class="brand-name">HomeCraft v2 · Visor RAG-E</span>
+    </div>
+    <div class="topbar-info">
+      <span id="dataset-count">— edificios</span>
+      <span class="sep">·</span>
+      <span id="visible-count">— visibles</span>
+    </div>
+    <div class="topbar-actions">
+      <button id="btn-upload" title="Cargar un JSON de edificio (o arrástralo a la ventana)">📂 Cargar JSON</button>
+      <button id="btn-help" title="Atajos de teclado (?)">？ Ayuda</button>
+      <button id="btn-mode-fps" title="First-person fly (F)">🚶 First-person</button>
+      <button id="btn-reset-view" title="Reset cámara (R)">⟲ Reset</button>
+      <button id="btn-screenshot" title="Captura (S)">📷</button>
+      <button id="btn-fullscreen" title="Pantalla completa">⛶</button>
+      <input type="file" id="file-input" accept=".json,application/json" hidden />
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="search-wrap">
+        <input type="search" id="search" placeholder="Buscar título…" autocomplete="off" />
+      </div>
+
+      <div class="filters">
+        <details open>
+          <summary>Estilo <span class="filter-count" id="count-style">0</span></summary>
+          <div class="filter-options" id="filter-style"></div>
+        </details>
+        <details open>
+          <summary>Categoría <span class="filter-count" id="count-category">0</span></summary>
+          <div class="filter-options" id="filter-category"></div>
+        </details>
+        <details>
+          <summary>Licencia <span class="filter-count" id="count-license">0</span></summary>
+          <div class="filter-options" id="filter-license"></div>
+        </details>
+        <details>
+          <summary>Solo interiores poblados</summary>
+          <div class="filter-options">
+            <label><input type="checkbox" id="filter-populated" /> Solo populated</label>
+          </div>
+        </details>
+        <button id="btn-clear-filters" class="clear-btn">Limpiar filtros</button>
+      </div>
+
+      <div class="building-list" id="building-list" aria-label="Lista de edificios"></div>
+    </aside>
+
+    <section class="viewer-shell">
+      <div id="canvas-container" class="canvas-container">
+        <div id="loader" class="loader hidden">Cargando…</div>
+        <div id="empty-state" class="empty-state">
+          <p>Selecciona un edificio en la lista de la izquierda.</p>
+          <p class="muted">Atajos: <kbd>R</kbd> reset · <kbd>1-6</kbd> vistas · <kbd>L</kbd> layer slicer · <kbd>G</kbd> grid · <kbd>WASD</kbd> mover</p>
+        </div>
+        <div id="hover-badge" class="hover-badge hidden"></div>
+        <div id="crosshair" class="crosshair hidden">+</div>
+        <div id="fps-overlay" class="fps-overlay hidden">
+          <strong>First-person fly mode</strong><br />
+          <span class="fps-keys">Mouse: mirar · WASD: mover · Space/Shift: ↑/↓ · Ctrl: rápido · ESC: salir</span>
+        </div>
+        <!-- HUD minimapa "estás aquí" en fly mode -->
+        <div id="fly-hud" class="fly-hud hidden">
+          <div id="fly-floor-label" class="fly-floor-label">Planta —</div>
+          <canvas id="fly-minimap" width="220" height="170"></canvas>
+        </div>
+        <div id="axis-overlay" class="axis-overlay">
+          <span class="axis-x">+X →</span>
+          <span class="axis-y">+Y ↑</span>
+          <span class="axis-z">+Z ←</span>
+        </div>
+      </div>
+
+      <div class="viewer-controls">
+        <label class="slider-wrap">
+          <span>Capas Y</span>
+          <input type="range" id="layer-min" min="0" max="0" value="0" step="1" disabled />
+          <input type="range" id="layer-max" min="0" max="0" value="0" step="1" disabled />
+          <span class="slider-value" id="layer-value">—</span>
+        </label>
+        <label class="toggle-wrap">
+          <input type="checkbox" id="toggle-grid" checked /> Grid
+        </label>
+        <label class="toggle-wrap">
+          <input type="checkbox" id="toggle-axes" checked /> Ejes
+        </label>
+        <label class="toggle-wrap">
+          <input type="checkbox" id="toggle-ao" checked /> AO
+        </label>
+        <label class="toggle-wrap" title="Resaltar las escaleras (visibles a través de muros)">
+          <input type="checkbox" id="toggle-stairs" /> 🪜 Escaleras
+        </label>
+      </div>
+    </section>
+
+    <aside class="info-panel" id="info-panel">
+      <h3 id="info-title" class="info-title">Sin selección</h3>
+      <dl class="info-grid">
+        <dt>ID</dt><dd id="info-id">—</dd>
+        <dt>Categoría</dt><dd id="info-category">—</dd>
+        <dt>Estilo</dt><dd id="info-style">—</dd>
+        <dt>Tamaño</dt><dd id="info-size">—</dd>
+        <dt>Vóxeles</dt><dd id="info-voxels">—</dd>
+        <dt>Paleta</dt><dd id="info-palette">—</dd>
+        <dt>Furniture</dt><dd id="info-furniture">—</dd>
+        <dt>Populated</dt><dd id="info-populated">—</dd>
+        <dt>Licencia</dt><dd id="info-license">—</dd>
+        <dt>Fuente</dt><dd id="info-source">—</dd>
+      </dl>
+
+      <div id="info-scores" class="info-scores hidden">
+        <h4 class="info-scores-title">Puntuaciones</h4>
+        <div id="info-scores-grid" class="info-scores-grid"></div>
+        <p id="info-explanation" class="info-explanation"></p>
+        <p id="info-critique" class="info-critique"></p>
+      </div>
+
+      <details class="bill-materials">
+        <summary>Bill of materials</summary>
+        <div id="bom-list">—</div>
+      </details>
+
+      <details class="block-inspector">
+        <summary>Bloque inspeccionado</summary>
+        <div id="block-info">
+          <p class="muted">Pasa el ratón sobre un bloque del viewer.</p>
+        </div>
+      </details>
+
+      <details class="floor-navigator hidden" id="floor-navigator">
+        <summary>Plantas y habitaciones</summary>
+        <div id="floor-nav-controls">
+          <button id="floor-show-all" class="floor-btn-all">Mostrar todo</button>
+          <div id="floor-status" class="floor-status">Mostrando todo</div>
+          <p class="floor-help muted">
+            Atajos: <kbd>1</kbd>–<kbd>9</kbd> aislar planta · <kbd>0</kbd> mostrar todo · <kbd>[</kbd>/<kbd>]</kbd> planta ±1
+          </p>
+        </div>
+        <div id="floor-list"></div>
+      </details>
+
+      <details class="evaluation-panel hidden" id="evaluation-panel" open>
+        <summary>Evaluación crítica</summary>
+        <div id="evaluation-content"></div>
+      </details>
+
+      <details>
+        <summary>JSON crudo</summary>
+        <a id="info-json-link" href="#" target="_blank" rel="noopener">Abrir fichero</a>
+      </details>
+    </aside>
+  </main>
+
+  <!-- Overlay de arrastrar-y-soltar JSON -->
+  <div id="drop-overlay" class="drop-overlay hidden">
+    <div class="drop-box">📂 Suelta aquí un JSON de edificio para renderizarlo</div>
+  </div>
+
+  <!-- Modal de atajos de teclado (se abre con ? o el botón Ayuda) -->
+  <div id="help-modal" class="help-modal hidden">
+    <div class="help-card">
+      <button id="help-close" class="help-close" aria-label="Cerrar">✕</button>
+      <h3>Atajos de teclado</h3>
+      <div class="help-cols">
+        <div>
+          <h4>Vista</h4>
+          <p><kbd>R</kbd> reset · <kbd>F</kbd> primera persona · <kbd>G</kbd> grid · <kbd>S</kbd> captura</p>
+          <h4>Plantas</h4>
+          <p><kbd>1</kbd>–<kbd>9</kbd> aislar planta (vista en picado) · <kbd>0</kbd> mostrar todo · <kbd>[</kbd>/<kbd>]</kbd> planta ±1</p>
+        </div>
+        <div>
+          <h4>Capas / extras</h4>
+          <p><kbd>L</kbd> slicer de capas · 🪜 resaltar escaleras</p>
+          <h4>First-person (fly)</h4>
+          <p><kbd>WASD</kbd> mover · ratón mirar · <kbd>Space</kbd>/<kbd>Shift</kbd> ↑/↓ · <kbd>Ctrl</kbd> rápido · <kbd>ESC</kbd> salir</p>
+          <h4>Datos</h4>
+          <p><strong>📂 Cargar JSON</strong> o arrastra un fichero · panel «Evaluación crítica» a la derecha</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+{
+  "id": "throne_room",
+  "name": "Throne room",
+  "kind": "room",
+  "description": "Small ceremonial audience chamber: an intimate, fully-enclosed throne room with a single @stairs throne on a 1-block raised @accent dais flush against the far short wall, two short @accent columns flanking the throne, @carpet banners on the throne wall, a short carpet runner from the entrance to the dais, side benches against the long walls, hanging lanterns under a flat @slab ceiling, and a treasure chest tucked beside the throne. Distinct from a great hall by being smaller, lower, fully roofed, and stripped of pillared aisles or braziers — it reads as a private audience chamber rather than a long ceremonial hall.",
+  "typical_dimensions": {
+    "min": [
+      6,
+      4,
+      7
+    ],
+    "preferred": [
+      8,
+      5,
+      10
+    ],
+    "max": [
+      10,
+      6,
+      14
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "throne",
+      "count": 1,
+      "rule": "A single @stairs block centered on the dais against the far short wall, facing into the room toward the entrance."
+    },
+    {
+      "item": "dais",
+      "count": 1,
+      "rule": "A 1-block raised platform of @accent under the throne, 3 wide × 2 deep, flush against the far short wall."
+    },
+    {
+      "item": "flanking_torches",
+      "count": 2,
+      "rule": "@carpet blocks affixed to the interior face of the far short wall as banner proxies, one on either side of the throne (above the dais)."
+    },
+    {
+      "item": "columns",
+      "count": 2,
+      "rule": "Two short @accent pillars (1×3 tall) standing one cell off the dais on either side, framing the throne and the foot of the runner."
+    },
+    {
+      "item": "runner_carpet",
+      "count": 1,
+      "rule": "A single-cell-wide @carpet strip running 5-6 blocks from the foot of the dais toward the entrance short wall, never under the throne."
+    },
+    {
+      "item": "side_benches",
+      "count": "2..4",
+      "rule": "@stairs benches against the long walls, facing into the room (one or two per wall), aligned with the runner."
+    },
+    {
+      "item": "lanterns",
+      "count": "2..3",
+      "rule": "minecraft:lantern[hanging=true] dangling one cell below the @slab ceiling, evenly spaced along the central axis above the runner."
+    },
+    {
+      "item": "treasure_chest",
+      "count": 1,
+      "rule": "A minecraft:chest on the floor beside the dais (preferably on the throne's right hand), within arm's reach of the seated monarch."
+    }
+  ],
+  "placement_rules": [
+    "Throne centered on far wall, raised on dais",
+    "Columns flank the throne",
+    "Carpet runs short axis only",
+    "Treasure chest beside throne",
+    "Banners (@carpet) only on the far short wall above the throne, never on the long walls",
+    "Side benches face inward toward the runner",
+    "Lanterns hang from the @slab ceiling along the central axis, never block the throne or runner"
+  ],
+  "lighting_ventilation": "Fully enclosed: a flat @slab ceiling caps the room, with 2-3 minecraft:lantern hanging fixtures dangling along the central axis as the sole light source. No windows by default — this is a private audience chamber, lit ceremonially from above rather than by daylight.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:stone_bricks",
+        "accent": "minecraft:polished_andesite",
+        "stairs": "minecraft:stone_brick_stairs",
+        "slab": "minecraft:stone_brick_slab",
+        "carpet": "minecraft:red_carpet"
+      },
+      "notes": "Stone-brick walls and andesite dais; red carpet runner and red banner-carpets behind the throne; iron lantern fixtures for a castle audience chamber."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "accent": "minecraft:polished_andesite",
+        "stairs": "minecraft:smooth_quartz_stairs",
+        "slab": "minecraft:smooth_stone_slab",
+        "carpet": "minecraft:gray_carpet"
+      },
+      "notes": "Minimalist civic audience room: quartz walls, andesite dais, gray runner, recessed lantern fittings. Banner-carpets read as accent panels rather than heraldry."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "accent": "minecraft:purpur_block",
+        "stairs": "minecraft:dark_oak_stairs",
+        "slab": "minecraft:dark_oak_slab",
+        "carpet": "minecraft:purple_carpet"
+      },
+      "notes": "Dark-oak chamber with a purpur dais and columns; purple-carpet runner and banners; sea-lantern fixtures read as enchanted lights over a sorcerer's audience seat."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "main-entrance",
+    "strong-centers"
+  ],
+  "tags": {
+    "category": "throne-room",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.throne_room.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_role",
+  "schema_version": "2.0",
+  "style_affinity": "Medieval / fortified-military motif. Coherent in medieval/castle/rustic/fantasy/gothic. Out of place in Modern, Minimalist, East-Asian, Classical/Renaissance buildings."
+}

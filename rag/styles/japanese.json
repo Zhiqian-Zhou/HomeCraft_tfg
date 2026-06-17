@@ -1,0 +1,53 @@
+{
+  "id": "japanese",
+  "name": "Japanese",
+  "description": "Traditional Japanese architecture: low-pitched tiered roofs, paper/shoji screen walls, dark timber framing against white plaster, raised wooden floors and engawa porches. Evokes minka houses, temples and pagodas.",
+  "palette": {
+    "primary": [
+      "minecraft:dark_oak_planks",
+      "minecraft:spruce_planks"
+    ],
+    "secondary": [
+      "minecraft:white_concrete",
+      "minecraft:smooth_stone"
+    ],
+    "accent": [
+      "minecraft:dark_oak_log",
+      "minecraft:stripped_dark_oak_log"
+    ],
+    "roof": [
+      "minecraft:dark_oak_planks",
+      "minecraft:smooth_stone_slab"
+    ],
+    "floor": [
+      "minecraft:oak_planks",
+      "minecraft:hay_block"
+    ],
+    "glass": [
+      "minecraft:white_stained_glass_pane",
+      "minecraft:glass_pane"
+    ],
+    "light": [
+      "minecraft:lantern"
+    ]
+  },
+  "signature_elements": [
+    "pagoda roof tiers",
+    "shoji screen walls (white concrete + dark frame)",
+    "tatami floor (hay_block proxy)",
+    "torii gate",
+    "raised platform",
+    "engawa (porch)"
+  ],
+  "ratios": {
+    "story_height": 3,
+    "wall_thickness": 1,
+    "window_width": 3,
+    "roof_pitch": 0.6
+  },
+  "alexander_patterns": [
+    "sheltering-roof",
+    "intimacy-gradient",
+    "tree-places"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "recessed-niche",
+  "name": "Recessed niche",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "wall_fitting",
+  "description": "A small alcove carved one or two blocks deep into an interior wall, framing a single display object such as a statue, bust, vase, or devotional figure. Inherited from Roman aedicula and refined in Renaissance palazzi and Mediterranean villas, the niche reads as a miniature architectural shrine: a flat or arched top, plain jambs, and a recessed back panel that pulls the eye into the wall thickness. In voxel terms it is a subtractive cut — air voxels removed from the perimeter wall — optionally finished with a different inner-face material to brighten the recess. Often paired with a wall lantern or torch above or beside the opening so the displayed object catches a pool of warm light, transforming the wall from a flat boundary into a chain of small, contemplative centres along the room axis.",
+  "typical_dimensions": {
+    "min": [1, 2, 1],
+    "preferred": [2, 3, 1],
+    "max": [3, 4, 2]
+  },
+  "tags": {
+    "category": "other",
+    "style": ["renaissance", "gothic", "mediterranean"]
+  },
+  "applicable_to": ["residential", "monument", "temple"],
+  "parameters": {
+    "depth": "1_or_2",
+    "height": "2_or_3",
+    "width": "1_or_2",
+    "top_shape": "arched_or_flat",
+    "placement": "interior_axial_wall",
+    "display_object": "statue_or_vase"
+  },
+  "alexander_patterns_relevant": ["pools-of-light", "strong-centers"],
+  "python_skill_signature": null
+}

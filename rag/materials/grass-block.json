@@ -1,0 +1,10 @@
+{
+  "id": "grass-block",
+  "block_id": "minecraft:grass_block",
+  "category": "ground",
+  "color": "green top, dirt-brown sides",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": ["medieval", "rustic", "fantasy", "cottagecore", "vanilla", "japanese", "modern"]
+}

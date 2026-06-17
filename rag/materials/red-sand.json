@@ -1,0 +1,11 @@
+{
+  "id": "red-sand",
+  "block_id": "minecraft:red_sand",
+  "category": "ground",
+  "color": "rust red granular",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["egyptian", "mediterranean"]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "hallway",
+  "name": "Hallway",
+  "kind": "room",
+  "description": "A corridor connecting two rooms. Floor of @floor, two lateral walls of @primary along the longer horizontal axis, and a flat @slab ceiling enclosing the passage. The two short ends are open so the hallway acts as a connector. Alternating @light blocks sit under the ceiling every 3-4 blocks; one or two @carpet runners line the floor; optional flower-pot niches every 5 blocks decorate one side wall.",
+  "typical_dimensions": {
+    "min": [
+      3,
+      5,
+      6
+    ],
+    "preferred": [
+      3,
+      5,
+      10
+    ],
+    "max": [
+      4,
+      6,
+      16
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "floor",
+      "count": 1,
+      "rule": "Solid @floor plane at y0 spanning the full AABB footprint"
+    },
+    {
+      "item": "wall",
+      "count": 2,
+      "rule": "Two @primary lateral walls along the longer axis; short ends remain open"
+    },
+    {
+      "item": "ceiling",
+      "count": 1,
+      "rule": "Flat @slab plane at y_top covering the corridor (beams of @primary every 2 blocks for fantasy long halls)"
+    },
+    {
+      "item": "light",
+      "count": "2..6",
+      "rule": "Alternating @light blocks every 3-4 blocks along the ceiling centreline; at least 2 lights regardless of length"
+    },
+    {
+      "item": "carpet_runner",
+      "count": "1..2",
+      "rule": "One centred runner for narrow corridors (interior width <= 2), two parallel runners for wider ones"
+    },
+    {
+      "item": "minecraft:flower_pot",
+      "count": "0..3",
+      "rule": "Optional niche decoration; one pot every 5 blocks along one side wall when length >= 6"
+    }
+  ],
+  "placement_rules": [
+    "Lights spaced every 3-4 blocks",
+    "Walls along longer axis",
+    "Open at short ends (connector)",
+    "Carpet runners centred for narrow halls, edge-aligned for wider ones",
+    "Flower-pot niches only on the inner face of one side wall, at floor+1",
+    "Ceiling slabs sit at y_top so a roof or upper-storey skill does not collide with the corridor cavity"
+  ],
+  "lighting_ventilation": "Ceiling-mounted lights every 3-4 blocks (torches on medieval, redstone lamps on modern, sea lanterns on fantasy). Hallway is ventilated by the open short ends connecting to adjacent rooms; no windows by default since lateral walls are short.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:oak_planks",
+        "floor": "minecraft:cobblestone",
+        "slab": "minecraft:oak_slab",
+        "carpet": "minecraft:red_carpet",
+        "light": "minecraft:torch"
+      },
+      "notes": "Cobblestone floor, oak-plank lateral walls, oak-slab ceiling, red carpet runner, wall torches every 3 blocks."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "floor": "minecraft:polished_andesite",
+        "slab": "minecraft:smooth_stone_slab",
+        "carpet": "minecraft:gray_carpet",
+        "light": "minecraft:redstone_lamp"
+      },
+      "notes": "Quartz walls, andesite floor, smooth-stone-slab ceiling, gray carpet runners, redstone-lamp ceiling lights."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "floor": "minecraft:mossy_cobblestone",
+        "slab": "minecraft:dark_oak_slab",
+        "carpet": "minecraft:purple_carpet",
+        "light": "minecraft:sea_lantern"
+      },
+      "notes": "Dark-oak walls, mossy-cobblestone floor, dark-oak beams every 2 blocks instead of a flat ceiling for long halls, purple carpet runner, sea-lantern lights."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "intimacy-gradient",
+    "sequence-of-sitting-spaces",
+    "pools-of-light"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "hallway",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.hallway:build(aabb, materials, style, **kwargs) -> list[Op]",
+  "skill_category": "room_role",
+  "schema_version": "2.0"
+}

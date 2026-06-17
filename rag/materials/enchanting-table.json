@@ -1,0 +1,10 @@
+{
+  "id": "enchanting-table",
+  "block_id": "minecraft:enchanting_table",
+  "category": "utility",
+  "color": "obsidian black with red book",
+  "transparent": true,
+  "light_emission": 7,
+  "is_solid": false,
+  "used_by_styles": ["medieval", "modern", "fantasy", "rustic"]
+}

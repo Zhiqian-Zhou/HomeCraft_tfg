@@ -1,0 +1,40 @@
+{
+  "id": "podium-base-layout",
+  "name": "Podium base layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "Floor-layout strategy that pairs a wide, tall ground floor dedicated to public or commercial use with a smaller upper volume — a tower, attic or set-back storey — stacked on top of it. The ground floor reads as a podium or stylobate: it is markedly taller than the floors above (5 to 7 blocks of clear height), occupies the full site footprint and houses the shop front, temple cella, tavern hall or townhouse parlour. The upper volume covers only 30-70% of the podium footprint, producing a setback that lets the lower roof double as a terrace, cornice or visible base. The pattern is the workhorse of classical temples on stylobates, of urban townhouses and shops-with-apartments where the trade floor faces the street and the dwelling sits above, and of any building where commerce and habitation need to share one plot.",
+  "typical_dimensions": {
+    "min": [12, 4, 12],
+    "preferred": [16, 5, 16],
+    "max": [24, 6, 24]
+  },
+  "tags": {
+    "category": "shop",
+    "style": ["renaissance", "gothic", "victorian"]
+  },
+  "applicable_to": ["residential", "shop", "tavern"],
+  "parameters": {
+    "ground_floor_use": "public_commercial",
+    "upper_floor_footprint": "smaller_30_to_70_percent",
+    "upper_setback": "uniform_or_corner",
+    "ground_floor_height": "tall_5_to_7_blocks"
+  },
+  "placement_rules": [
+    "Reserve the full site footprint for the ground floor and give it 5 to 7 blocks of clear interior height so it reads as a tall public base rather than an ordinary storey.",
+    "Size the upper volume between 30% and 70% of the ground-floor footprint; below 30% the upper looks like a chimney stub, above 70% the podium silhouette is lost.",
+    "Choose a single setback strategy per building — either uniform on all four sides (classical podium) or pulled back to one corner (urban townhouse with terrace) — and apply it consistently across every storey above the base.",
+    "Treat the exposed roof of the podium as a usable surface: terrace, balustraded walkway, cornice band or planted parapet, never raw shingles, so the setback is read as deliberate.",
+    "Place the main public entrance on the long facade of the podium at ground level and align it with the centroid of the ground floor; the upper volume must not block or overhang the entrance approach.",
+    "Stack the upper volume directly over load-bearing podium walls — typically the rear and one side — so the structural logic of the setback reads from outside.",
+    "Mark the transition between podium and upper volume with a horizontal string course, cornice or change of material spanning the full perimeter, so the two volumes are legibly distinct."
+  ],
+  "lighting_ventilation": "The tall ground floor admits light through large street-facing windows or an open shop front on the long facade; high clerestory windows along the rear can supplement the front-lit hall. The upper volume sits free of the podium edge on at least one side, so its rooms gain windows on three or four faces and cross-ventilate easily. The exposed podium roof acts as a light shelf reflecting daylight up into the upper storey's windows.",
+  "alexander_patterns_relevant": [
+    "main-entrance",
+    "building-edge"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

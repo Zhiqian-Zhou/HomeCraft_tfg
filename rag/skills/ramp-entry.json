@@ -1,0 +1,30 @@
+{
+  "id": "ramp-entry",
+  "name": "Ramp entry",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "connector_template",
+  "description": "A sloped ramp that resolves a vertical offset between the surrounding ground and the building's finished floor by walking the visitor up a gentle incline rather than a stair. Read as a single continuous paved surface, ideally one-in-six or shallower, terminating at the main door or temple portico. Three idiomatic uses: Mediterranean villas absorbing hillside grade so the loggia stays level; Egyptian and Greek temples staging a slow ceremonial ascent that elevates the cella above the worshipper; and modern accessible entries where the ramp replaces or parallels a stair without breaking the building line. Optional flanking low parapets, occasional landings every few blocks of run, and a paved threshold cell where the ramp meets the door.",
+  "typical_dimensions": {
+    "min": [3, 2, 4],
+    "preferred": [4, 3, 6],
+    "max": [6, 4, 10]
+  },
+  "tags": {
+    "category": "door",
+    "style": ["mediterranean", "modern", "renaissance"]
+  },
+  "applicable_to": ["residential", "temple", "monument"],
+  "parameters": {
+    "slope_ratio": "1:6_to_1:8",
+    "width": "3_to_6",
+    "terminus": "main_entrance_or_temple_portico",
+    "ceremonial": "optional",
+    "surface": "paved_stone_or_concrete"
+  },
+  "alexander_patterns_relevant": [
+    "entrance-transition",
+    "main-entrance"
+  ],
+  "python_skill_signature": null
+}

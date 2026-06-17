@@ -1,0 +1,23 @@
+{
+  "id": "window-place",
+  "name": "Window Place",
+  "source_work": "A Pattern Language",
+  "paraphrase": "In every room where you spend any length of time during the day, make at least one window into a 'window place': a deliberately shaped zone next to a window that combines a generous view, a seat, and some enclosure. Alexander argues that a room without such a place forces occupants to choose between sitting comfortably and being drawn toward the light, leaving the room unsettled; a proper window place resolves the tension so people naturally come to rest there.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "833-837",
+    "edition": "Oxford University Press 1977",
+    "isbn": "0-19-501919-9"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "window_place_presence_ratio"
+  },
+  "skills_embodying": [
+    "living_room",
+    "bedroom",
+    "study",
+    "library",
+    "window_bay",
+    "dining_room"
+  ]
+}

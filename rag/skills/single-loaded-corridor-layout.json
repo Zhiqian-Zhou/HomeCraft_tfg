@@ -1,0 +1,68 @@
+{
+  "id": "single-loaded-corridor-layout",
+  "name": "Single-loaded corridor layout",
+  "kind": "structural",
+  "description": "A circulation spine pressed against one outer wall, with a single row of rooms attached on the opposite side so every room opens to the outside on its long facade. Because the corridor itself takes the wall-facing position, rooms enjoy daylight from two sides — the long exterior wall and a short end wall — which is impossible in a double-loaded plan. The corridor is typically 2 blocks wide; rooms occupy the full remaining depth. This arrangement underlies monastic cloisters opening onto a garth, Mediterranean villa galleries facing the sea, motel room rows opening to a balcony walkway, and renaissance loggias. The corridor wall is often pierced by arched openings or windows rather than being solid, reinforcing the light-on-two-sides advantage.",
+  "typical_dimensions": {
+    "min": [6, 4, 12],
+    "preferred": [8, 4, 16],
+    "max": [12, 5, 24]
+  },
+  "placement_rules": [
+    "Place the corridor against the outer wall whose exposure is least desirable (cold-side, street-side, or shaded-side) so rooms claim the better-lit opposite facade.",
+    "Keep corridor width at 2 blocks; the single-loaded layout is already wider than a double-loaded one and should not waste further footprint on circulation.",
+    "Punch frequent windows or arched openings into the corridor's outer wall — it is the public side and benefits from a colonnade or loggia treatment.",
+    "Each room's outer wall (opposite the corridor) carries the primary windows and earns most of the daylight; do not block this facade with stairs or service shafts.",
+    "Terminate the corridor at both short ends with a window, door, or stair so it never reads as a dead-end tunnel.",
+    "Doors from corridor to rooms space evenly along the inner wall; align them with corridor arches when present to create cross-views from outside to room interior."
+  ],
+  "lighting_ventilation": "Light arrives on two sides of each room: the long outer facade (full windows) and a short end wall where geometry permits. The corridor itself is daylit through its outer-wall openings, so artificial lighting is only needed at night — place lanterns every 4-5 blocks along the room-side wall.",
+  "style_variants": {
+    "mediterranean": {
+      "palette_overrides": {
+        "floor": "minecraft:smooth_sandstone",
+        "wall": "minecraft:sandstone",
+        "trim": "minecraft:cut_sandstone",
+        "ceiling": "minecraft:smooth_sandstone"
+      },
+      "notes": "Whitewashed plaster with sandstone arches along the corridor's outer wall; terracotta or smooth-sandstone floor; corridor reads as a shaded loggia overlooking a courtyard or garden."
+    },
+    "rustic": {
+      "palette_overrides": {
+        "floor": "minecraft:spruce_planks",
+        "wall": "minecraft:cobblestone",
+        "trim": "minecraft:stripped_spruce_log",
+        "ceiling": "minecraft:oak_planks"
+      },
+      "notes": "Farmhouse gallery: cobble base under a timber-framed corridor open to the yard via wooden posts and lintels; rooms behind keep stone walls for warmth."
+    },
+    "renaissance": {
+      "palette_overrides": {
+        "floor": "minecraft:polished_andesite",
+        "wall": "minecraft:smooth_stone",
+        "trim": "minecraft:quartz_pillar",
+        "ceiling": "minecraft:smooth_quartz"
+      },
+      "notes": "Loggia of regularly spaced quartz pilasters supporting a coffered ceiling; corridor opens to a formal garden through arcades, rooms on the inner side enjoy framed garden views."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "light-on-two-sides",
+    "intimacy-gradient"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "hallway",
+    "style": ["mediterranean", "rustic", "renaissance"]
+  },
+  "applicable_to": ["residential", "temple", "monument"],
+  "parameters": {
+    "corridor_position": "north_or_outer_wall",
+    "corridor_width": 2,
+    "rooms_per_side": "single",
+    "room_outer_facade": "windows_long_side"
+  },
+  "python_skill_signature": null,
+  "skill_category": "floor_layout",
+  "schema_version": "2.0"
+}

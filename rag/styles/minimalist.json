@@ -1,0 +1,53 @@
+{
+  "id": "minimalist",
+  "name": "Minimalist",
+  "description": "Extreme reduction: monochrome palette, smooth quartz and concrete surfaces, and a deliberately tiny material vocabulary. Eliminates ornament in favor of light, proportion and exposed structure.",
+  "palette": {
+    "primary": [
+      "minecraft:smooth_quartz",
+      "minecraft:white_concrete"
+    ],
+    "secondary": [
+      "minecraft:polished_andesite",
+      "minecraft:smooth_stone"
+    ],
+    "accent": [
+      "minecraft:gray_concrete",
+      "minecraft:black_concrete"
+    ],
+    "roof": [
+      "minecraft:smooth_stone_slab"
+    ],
+    "floor": [
+      "minecraft:polished_andesite"
+    ],
+    "glass": [
+      "minecraft:glass",
+      "minecraft:glass_pane",
+      "minecraft:white_stained_glass_pane"
+    ],
+    "light": [
+      "minecraft:sea_lantern",
+      "minecraft:redstone_lamp"
+    ]
+  },
+  "signature_elements": [
+    "monochrome palette",
+    "huge clear glass spans",
+    "no ornament",
+    "exposed structure",
+    "minimal furniture",
+    "single accent color"
+  ],
+  "ratios": {
+    "story_height": 5,
+    "wall_thickness": 1,
+    "window_width": 6,
+    "roof_pitch": 0.0
+  },
+  "alexander_patterns": [
+    "light-on-two-sides",
+    "pools-of-light",
+    "alternating-repetition"
+  ]
+}

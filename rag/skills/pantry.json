@@ -1,0 +1,132 @@
+{
+  "id": "pantry",
+  "name": "Pantry",
+  "kind": "room",
+  "description": "A tightly packed storage room (despensa) next to the kitchen. Walls of @primary, floor of @floor, flat @slab ceiling — fully enclosed because the pantry sits inside a larger building. Three of the four interior walls are lined with stacked minecraft:barrel columns (2-3 high), with minecraft:bookshelf columns interleaved on the rear feature wall as recipe / ingredient labels. A minecraft:chest (or two on larger rooms) sits on the floor by the front wall, with a minecraft:composter and a minecraft:cauldron handling food-prep tasks. A hanging minecraft:lantern lights the centre of the ceiling, and a potted plant on top of one barrel stack provides a touch of greenery.",
+  "typical_dimensions": {
+    "min": [
+      3,
+      3,
+      3
+    ],
+    "preferred": [
+      5,
+      3,
+      5
+    ],
+    "max": [
+      6,
+      4,
+      6
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "minecraft:barrel",
+      "count": "6..30",
+      "rule": "Stack 2-3 high along the rear, right and back-half-of-left interior walls. Front wall left bare for the doorway to the kitchen."
+    },
+    {
+      "item": "minecraft:bookshelf",
+      "count": "2..6",
+      "rule": "Interleaved between barrel columns on the rear wall as recipe-book / ingredient-label shelves; at least 2 always."
+    },
+    {
+      "item": "minecraft:chest",
+      "count": "1..2",
+      "rule": "On the floor against the front wall, centred. A second chest is added when AABB width >= 5."
+    },
+    {
+      "item": "minecraft:composter",
+      "count": 1,
+      "rule": "Left-front interior corner next to the implied kitchen doorway so food scraps go straight in."
+    },
+    {
+      "item": "minecraft:cauldron",
+      "count": 1,
+      "rule": "Next to the composter (one cell deeper or to the right); filled with water for washing produce."
+    },
+    {
+      "item": "minecraft:lantern",
+      "count": 1,
+      "rule": "Single hanging lantern in the centre of the ceiling, one row below the @slab lid."
+    },
+    {
+      "item": "minecraft:flower_pot",
+      "count": 1,
+      "rule": "Potted plant (poppy or style-specific) sitting on top of a rear-wall barrel stack as decor."
+    }
+  ],
+  "placement_rules": [
+    "Dense storage: stack barrels 2-3 high along 2-3 walls.",
+    "Bookshelves between barrels for variety on the rear feature wall.",
+    "Lantern on ceiling for visibility (hanging, centred).",
+    "Front wall stays clear for the doorway to the adjacent kitchen.",
+    "Composter + cauldron occupy the left-front prep corner.",
+    "Chest(s) sit on the floor against the front wall, between the prep corner and the doorway."
+  ],
+  "lighting_ventilation": "A single hanging lantern in the centre of the ceiling is the only light source — pantries are kept dim to preserve dry goods. Ventilation is implicit via the unmodeled doorway in the front wall connecting to the kitchen; no windows (food storage rooms avoid sunlight).",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:oak_planks",
+        "floor": "minecraft:cobblestone",
+        "slab": "minecraft:oak_slab",
+        "light": "minecraft:lantern"
+      },
+      "furniture_overrides": [
+        {
+          "item": "minecraft:potted_poppy",
+          "count": 1
+        }
+      ],
+      "notes": "Cobblestone floor under oak walls; barrels lashed with iron bands (vanilla barrel block reads as this). Potted poppy on top of the corner stack."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "floor": "minecraft:polished_andesite",
+        "slab": "minecraft:smooth_stone_slab",
+        "light": "minecraft:redstone_lamp"
+      },
+      "furniture_overrides": [
+        {
+          "item": "minecraft:potted_fern",
+          "count": 1
+        }
+      ],
+      "notes": "Quartz walls, andesite floor, smooth-stone slab lid. Barrels remain the vanilla wooden block (no modern equivalent in 1.16.5). Potted fern instead of poppy."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "floor": "minecraft:mossy_cobblestone",
+        "slab": "minecraft:dark_oak_slab",
+        "light": "minecraft:soul_lantern"
+      },
+      "furniture_overrides": [
+        {
+          "item": "minecraft:potted_blue_orchid",
+          "count": 1
+        }
+      ],
+      "notes": "Mossy-cobble floor, dark-oak walls and slab lid. A soul lantern hangs in the centre (eerie blue glow). Potted blue orchid on the corner stack hints at alchemical herbs alongside ordinary pantry stock."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "the-farmhouse-kitchen",
+    "workplace-enclosure"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "storage",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.pantry.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_role",
+  "schema_version": "2.0"
+}

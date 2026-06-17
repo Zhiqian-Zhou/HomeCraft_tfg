@@ -1,0 +1,56 @@
+{
+  "id": "temple_eave_bracket",
+  "name": "Dougong eave bracket band",
+  "kind": "decorative",
+  "description": "A decorative dougong corbel band around the footprint perimeter near the wall top: each bracket an @accent block carried on an outward-facing stair, evoking the interlocking timber brackets that carry an East-Asian eave. Composes under an asian_roof.",
+  "typical_dimensions": {
+    "min": [
+      4,
+      2,
+      4
+    ],
+    "preferred": [
+      9,
+      2,
+      9
+    ],
+    "max": [
+      17,
+      3,
+      17
+    ]
+  },
+  "placement_rules": [
+    "Sits one course under the eave shelf, around the whole perimeter.",
+    "Pairs with asian_roof / pagoda tiers."
+  ],
+  "lighting_ventilation": "Decorative band only.",
+  "style_variants": {
+    "chinese": {
+      "palette_overrides": {
+        "@accent": "minecraft:gold_block"
+      },
+      "notes": "Gilt brackets."
+    },
+    "japanese": {
+      "palette_overrides": {
+        "@accent": "minecraft:dark_oak_log"
+      },
+      "notes": "Dark timber brackets."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "roof-layout"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "any",
+    "style": [
+      "chinese",
+      "japanese"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.temple_eave_bracket.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "wall_fitting",
+  "schema_version": "2.0"
+}

@@ -1,0 +1,60 @@
+{
+ "id": "mcs-fleet-center",
+ "source": "github",
+ "source_url": "https://github.com/Silicon23/MoreChineseStructures/blob/main/data/mcs/structure/fleet/fleet_center.nbt",
+ "license": "MIT",
+ "title": "MCS Fleet Center",
+ "tags": {
+  "category": "other",
+  "style": [
+   "chinese"
+  ],
+  "size_bucket": "small"
+ },
+ "bounding_box": {
+  "size": [
+   3,
+   1,
+   8
+  ]
+ },
+ "block_palette": {
+  "0": "minecraft:stone"
+ },
+ "voxels": [
+  [
+   0,
+   0,
+   7,
+   0
+  ],
+  [
+   1,
+   0,
+   0,
+   0
+  ],
+  [
+   2,
+   0,
+   7,
+   0
+  ]
+ ],
+ "bot_decomposition": null,
+ "metadata_quality": {
+  "interior_populated": false,
+  "furniture_blocks": 0,
+  "has_labels": false,
+  "ingest_warnings": [
+   "1.17+ downsample applied to 1 block ids: minecraft:jigsaw->minecraft:stone"
+  ]
+ },
+ "ingest": {
+  "tool": "ingest_nbt.py",
+  "tool_version": "0.1.0",
+  "source_format": "nbt",
+  "ingested_at": "2026-05-24T16:57:01Z",
+  "ingester_path": "/Users/zhiqian/Desktop/Uni/TFGv2Z/tools/ingest_nbt.py"
+ }
+}

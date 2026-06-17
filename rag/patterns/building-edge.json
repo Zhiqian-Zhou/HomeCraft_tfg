@@ -1,0 +1,20 @@
+{
+  "id": "building-edge",
+  "name": "Building Edge",
+  "source_work": "A Pattern Language",
+  "paraphrase": "Treat the edge of the building as a 'thing', a 'place', a zone with volume to it, not a line or interface that has no thickness. Alexander argues that buildings with sharp, sheer edges sterilise the ground around them, while a well-developed edge - made of arcades, terraces, galleries, balconies, alcoves and benches where indoor and outdoor life overlap - invites passers-by to linger and the occupants to spill outward.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "752-756",
+    "edition": "Oxford University Press 1977",
+    "isbn": "0-19-501919-9"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "building_edge_thickness"
+  },
+  "skills_embodying": [
+    "perimeter_wall_with_windows",
+    "parapet",
+    "balcony"
+  ]
+}

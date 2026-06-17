@@ -1,0 +1,15 @@
+{
+  "id": "cobblestone",
+  "block_id": "minecraft:cobblestone",
+  "category": "stone",
+  "color": "mottled gray",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:cobblestone_stairs",
+    "slab": "minecraft:cobblestone_slab",
+    "wall": "minecraft:cobblestone_wall"
+  },
+  "used_by_styles": ["medieval", "rustic"]
+}

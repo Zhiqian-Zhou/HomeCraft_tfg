@@ -1,0 +1,11 @@
+{
+  "id": "black-wool",
+  "block_id": "minecraft:black_wool",
+  "category": "wool",
+  "color": "black",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["medieval", "rustic"]
+}

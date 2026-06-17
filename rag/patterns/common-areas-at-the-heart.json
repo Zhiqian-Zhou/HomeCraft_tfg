@@ -1,0 +1,20 @@
+{
+  "id": "common-areas-at-the-heart",
+  "name": "Common Areas at the Heart",
+  "source_work": "A Pattern Language",
+  "paraphrase": "Place the common areas of any social group at the very heart of the building they occupy, so that every member passes through or by them on the way to private rooms. Alexander observes that when common rooms are tucked into a corner or off a side corridor, they are bypassed and die; when they sit at the geometric and circulatory center, daily comings and goings keep the shared life of the household continuously animated.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "618-622",
+    "edition": "Oxford University Press 1977",
+    "isbn": "0-19-501919-9"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "common_area_centrality"
+  },
+  "skills_embodying": [
+    "living_room",
+    "dining_room",
+    "great_hall"
+  ]
+}

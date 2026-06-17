@@ -1,0 +1,20 @@
+{
+  "id": "main-entrance",
+  "name": "Main Entrance",
+  "source_work": "A Pattern Language",
+  "paraphrase": "Place the main entrance at a point where it can be seen immediately from the main avenues of approach, and give it a bold, visible shape that stands out in front of the building. Alexander argues that placing the main entrance is perhaps the single most important step in evolving a building plan, because a hidden or weak entrance confuses arrival and breaks the social transition from outside to inside.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "540-544",
+    "edition": "Oxford University Press 1977",
+    "isbn": "0-19-501919-9"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "main_entrance_visibility"
+  },
+  "skills_embodying": [
+    "entry_hall",
+    "door_with_frame",
+    "double_door"
+  ]
+}

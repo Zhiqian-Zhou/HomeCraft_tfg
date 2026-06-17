@@ -1,0 +1,40 @@
+{
+  "id": "gallery-spine-layout",
+  "name": "Gallery spine layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "Floor-layout strategy in which a wide central gallery — 3 to 5 blocks across rather than the usual one-block corridor — runs the full length of the footprint and doubles as both the circulation backbone and a habitable social room in its own right. The gallery is dressed for art display, reading nooks, side benches and statuary, while a long run of windows along one or both ends bathes it in natural light. Habitable rooms attach to both flanks, three to five per side, each entering directly off the gallery so the spine is the single organising axis of the floor. This pattern is the signature of Renaissance palaces and the English country house long gallery; it scales naturally to Victorian and Gothic-revival manor plans where processional length is itself a design goal.",
+  "typical_dimensions": {
+    "min": [10, 5, 16],
+    "preferred": [14, 5, 22],
+    "max": [20, 6, 32]
+  },
+  "tags": {
+    "category": "library",
+    "style": ["renaissance", "victorian", "gothic"]
+  },
+  "applicable_to": ["residential", "castle", "monument"],
+  "parameters": {
+    "gallery_width": "3-5",
+    "gallery_role": "circulation_plus_display",
+    "rooms_per_side": "3-5",
+    "gallery_lighting": "long_window_run"
+  },
+  "placement_rules": [
+    "Run the gallery along the long axis of the footprint so its length reads as a processional route, not a stub corridor.",
+    "Keep the gallery 3 to 5 blocks wide; below 3 it collapses into a normal corridor, above 5 the flanking rooms lose depth and the spine no longer feels enclosed.",
+    "Attach 3 to 5 habitable rooms per side, each opening directly onto the gallery; no room may open onto another room without first touching the spine.",
+    "Pair rooms across the gallery so the spine has a symmetric rhythm of doorways; offset pairings break the axial reading.",
+    "Place a long window run at one or both short ends of the gallery (and clerestory windows along the upper wall when a second story permits) so light travels down the full length.",
+    "Furnish the gallery itself with display niches, benches or reading alcoves at regular intervals so it functions as a social room and not only as passage.",
+    "Reserve the gallery's two end bays as terminations — a window, a fireplace, a statue or a major doorway — to anchor the axis."
+  ],
+  "alexander_patterns_relevant": [
+    "light-on-two-sides",
+    "common-areas-at-the-heart",
+    "sequence-of-sitting-spaces"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

@@ -1,0 +1,11 @@
+{
+  "id": "dirt",
+  "block_id": "minecraft:dirt",
+  "category": "ground",
+  "color": "brown",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["rustic", "medieval", "natural"]
+}

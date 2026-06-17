@@ -1,0 +1,101 @@
+{
+  "id": "attic",
+  "name": "Attic",
+  "kind": "room",
+  "description": "The high triangular space directly under a gabled roof. The floor of @primary is the ceiling of the room below; the walls taper inward each layer (one block off each side per level on the short axis) until they meet in a 1-block @primary ridge — or @glass for a skylight. Storage chests line the eaves (the low-headroom edge where you cannot stand), @primary blocks are stacked as crate-like boxes in the centre with one bookshelf, hanging lanterns dangle from the ridge for light, and a single dormer window cuts a small gable into one pitched wall to admit daylight.",
+  "typical_dimensions": {
+    "min": [
+      5,
+      3,
+      5
+    ],
+    "preferred": [
+      8,
+      4,
+      8
+    ],
+    "max": [
+      10,
+      5,
+      10
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "minecraft:chest",
+      "count": "2..4",
+      "rule": "Lined along the eaves (the first interior row next to each long pitched wall) where the headroom is too low to stand; place 2 on the primary eave and up to 2 more on the opposite eave when the AABB is large."
+    },
+    {
+      "item": "boxes",
+      "count": "2..3",
+      "rule": "Stacked @primary blocks in the centre of the floor as crate-shaped storage forms, optionally stacked 2 high under the apex where headroom allows."
+    },
+    {
+      "item": "minecraft:bookshelf",
+      "count": 1,
+      "rule": "A single bookshelf next to the boxes at the centre of the floor."
+    },
+    {
+      "item": "minecraft:lantern",
+      "count": "1..3",
+      "rule": "Hanging from the ridge (one block below the apex); scale to 3 lanterns spread along the long axis for large attics."
+    },
+    {
+      "item": "dormer_window",
+      "count": 1,
+      "rule": "A 1-2 block @glass cluster cut into one long pitched wall roughly halfway up the slope; centred along the long axis."
+    }
+  ],
+  "placement_rules": [
+    "Sloped walls following roof pitch — each layer above the floor shrinks by one block on each side of the short axis until reaching a 1-block ridge.",
+    "Ridge runs along the longer horizontal axis (ties break to x), mirroring the gabled_roof skill so an attic stacked below such a roof aligns geometrically.",
+    "Storage along the eaves: chests sit on the low-headroom edge where a standing person could not fit under the slope anyway.",
+    "Skylight or dormer window for light: the ridge course may be glazed (@glass instead of @primary) when daylight from above is preferred; otherwise a small dormer is cut into one pitched wall.",
+    "Hang lanterns from the ridge layer (hanging=true) so the light source dangles into the open volume below the apex.",
+    "Centre the bookshelf + stacked boxes under the apex where the headroom is highest."
+  ],
+  "lighting_ventilation": "At least one hanging lantern under the ridge, plus daylight through the dormer window (and optionally a skylight ridge of @glass). Two opposite eaves with chests leave the long centre line as the ventilated walking aisle.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:oak_planks",
+        "glass": "minecraft:glass_pane",
+        "light": "minecraft:lantern"
+      },
+      "notes": "Oak-plank ridge and floor, plain glass dormer, hanging iron lanterns dangling from the ridge beam."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "glass": "minecraft:white_stained_glass_pane",
+        "light": "minecraft:redstone_lamp"
+      },
+      "notes": "Quartz sloped walls, a full @glass skylight ridge by default (set skylight=True), and redstone-lamp lighting in place of the lantern silhouette."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "glass": "minecraft:purple_stained_glass_pane",
+        "light": "minecraft:sea_lantern"
+      },
+      "notes": "Dark-oak attic with a purple-stained-glass dormer; sea lanterns hang from the ridge giving a bluish wizard-tower glow."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "sheltering-roof",
+    "building-edge"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "attic",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.attic.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_role",
+  "schema_version": "2.0"
+}

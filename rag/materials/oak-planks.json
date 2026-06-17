@@ -1,0 +1,15 @@
+{
+  "id": "oak-planks",
+  "block_id": "minecraft:oak_planks",
+  "category": "wood",
+  "color": "tan",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:oak_stairs",
+    "slab": "minecraft:oak_slab",
+    "fence": "minecraft:oak_fence"
+  },
+  "used_by_styles": ["medieval", "rustic", "fantasy", "cottagecore", "vanilla"]
+}

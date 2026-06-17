@@ -1,0 +1,27 @@
+{
+  "id": "strong-centers",
+  "name": "Strong Centers",
+  "source_work": "The Nature of Order",
+  "paraphrase": "Every living configuration is organised around perceptible centers, regions of coherent space whose pull is reinforced by surrounding centers that point toward them. A strong center is not merely a geometric midpoint but a focus of attention created by symmetry, boundary, light, and the cooperation of subsidiary centers; without such foci a design dissolves into undifferentiated pattern.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "144-242",
+    "edition": "Center for Environmental Structure 2002",
+    "isbn": "0-9726529-0-6"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "strong_centers_score",
+    "python_path": "TFGv2.eval.strong_centers",
+    "expected_range": [0.0, 1.0]
+  },
+  "skills_embodying": [
+    "chimney",
+    "entry_hall",
+    "courtyard_indoor",
+    "great_hall",
+    "round_tower",
+    "square_tower",
+    "chapel",
+    "throne_room"
+  ]
+}

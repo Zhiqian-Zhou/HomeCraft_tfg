@@ -1,0 +1,40 @@
+{
+  "id": "central-hall-layout",
+  "name": "Central great hall layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "Medieval great-hall floor-layout strategy in which one dominant rectangular hall occupies 40-50% of the total floor footprint and acts as the building's social, dining and meeting heart, while 2-4 smaller service rooms (kitchen, pantry/store, sleeping chambers, antechamber) are tucked against the long sides and short ends of that hall. The hall is the tallest space in the plan, rising 5 to 8 blocks to expose a timber-truss ceiling and to host a central hearth or long table, whereas the satellite rooms keep ordinary 3-4 block ceilings. This layout is the canonical organisation of medieval manor houses, Viking longhouses, fantasy mead halls and large taverns: the hall is the only space a guest sees first, the side rooms open off it rather than off any corridor.",
+  "typical_dimensions": {
+    "min": [10, 5, 12],
+    "preferred": [14, 6, 16],
+    "max": [22, 8, 26]
+  },
+  "tags": {
+    "category": "great-hall",
+    "style": ["medieval", "viking", "fantasy"]
+  },
+  "applicable_to": ["residential", "castle", "tavern"],
+  "parameters": {
+    "hall_ratio": "0.40-0.50",
+    "hall_position": "center",
+    "side_rooms_count": "2-4",
+    "hall_height": "tall_5_to_8"
+  },
+  "placement_rules": [
+    "Place the great hall on the long axis of the footprint so its length is at least 1.3x its width; a square hall reads as a room, not as a hall.",
+    "Size the hall between 40% and 50% of the floor area — below that it stops dominating the plan, above that the side rooms become unusable slivers.",
+    "Make the hall ceiling 5-8 blocks tall while the satellite rooms stay at 3-4 blocks; the height contrast is what signals 'great hall' from outside via a taller roof ridge.",
+    "Place 2 to 4 side rooms against the hall's long walls and short ends; the kitchen takes the end nearest the hearth or chimney, sleeping chambers take the quiet far end, the store/pantry tucks beside the kitchen.",
+    "Every side room opens directly onto the hall through a single door — never link two side rooms by an internal corridor, the hall is itself the corridor.",
+    "Reserve the geometric centre of the hall for a hearth, long table or fire pit; no door, stair or pillar may land in the central 3x3 block area.",
+    "Keep the main entrance on one of the hall's short ends so a visitor walks the full length of the hall before reaching any private room — this is the medieval intimacy gradient."
+  ],
+  "alexander_patterns_relevant": [
+    "common-areas-at-the-heart",
+    "high-ceilings",
+    "the-fire"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

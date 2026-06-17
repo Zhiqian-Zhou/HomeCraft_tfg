@@ -1,0 +1,106 @@
+{
+  "id": "round_tower",
+  "name": "Round tower",
+  "kind": "exterior",
+  "description": "Defensive round tower inscribed in an AABB. Builds a hollow @primary cylinder of radius min(W,D)//2 centered on the AABB, a solid @secondary floor disc at the base, a crenellated battlement crown at the top (alternating merlons and air-gap crenels around the rim), four narrow @glass window slits at mid-height on the cardinal directions, a 1x2 door cut on the +z side, and a single @light lantern hanging near the top of the interior.",
+  "typical_dimensions": {
+    "min": [
+      5,
+      6,
+      5
+    ],
+    "preferred": [
+      9,
+      10,
+      9
+    ],
+    "max": [
+      14,
+      16,
+      14
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "cylinder_wall",
+      "count": 1,
+      "rule": "Hollow @primary cylinder, radius = min(W,D)//2, full AABB height."
+    },
+    {
+      "item": "battlement",
+      "count": 1,
+      "rule": "Top-course crenellation: alternating @primary merlons and air crenels around the rim."
+    },
+    {
+      "item": "window_slit",
+      "count": "4..6",
+      "rule": "Narrow @glass slit at mid-height on each cardinal direction (N/S/E/W); 1-2 blocks tall depending on tower height."
+    },
+    {
+      "item": "door_opening",
+      "count": 1,
+      "rule": "1-wide, 2-tall opening on the accessible (+z) side at y0..y0+1, cut by overwriting wall cells with cave_air."
+    },
+    {
+      "item": "lantern",
+      "count": 1,
+      "rule": "One minecraft:lantern at the center of the interior near the top course for night-time defense lighting."
+    }
+  ],
+  "placement_rules": [
+    "Battlement crown at top with alternating crenels",
+    "Window slits at cardinal directions",
+    "Door on accessible side",
+    "Floor disc of @secondary forms a solid base distinguishable from the wall material",
+    "Lantern placed above mid-height so it lights both upper floor and the door opening"
+  ],
+  "lighting_ventilation": "Cardinal window slits provide minimal but defensive natural light + ventilation; a single interior lantern keeps the tower mob-safe on Java 1.16.5 light-level rules. Open crenels in the battlement double as sky-light wells at the top.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:cobblestone",
+        "secondary": "minecraft:stone_bricks",
+        "accent": "minecraft:mossy_cobblestone",
+        "glass": "minecraft:glass_pane",
+        "light": "minecraft:lantern"
+      },
+      "notes": "Cobblestone keep with stone-brick floor and lantern light — the canonical castle watchtower."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "secondary": "minecraft:polished_andesite",
+        "accent": "minecraft:smooth_stone",
+        "glass": "minecraft:white_stained_glass_pane",
+        "light": "minecraft:redstone_lamp"
+      },
+      "notes": "Smooth-quartz silo with andesite floor — reads as an observation tower or lighthouse base."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "secondary": "minecraft:mossy_cobblestone",
+        "accent": "minecraft:purpur_block",
+        "glass": "minecraft:purple_stained_glass_pane",
+        "light": "minecraft:sea_lantern"
+      },
+      "notes": "Dark-timber wizard tower on mossy footing with purple stained-glass slits and a sea-lantern beacon."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "building-edge",
+    "roof-layout"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "tower",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.round_tower.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0"
+}

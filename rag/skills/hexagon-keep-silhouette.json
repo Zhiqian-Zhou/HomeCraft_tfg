@@ -1,0 +1,79 @@
+{
+  "id": "hexagon-keep-silhouette",
+  "name": "Hexagonal keep silhouette",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "global_silhouette",
+  "description": "Overall silhouette of a hexagonal keep or hall — an elongated six-sided footprint, full-height across the middle and tapering to a vertical edge at each end. The angled ends deflect attack and give a broader, more imposing presence than a plain rectangle while keeping rectangular rooms in the wide middle bay. Used for castle keeps, chapter houses and fantasy strongholds. Consumed by the global_designer to fix the envelope before space_planner subdivides the bays.",
+  "typical_dimensions": {
+    "min": [
+      10,
+      8,
+      8
+    ],
+    "preferred": [
+      24,
+      16,
+      24
+    ],
+    "max": [
+      44,
+      30,
+      44
+    ]
+  },
+  "tags": {
+    "category": "tower",
+    "style": [
+      "medieval",
+      "fantasy",
+      "gothic"
+    ]
+  },
+  "applicable_to": [
+    "monument",
+    "residential",
+    "castle"
+  ],
+  "parameters": {
+    "footprint_shape": "hexagon",
+    "aspect_ratio": "1.4",
+    "preferred_floors": "2-4",
+    "entrance_side": "a_flat_face",
+    "floor_progression": "setback"
+  },
+  "placement_rules": [
+    "Footprint is an elongated hexagon: full depth in the middle, tapering to a vertical edge at each X-end.",
+    "Rectangular rooms occupy the wide central bay; the tapered ends are thick wall, stairs or alcoves.",
+    "2-4 storeys suit a keep; a single stair core serves them.",
+    "The entrance pierces one of the long flat faces.",
+    "Keep the central bay >= 4 deep so rooms fit."
+  ],
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:cobblestone",
+        "accent": "minecraft:stone_bricks",
+        "roof": "minecraft:dark_oak_stairs",
+        "trim": "minecraft:oak_log"
+      },
+      "notes": "Rubble-and-ashlar keep with battered hexagonal base and crenellated top."
+    },
+    "gothic": {
+      "palette_overrides": {
+        "primary": "minecraft:stone_bricks",
+        "accent": "minecraft:polished_diorite",
+        "roof": "minecraft:dark_oak_stairs",
+        "trim": "minecraft:dark_oak_log"
+      },
+      "notes": "Chapter-house hexagon with tall traceried windows on each face."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "levels-of-scale",
+    "strong-centers",
+    "sheltering-roof"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

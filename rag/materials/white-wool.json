@@ -1,0 +1,11 @@
+{
+  "id": "white-wool",
+  "block_id": "minecraft:white_wool",
+  "category": "wool",
+  "color": "white",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["medieval", "rustic", "modern", "fantasy"]
+}

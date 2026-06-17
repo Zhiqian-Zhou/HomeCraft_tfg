@@ -1,0 +1,30 @@
+{
+  "id": "mediterranean",
+  "name": "Mediterranean",
+  "description": "Sun-drenched coastal vernacular: whitewashed walls, terracotta tile roofs, blue door and shutter accents, arched windows, and sun terraces that open onto stone-paved courtyards.",
+  "palette": {
+    "primary": ["minecraft:smooth_sandstone", "minecraft:white_concrete"],
+    "secondary": ["minecraft:sandstone", "minecraft:cut_sandstone"],
+    "accent": ["minecraft:orange_terracotta", "minecraft:blue_concrete"],
+    "roof": ["minecraft:orange_terracotta", "minecraft:red_terracotta"],
+    "floor": ["minecraft:smooth_sandstone", "minecraft:polished_diorite"],
+    "glass": ["minecraft:light_blue_stained_glass_pane", "minecraft:glass_pane"],
+    "light": ["minecraft:lantern"]
+  },
+  "signature_elements": [
+    "whitewashed walls",
+    "terracotta tile roof",
+    "blue door/shutter accents",
+    "arched windows",
+    "olive tree (sapling) gardens",
+    "stone-paved courtyards",
+    "low pitched roofs"
+  ],
+  "ratios": {
+    "story_height": 4,
+    "wall_thickness": 1,
+    "window_width": 2,
+    "roof_pitch": 0.5
+  },
+  "alexander_patterns": ["sheltering-roof", "tree-places", "main-entrance"]
+}

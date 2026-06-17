@@ -1,0 +1,10 @@
+{
+  "id": "red-bed",
+  "block_id": "minecraft:red_bed",
+  "category": "furniture",
+  "color": "red wool with wooden frame",
+  "transparent": true,
+  "light_emission": 0,
+  "is_solid": false,
+  "used_by_styles": ["medieval", "modern", "fantasy", "rustic"]
+}

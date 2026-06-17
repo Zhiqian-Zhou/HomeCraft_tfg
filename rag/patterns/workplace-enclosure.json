@@ -1,0 +1,19 @@
+{
+  "id": "workplace-enclosure",
+  "name": "Workspace Enclosure",
+  "source_work": "A Pattern Language",
+  "paraphrase": "A workspace must feel neither too enclosed nor too exposed: it needs a back wall and a partial enclosure on two or three sides, a view out to a larger space, and the ability for the occupant to see other people at work without being directly in their line of traffic. Alexander recommends that walls and windows together close off roughly fifty to seventy-five percent of a sixty-square-foot workspace, with an opening of at least eight feet in front facing onto a larger space, so the worker has both shelter at the back and outlook to the front.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "846-851",
+    "edition": "Oxford University Press 1977",
+    "isbn": "0-19-501919-9"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "workplace_enclosure_score"
+  },
+  "skills_embodying": [
+    "study",
+    "library"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "dark-oak-planks",
+  "block_id": "minecraft:dark_oak_planks",
+  "category": "wood",
+  "color": "#3F2A14",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:dark_oak_stairs",
+    "slab": "minecraft:dark_oak_slab",
+    "fence": "minecraft:dark_oak_fence"
+  },
+  "used_by_styles": ["medieval", "gothic", "fantasy", "manor", "arts-and-crafts"]
+}

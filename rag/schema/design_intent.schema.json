@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homecraft.tfg/schemas/design_intent.schema.json",
+  "title": "DesignIntent",
+  "description": "Output of the main planner agent: BOT skeleton + globally pre-planned connectors (doors, windows, staircases) that specialists MUST respect.",
+  "type": "object",
+  "required": [
+    "prompt",
+    "style",
+    "site_aabb",
+    "floors",
+    "rooms",
+    "exterior",
+    "connectors"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "prompt": { "type": "string", "minLength": 1 },
+    "style": {
+      "type": "string",
+      "enum": ["medieval", "fantasy", "gothic", "renaissance", "modern", "minimalist",
+               "japanese", "chinese", "mediterranean", "rustic"]
+    },
+    "exemplars_used": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Building IDs from rag/reference_buildings/processed/ used as exemplars."
+    },
+    "category": {
+      "type": "string",
+      "enum": ["residential", "castle", "tower", "temple", "shop", "tavern",
+               "barn", "windmill", "lighthouse", "monument", "other"]
+    },
+    "site_aabb": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": { "type": "integer" },
+      "description": "[x0,y0,z0,x1,y1,z1] of the whole site including exterior."
+    },
+    "building_aabb": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": { "type": "integer" },
+      "description": "[x0,y0,z0,x1,y1,z1] of the building footprint only (subset of site_aabb)."
+    },
+    "floors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["index", "y0", "y1"],
+        "additionalProperties": false,
+        "properties": {
+          "index": { "type": "integer", "minimum": 0 },
+          "y0": { "type": "integer" },
+          "y1": { "type": "integer" },
+          "name": { "type": "string" }
+        }
+      }
+    },
+    "rooms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "role", "floor", "aabb"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9_-]*$" },
+          "role": { "type": "string" },
+          "floor": { "type": "integer", "minimum": 0 },
+          "aabb": { "$ref": "#/$defs/aabb" },
+          "style_overrides": { "type": "object" },
+          "patterns_hint": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "exterior": {
+      "type": "object",
+      "required": ["features"],
+      "additionalProperties": false,
+      "properties": {
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["role", "aabb"],
+            "additionalProperties": false,
+            "properties": {
+              "role": { "type": "string" },
+              "aabb": { "$ref": "#/$defs/aabb" },
+              "skill_hint": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "connectors": {
+      "type": "object",
+      "required": ["doors", "windows", "staircases"],
+      "additionalProperties": false,
+      "properties": {
+        "doors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "between", "at", "facing"],
+            "properties": {
+              "id": { "type": "string" },
+              "between": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "items": { "type": "string" }
+              },
+              "at": { "$ref": "#/$defs/xyz" },
+              "facing": {
+                "type": "string",
+                "enum": ["n", "s", "e", "w", "north", "south", "east", "west"]
+              },
+              "block_key": { "type": "string" }
+            }
+          }
+        },
+        "windows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "in_room", "wall", "aabb"],
+            "properties": {
+              "id": { "type": "string" },
+              "in_room": { "type": "string" },
+              "wall": {
+                "type": "string",
+                "enum": ["n", "s", "e", "w", "north", "south", "east", "west"]
+              },
+              "aabb": { "$ref": "#/$defs/aabb" },
+              "block_key": { "type": "string" }
+            }
+          }
+        },
+        "staircases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "aabb"],
+            "properties": {
+              "id": { "type": "string" },
+              "from_floor": { "type": "integer", "minimum": 0 },
+              "to_floor": { "type": "integer", "minimum": 0 },
+              "aabb": { "$ref": "#/$defs/aabb" },
+              "shape": { "type": "string" },
+              "block_key": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "alexander_rationale": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["pattern_id", "rationale"],
+        "additionalProperties": false,
+        "properties": {
+          "pattern_id": { "type": "string" },
+          "applied_to": { "type": "array", "items": { "type": "string" } },
+          "rationale": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "palette_override": { "type": "object" }
+  },
+  "$defs": {
+    "xyz": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": { "type": "integer" }
+    },
+    "aabb": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": { "type": "integer" },
+      "description": "[x0,y0,z0,x1,y1,z1] half-open."
+    }
+  }
+}

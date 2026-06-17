@@ -1,0 +1,26 @@
+{
+  "id": "crown-molding",
+  "name": "Crown molding",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "wall_fitting",
+  "description": "A decorative horizontal trim run along the top perimeter of an interior wall, in the single course directly below the ceiling, where wall meets ceiling. Crown molding is a classical refinement detail — it softens the otherwise sharp 90-degree intersection between the vertical wall plane and the horizontal ceiling plane and adds a finer level of scale to a room that would otherwise read as a bare box. Profile is stepped or curved: an inverted oak stair facing into the room reads as a coved cornice, while a spruce slab tucked flush against the ceiling reads as a flat picture rail. The trim wraps every interior wall continuously, breaking only at door and window heads. Found in renaissance halls, Victorian parlours, and Gothic chapter rooms.",
+  "typical_dimensions": {
+    "min": [3, 1, 1],
+    "preferred": [8, 1, 1],
+    "max": [16, 1, 1]
+  },
+  "tags": {
+    "category": "other",
+    "style": ["renaissance", "victorian", "gothic"]
+  },
+  "applicable_to": ["residential", "monument"],
+  "parameters": {
+    "height_from_ceiling": 1,
+    "block": "oak_stairs_inverted_or_spruce_slab",
+    "placement": "interior_walls_top_perimeter",
+    "profile": "stepped_or_curved"
+  },
+  "alexander_patterns_relevant": ["levels-of-scale"],
+  "python_skill_signature": null
+}

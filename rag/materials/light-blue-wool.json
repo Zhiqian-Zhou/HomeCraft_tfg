@@ -1,0 +1,11 @@
+{
+  "id": "light-blue-wool",
+  "block_id": "minecraft:light_blue_wool",
+  "category": "wool",
+  "color": "light_blue",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["modern", "fantasy"]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "oriel-window",
+  "name": "Oriel window",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "wall_fitting",
+  "description": "A projecting bay window cantilevered from an upper-floor wall, distinct from a ground-rooted bay in that it never touches the ground — the protruding volume is carried instead by decorative corbels, a stone bracket, or a stepped underbelly tucked beneath the sill. The oriel extrudes one or two blocks outward from the host wall and is glazed on its front and two flanking faces, typically with three or more panels divided by slender mullions of the wall's primary material. Diagnostic of Medieval English manor houses, late-Gothic gatehouses, and Victorian/Tudor-revival townhouses, the oriel reads as a small light-filled alcove inside — a natural window seat — while outside it animates the facade with a sculptural overhang that frames a view of the street, courtyard, or garden below.",
+  "typical_dimensions": {
+    "min": [2, 2, 1],
+    "preferred": [3, 2, 2],
+    "max": [4, 3, 2]
+  },
+  "tags": {
+    "category": "window",
+    "style": ["medieval", "victorian", "gothic"]
+  },
+  "applicable_to": ["residential", "castle"],
+  "parameters": {
+    "placement": "upper_floor_wall_only",
+    "projection": "1_or_2",
+    "support": "corbels_or_bracket",
+    "glazing": "3_panels_minimum",
+    "typical_height": "2_or_3"
+  },
+  "alexander_patterns_relevant": ["window-place", "light-on-two-sides"],
+  "python_skill_signature": null
+}

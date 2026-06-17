@@ -1,0 +1,10 @@
+{
+  "id": "ice",
+  "block_id": "minecraft:ice",
+  "category": "other",
+  "color": "translucent pale blue",
+  "transparent": true,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": ["fantasy", "nordic", "modern"]
+}

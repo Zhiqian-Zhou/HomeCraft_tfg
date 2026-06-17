@@ -1,0 +1,10 @@
+{
+  "id": "spruce-leaves",
+  "block_id": "minecraft:spruce_leaves",
+  "category": "plant",
+  "color": "#4A6240",
+  "transparent": true,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": ["alpine", "scandinavian", "nordic", "rustic", "taiga"]
+}

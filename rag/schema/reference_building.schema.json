@@ -1,0 +1,375 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homecraft.tfg/schemas/reference_building.schema.json",
+  "title": "ReferenceBuilding",
+  "description": "Canonical record of a real Minecraft building used as RAG-E example. Coordinates are local (origin at the AABB lower-NW corner). Block IDs are 1.16.5 namespaced.",
+  "type": "object",
+  "required": [
+    "id",
+    "source",
+    "source_url",
+    "license",
+    "title",
+    "tags",
+    "bounding_box",
+    "block_palette",
+    "voxels",
+    "metadata_quality"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]{2,63}$",
+      "description": "Stable kebab-case identifier, unique inside processed/."
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "gdmc",
+        "minerl",
+        "minedojo",
+        "craftassist",
+        "planet-minecraft",
+        "minecraft-schematics",
+        "9minecraft",
+        "github",
+        "huggingface",
+        "kaggle",
+        "zenodo",
+        "figshare",
+        "worldedit-archive",
+        "litematica-archive",
+        "world-export",
+        "synthetic",
+        "other"
+      ],
+      "description": "'synthetic' is reserved for derivative builds (e.g. palette-swapped variants of an existing real building); such records MUST flag `metadata_quality.ingest_warnings` with 'synthetic_palette_swap' and include `license_notes` naming the parent."
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "license": {
+      "type": "string",
+      "enum": [
+        "CC0",
+        "CC-BY",
+        "CC-BY-SA",
+        "CC-BY-NC",
+        "CC-BY-NC-SA",
+        "MIT",
+        "Apache-2.0",
+        "research-use-only",
+        "public-domain",
+        "unknown",
+        "forbidden"
+      ],
+      "description": "Items with 'unknown' must stay in raw/ until reviewed; 'forbidden' never reaches processed/."
+    },
+    "license_notes": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "tags": {
+      "type": "object",
+      "required": [
+        "category",
+        "style"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "residential",
+            "castle",
+            "tower",
+            "temple",
+            "shop",
+            "tavern",
+            "barn",
+            "windmill",
+            "lighthouse",
+            "village",
+            "ruin",
+            "monument",
+            "other"
+          ]
+        },
+        "style": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": [
+              "medieval",
+              "fantasy",
+              "gothic",
+              "renaissance",
+              "modern",
+              "minimalist",
+              "japanese",
+              "chinese",
+              "mediterranean",
+              "rustic",
+              "viking",
+              "egyptian",
+              "victorian",
+              "industrial",
+              "futuristic",
+              "other"
+            ]
+          }
+        },
+        "stories": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "has_basement": {
+          "type": "boolean"
+        },
+        "has_garden": {
+          "type": "boolean"
+        },
+        "size_bucket": {
+          "type": "string",
+          "enum": [
+            "small",
+            "medium",
+            "large",
+            "xlarge"
+          ],
+          "description": "Auto-computed from max dimension of bounding_box.size: small \u22648, medium \u226416, large \u226432, xlarge >32."
+        }
+      }
+    },
+    "bounding_box": {
+      "type": "object",
+      "required": [
+        "size"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "size": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 512
+          },
+          "description": "[width X, height Y, depth Z] in blocks"
+        }
+      }
+    },
+    "block_palette": {
+      "type": "object",
+      "minProperties": 1,
+      "patternProperties": {
+        "^[0-9]+$": {
+          "type": "string",
+          "pattern": "^minecraft:(?!(air|cave_air|void_air)\\b)[a-z0-9_]+(\\[[a-z0-9_=,]+\\])?$",
+          "description": "Namespaced 1.16.5 block ID, optionally with blockstate suffix. Air variants (air/cave_air/void_air) are forbidden \u2014 air is implicit (any coord not in voxels is air)."
+        }
+      },
+      "additionalProperties": false
+    },
+    "voxels": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4,
+        "items": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "description": "[x, y, z, palette_idx] with 0 <= x < W, 0 <= y < H, 0 <= z < D, palette_idx present in block_palette."
+      }
+    },
+    "bot_decomposition": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "building"
+          ],
+          "properties": {
+            "building": {
+              "type": "object",
+              "required": [
+                "storeys"
+              ],
+              "properties": {
+                "storeys": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "spaces"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "spaces": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "id",
+                            "function",
+                            "aabb"
+                          ],
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "function": {
+                              "type": "string",
+                              "enum": [
+                                "kitchen",
+                                "bathroom",
+                                "bedroom",
+                                "living-room",
+                                "dining-room",
+                                "library",
+                                "study",
+                                "hallway",
+                                "staircase",
+                                "entry-hall",
+                                "basement",
+                                "attic",
+                                "courtyard",
+                                "throne-room",
+                                "great-hall",
+                                "chapel",
+                                "storage",
+                                "other"
+                              ]
+                            },
+                            "aabb": {
+                              "type": "array",
+                              "minItems": 6,
+                              "maxItems": 6,
+                              "items": {
+                                "type": "integer",
+                                "minimum": 0
+                              },
+                              "description": "[x0, y0, z0, x1, y1, z1] inclusive lower / exclusive upper."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "description": "Optional BOT decomposition. Null when no room labels exist at ingest."
+    },
+    "metadata_quality": {
+      "type": "object",
+      "required": [
+        "interior_populated",
+        "has_labels"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "interior_populated": {
+          "type": "boolean",
+          "description": "True if furniture_blocks >= 20 (absolute threshold). Replaces the old ratio-based heuristic that broke on builds with outdoor gardens."
+        },
+        "has_labels": {
+          "type": "boolean",
+          "description": "True if bot_decomposition is non-null."
+        },
+        "furniture_blocks": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ingest_warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ingest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "type": "string"
+        },
+        "tool_version": {
+          "type": "string"
+        },
+        "source_format": {
+          "type": "string",
+          "enum": [
+            "schem",
+            "schematic",
+            "litematic",
+            "nbt",
+            "mca",
+            "json",
+            "npz",
+            "other"
+          ]
+        },
+        "ingested_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "ingester_path": {
+          "type": "string"
+        }
+      }
+    },
+    "connectors": {
+      "type": "object",
+      "description": "Planned doors/windows/staircases (for floor-plan display). Optional.",
+      "properties": {
+        "doors": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "windows": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "staircases": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

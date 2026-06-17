@@ -1,0 +1,18 @@
+{
+  "id": "quartz-block",
+  "block_id": "minecraft:quartz_block",
+  "category": "stone",
+  "color": "white",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:quartz_stairs",
+    "slab": "minecraft:quartz_slab"
+  },
+  "used_by_styles": [
+    "modern",
+    "minimalist",
+    "mediterranean"
+  ]
+}

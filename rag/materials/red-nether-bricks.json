@@ -1,0 +1,15 @@
+{
+  "id": "red-nether-bricks",
+  "block_id": "minecraft:red_nether_bricks",
+  "category": "brick",
+  "color": "dark red",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:red_nether_brick_stairs",
+    "slab": "minecraft:red_nether_brick_slab",
+    "wall": "minecraft:red_nether_brick_wall"
+  },
+  "used_by_styles": ["gothic", "infernal", "dark-fantasy", "decorative"]
+}

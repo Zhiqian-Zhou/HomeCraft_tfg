@@ -1,0 +1,40 @@
+{
+  "id": "vestibule-with-coatroom",
+  "name": "Vestibule with coatroom",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "connector_template",
+  "description": "An enclosed lobby buffer placed between the front door and the rest of the interior, acting as a climate lock and a coat-shedding antechamber rather than as a destination room. The outer door opens into a small four-walled cell (3-6 blocks deep) holding a low bench along one side, a row of coat hooks on the opposite wall, and an inner door — never aligned axially with the outer door — that leads into the main hall. The two doors are never open at the same time, so cold air, snow, mud and wind stop at the threshold. This is the canonical Victorian house vestibule, the Russian dacha senyi, and the standard entry buffer of any cold-climate or formal dwelling where the main interior must be insulated from the street.",
+  "typical_dimensions": {
+    "min": [3, 3, 3],
+    "preferred": [4, 4, 3],
+    "max": [6, 5, 4]
+  },
+  "tags": {
+    "category": "entry-hall",
+    "style": ["victorian", "gothic", "medieval"]
+  },
+  "applicable_to": ["residential", "tavern"],
+  "parameters": {
+    "is_buffer_room": true,
+    "outer_door": true,
+    "inner_door": true,
+    "contains_bench": true,
+    "contains_coat_hooks": true,
+    "climate_lock": true
+  },
+  "placement_rules": [
+    "Place the vestibule directly inside the main entrance of the building so the outer door is the only weatherward opening and the inner door is the only path to the rest of the floor plan.",
+    "Offset the inner door laterally from the outer door — never align the two on the same axis — so a visitor must turn once between entering and reaching the interior; this breaks the wind path and visually screens the main hall from the street.",
+    "Keep the footprint small (3-6 blocks deep, 3-4 wide); a vestibule larger than that stops reading as a buffer and starts reading as a foyer or entry hall.",
+    "Place the bench along the wall perpendicular to the inner door so someone sitting to remove boots is not blocking either threshold.",
+    "Mount the coat hooks (rendered as a row of fence/trapdoor or item-frame blocks) on the wall opposite the bench, between waist and shoulder height.",
+    "Both doors must be closeable; the climate-lock property requires that opening one door does not expose the interior to the outside."
+  ],
+  "alexander_patterns_relevant": [
+    "entrance-transition",
+    "intimacy-gradient"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

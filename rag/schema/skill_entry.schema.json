@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homecraft.tfg/schemas/skill_entry.schema.json",
+  "title": "SkillEntry",
+  "description": "RAG-A entry (schema v2.0). Descriptive knowledge of one skill — building silhouette, floor layout, connector template, wall fitting, room role, or room decoration. Metadata-only entries (the new categories) have python_skill_signature=null; legacy ones reference a Python module in pipeline/skills/<id>.py.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "kind",
+    "description",
+    "typical_dimensions",
+    "tags"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]+$"
+    },
+    "style_affinity": {
+      "type": "string",
+      "description": "Optional. Human-readable note telling the LLM the stylistic character of this skill and which building styles it does/does not fit (e.g. 'East-Asian motif — out of place in Gothic/Modern'). INFORMATIONAL ONLY: the skill is still surfaced; the agent uses this to judge coherence, it is not a hard filter. Absent = style-neutral, fits any building."
+    },
+    "schema_version": {
+      "type": "string",
+      "enum": ["1.0", "2.0"],
+      "description": "Optional. 1.0 = legacy (no skill_category). 2.0 = v4 BOT-aware. Absent treated as 1.0."
+    },
+    "skill_category": {
+      "type": "string",
+      "enum": [
+        "global_silhouette",
+        "floor_layout",
+        "connector_template",
+        "wall_fitting",
+        "room_role",
+        "room_decoration",
+        "exterior_feature"
+      ],
+      "description": "v4 BOT-aware category. global_silhouette consumed by global_designer; floor_layout by space_planner + floor_planner; connector_template by space_planner; wall_fitting by architecture_planner; room_role by floor_planner + room_agent; room_decoration by room_agent; exterior_feature by exterior_agent. Absent on legacy entries (treat as room_role for back-compat)."
+    },
+    "applicable_to": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["residential", "castle", "tower", "temple", "shop", "tavern",
+                  "barn", "windmill", "lighthouse", "monument", "other"]
+      },
+      "description": "Building categories where this skill is appropriate. Used by agents to filter skill candidates by category."
+    },
+    "parameters": {
+      "type": "object",
+      "description": "Structured hints for the agent consuming this skill. Free-form keys per skill_category (e.g. footprint_shape for global_silhouette, corridor_width for floor_layout).",
+      "additionalProperties": true
+    },
+    "name": { "type": "string" },
+    "kind": {
+      "type": "string",
+      "enum": ["room", "furniture", "structural", "exterior", "decorative"]
+    },
+    "description": { "type": "string", "minLength": 10 },
+    "typical_dimensions": {
+      "type": "object",
+      "required": ["preferred"],
+      "additionalProperties": false,
+      "properties": {
+        "min": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "integer" } },
+        "preferred": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "integer" } },
+        "max": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "integer" } }
+      }
+    },
+    "required_furniture": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item", "count"],
+        "properties": {
+          "item": { "type": "string" },
+          "count": { "oneOf": [
+            { "type": "integer", "minimum": 0 },
+            { "type": "string", "pattern": "^[0-9]+\\.\\.[0-9]+$" }
+          ]},
+          "rule": { "type": "string" }
+        }
+      }
+    },
+    "placement_rules": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "lighting_ventilation": { "type": "string" },
+    "style_variants": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "palette_overrides": { "type": "object" },
+          "furniture_overrides": { "type": "array" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "alexander_patterns_relevant": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Pattern ids cross-referenced with RAG-C."
+    },
+    "examples": {
+      "type": "array",
+      "items": { "type": "string", "description": "ReferenceBuilding id from RAG-E." }
+    },
+    "tags": {
+      "type": "object",
+      "required": ["category"],
+      "properties": {
+        "category": { "type": "string" },
+        "style": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "python_skill_signature": {
+      "type": ["string", "null"],
+      "description": "Reference to the dispatchable Python skill function signature. null = metadata-only skill (no Python implementation; the consuming agent uses this entry as inspiration/pattern)."
+    }
+  }
+}

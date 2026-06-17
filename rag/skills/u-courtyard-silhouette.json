@@ -1,0 +1,90 @@
+{
+  "id": "u-courtyard-silhouette",
+  "name": "U-shape courtyard villa silhouette",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "global_silhouette",
+  "description": "Overall silhouette of a building whose footprint forms a U: three rectangular wings joined at right angles to enclose a central open courtyard, with the fourth side left open to admit light, breeze and entry traffic. Characteristic of Mediterranean villas, monastic cloisters with one cloister-walk dropped, and renaissance or Chinese sì-hé-yuàn-derived palaces. The open arm typically faces south or away from prevailing winds, so the courtyard collects sun while the closed wings shelter it. The U geometry defines a strong indoor-outdoor interior space: rooms on three sides face inward onto the court, making it the social heart while the outer facades read as the building's public face. Consumed by the global_designer to fix the envelope before space_planner subdivides the wings.",
+  "typical_dimensions": {
+    "min": [
+      14,
+      5,
+      14
+    ],
+    "preferred": [
+      28,
+      10,
+      28
+    ],
+    "max": [
+      56,
+      22,
+      56
+    ]
+  },
+  "tags": {
+    "category": "courtyard",
+    "style": [
+      "mediterranean",
+      "renaissance",
+      "chinese"
+    ]
+  },
+  "applicable_to": [
+    "residential",
+    "temple",
+    "monument"
+  ],
+  "parameters": {
+    "footprint_shape": "U",
+    "wings": 3,
+    "courtyard_ratio": "0.20-0.40",
+    "open_side": "south_or_entry",
+    "preferred_floors": "1-2",
+    "entrance_side": "open_arm_of_U"
+  },
+  "placement_rules": [
+    "Footprint is three rectangular wings forming a U; the fourth side is open and serves as the main entry axis.",
+    "Courtyard area should occupy 20-40% of the overall footprint bounding box — smaller reads as a notched rectangle, larger as a thin frame.",
+    "Orient the open arm of the U toward south (or whatever direction is away from prevailing winds) so the courtyard collects sun and shelter.",
+    "Rooms on the three closed wings should open onto the interior courtyard with windows, arcades or covered walkways; outer facades read as the public face.",
+    "Wing depth is roughly uniform (variation under 30%) so the U reads as a single coherent envelope rather than three disjoint buildings.",
+    "Building height is 1 or 2 storeys (5-10 blocks); taller variants risk overshadowing the courtyard and breaking the indoor-outdoor balance."
+  ],
+  "style_variants": {
+    "mediterranean": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_sandstone",
+        "accent": "minecraft:sandstone",
+        "roof": "minecraft:granite",
+        "trim": "minecraft:jungle_log"
+      },
+      "notes": "Whitewashed stucco wings around a sun-drenched courtyard; terracotta-toned roof; arcaded walkway facing the court on all three inner faces."
+    },
+    "renaissance": {
+      "palette_overrides": {
+        "primary": "minecraft:polished_diorite",
+        "accent": "minecraft:stone_bricks",
+        "roof": "minecraft:bricks",
+        "trim": "minecraft:dark_oak_log"
+      },
+      "notes": "Symmetrical wings with regular fenestration; ground-floor loggia along the courtyard; restrained brick-and-stone palette and a low hip cap on each wing."
+    },
+    "chinese": {
+      "palette_overrides": {
+        "primary": "minecraft:red_terracotta",
+        "accent": "minecraft:spruce_planks",
+        "roof": "minecraft:dark_oak_stairs",
+        "trim": "minecraft:stripped_spruce_log"
+      },
+      "notes": "Sì-hé-yuàn-derived layout with the south wing dropped; lacquer-red walls, upturned eaves on each wing, central courtyard paved and planted as the household's social heart."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "courtyards-which-live",
+    "common-areas-at-the-heart",
+    "wings-of-light"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

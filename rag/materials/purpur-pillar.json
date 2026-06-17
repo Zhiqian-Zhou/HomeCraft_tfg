@@ -1,0 +1,13 @@
+{
+  "id": "purpur-pillar",
+  "block_id": "minecraft:purpur_pillar",
+  "category": "stone",
+  "color": "purple",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": [
+    "fantasy",
+    "renaissance"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "e-wing-silhouette",
+  "name": "E-wing spine silhouette",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "global_silhouette",
+  "description": "Overall silhouette whose footprint forms an E: a long back spine with three projecting teeth (wings) reaching forward, enclosing two open light-courts between them. The Elizabethan-prodigy-house plan: the central tooth holds the porch and great hall, the flanking teeth hold lodgings, and the recesses flood the inner rooms with light. Consumed by the global_designer to fix the envelope before space_planner subdivides spine and teeth.",
+  "typical_dimensions": {
+    "min": [
+      16,
+      5,
+      16
+    ],
+    "preferred": [
+      34,
+      12,
+      30
+    ],
+    "max": [
+      68,
+      26,
+      56
+    ]
+  },
+  "tags": {
+    "category": "block",
+    "style": [
+      "renaissance",
+      "gothic",
+      "medieval"
+    ]
+  },
+  "applicable_to": [
+    "residential",
+    "monument"
+  ],
+  "parameters": {
+    "footprint_shape": "E",
+    "teeth": 3,
+    "spine_ratio": "0.20-0.30",
+    "preferred_floors": "1-2",
+    "entrance_side": "central_tooth"
+  },
+  "placement_rules": [
+    "Footprint is a back spine with three forward teeth forming an E.",
+    "The central tooth carries the main entrance and the principal room.",
+    "The two recesses between teeth stay open as light-courts.",
+    "Teeth and spine share full walls; tooth width >= 4.",
+    "1-2 storeys keep the light-courts effective."
+  ],
+  "style_variants": {
+    "renaissance": {
+      "palette_overrides": {
+        "primary": "minecraft:stone_bricks",
+        "accent": "minecraft:polished_diorite",
+        "roof": "minecraft:bricks",
+        "trim": "minecraft:dark_oak_log"
+      },
+      "notes": "Prodigy-house E with a tall central porch tooth; symmetrical lodging wings."
+    },
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:cobblestone",
+        "accent": "minecraft:oak_planks",
+        "roof": "minecraft:dark_oak_stairs",
+        "trim": "minecraft:oak_log"
+      },
+      "notes": "Stone-and-timber wings off a hall spine; gabled tooth ends."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "light-on-two-sides",
+    "main-entrance",
+    "strong-centers"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

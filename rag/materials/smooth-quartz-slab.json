@@ -1,0 +1,13 @@
+{
+  "id": "smooth-quartz-slab",
+  "block_id": "minecraft:smooth_quartz_slab",
+  "category": "stone",
+  "color": "white",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": [
+    "modern",
+    "minimalist"
+  ]
+}

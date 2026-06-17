@@ -1,0 +1,110 @@
+{
+  "id": "drawbridge",
+  "name": "Drawbridge over a moat",
+  "kind": "exterior",
+  "description": "Straight wooden span bridging a moat, drawn in a partially-lifted pose. A flat deck of @primary planks runs along the longer horizontal axis at y0; two @accent anchor posts (2 blocks tall, capped with minecraft:lantern) stand at the inner (building-side) end on either side; two slanted chains of minecraft:iron_bars rise from the outer end up to the top of the anchor posts, suggesting the bridge is being winched up. Optional decorative bumps every 2 blocks along the outer deck edges are @stairs facing outward — planks lifted in a rhythm. Length follows max(W, D); width is clamped to 2-3.",
+  "typical_dimensions": {
+    "min": [
+      2,
+      3,
+      4
+    ],
+    "preferred": [
+      3,
+      4,
+      8
+    ],
+    "max": [
+      3,
+      6,
+      12
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "planks_floor",
+      "count": 1,
+      "rule": "Fill of @primary at y0 covering the full deck rectangle; spans max(W, D)."
+    },
+    {
+      "item": "iron_chains",
+      "count": 2,
+      "rule": "Two minecraft:iron_bars chains, one on each long side, slanting UP from outer end (y0+1) to inner anchor-post top (y0+2)."
+    },
+    {
+      "item": "anchor_posts",
+      "count": 2,
+      "rule": "Two 2-tall @accent posts at the inner (building-side) end, one on each side of the width axis, starting at y0+1."
+    },
+    {
+      "item": "lanterns",
+      "count": 2,
+      "rule": "minecraft:lantern on top of each anchor post (y0+3); allowed to protrude one block above the AABB envelope."
+    },
+    {
+      "item": "optional_decoration",
+      "count": "0..10",
+      "rule": "Every 2 blocks along the outer deck edges, an @stairs block facing outward — only when span_len >= 6 and width >= 3."
+    }
+  ],
+  "placement_rules": [
+    "Planks form a flat span",
+    "Chains anchor each end",
+    "Posts at building-side end",
+    "Span runs along whichever horizontal axis is longer (max(W, D))",
+    "Width is clamped to 2-3 blocks",
+    "Chains slant up to suggest the drawbridge being lifted",
+    "Lanterns hang on top of the anchor posts (may protrude 1 above AABB)"
+  ],
+  "lighting_ventilation": "Two lanterns atop the anchor posts illuminate the bridge mouth; the deck itself is open-air, so ventilation is implicit. Chains and the iron-bar railing read as defensive, not enclosed.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "accent": "minecraft:stone_bricks",
+        "stairs": "minecraft:dark_oak_stairs"
+      },
+      "notes": "Dark-oak planks with iron_bars chains over a stone anchorage; classic castle-mouth drawbridge."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_stone",
+        "accent": "minecraft:polished_andesite",
+        "stairs": "minecraft:smooth_quartz_stairs"
+      },
+      "notes": "Smooth-stone deck with iron_bars chains — reads as a service bridge rather than a defensive one."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "accent": "minecraft:purpur_block",
+        "stairs": "minecraft:dark_oak_stairs"
+      },
+      "notes": "Dark-oak deck with proper minecraft:chain links instead of iron_bars; purpur anchor posts for arcane reading.",
+      "furniture_overrides": [
+        {
+          "item": "iron_chains",
+          "swap_block": "minecraft:chain"
+        }
+      ]
+    }
+  },
+  "alexander_patterns_relevant": [
+    "entrance-transition",
+    "main-entrance",
+    "building-edge"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "other",
+    "style": [
+      "medieval",
+      "fantasy",
+      "modern"
+    ]
+  },
+  "python_skill_signature": "build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0",
+  "style_affinity": "Medieval / fortified-military motif. Coherent in medieval/castle/rustic/fantasy/gothic. Out of place in Modern, Minimalist, East-Asian, Classical/Renaissance buildings."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "chiseled-sandstone",
+  "block_id": "minecraft:chiseled_sandstone",
+  "category": "stone",
+  "color": "pale tan with carved creeper-face relief",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["egyptian", "mediterranean"]
+}

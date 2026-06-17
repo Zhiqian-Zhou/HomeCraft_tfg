@@ -1,0 +1,10 @@
+{
+  "id": "barrel",
+  "block_id": "minecraft:barrel",
+  "category": "furniture",
+  "color": "spruce wood with iron bands",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": ["medieval", "modern", "fantasy", "rustic"]
+}

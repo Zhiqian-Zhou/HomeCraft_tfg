@@ -1,0 +1,14 @@
+{
+  "id": "iron-block",
+  "block_id": "minecraft:iron_block",
+  "category": "metal",
+  "color": "gray",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": [
+    "modern",
+    "industrial",
+    "minimalist"
+  ]
+}

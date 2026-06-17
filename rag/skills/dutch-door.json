@@ -1,0 +1,27 @@
+{
+  "id": "dutch-door",
+  "name": "Dutch door",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "connector_template",
+  "description": "A doorway split horizontally across its middle into two independently hinged leaves, so the upper half can be swung open for light, air, and conversation while the lower half stays shut to keep small children, dogs, chickens, or wind-blown straw on the correct side of the threshold. Historically the working door of stables, dairy barns, farmhouse kitchens, and rear service entries, it reads as an unmistakably rural, hands-on threshold: solid plank construction, visible iron strap hinges on both leaves, and a flat sill at floor level. The two halves usually meet around 1.5 blocks above the floor, giving an adult a comfortable lean-out height. Style variants stay restrained — weathered oak, spruce, or dark-stained planks — never ornamented.",
+  "typical_dimensions": {
+    "min": [2, 3, 1],
+    "preferred": [3, 4, 1],
+    "max": [4, 5, 1]
+  },
+  "tags": {
+    "category": "door",
+    "style": ["rustic", "medieval", "viking"]
+  },
+  "applicable_to": ["residential", "barn"],
+  "parameters": {
+    "split_axis": "horizontal_middle",
+    "top_independent": true,
+    "bottom_independent": true,
+    "common_use": "stable_or_kitchen_entry",
+    "typical_height_split": "1.5_blocks_per_half"
+  },
+  "alexander_patterns_relevant": ["entrance-transition"],
+  "python_skill_signature": null
+}

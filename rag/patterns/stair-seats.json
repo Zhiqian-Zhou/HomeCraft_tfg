@@ -1,0 +1,18 @@
+{
+  "id": "stair-seats",
+  "name": "Stair Seats",
+  "source_work": "A Pattern Language",
+  "paraphrase": "Wherever there are public stairs in a building or outside it, widen the steps near the bottom or shape one or two of the bottom treads so that they form generous seats facing the activity they overlook. Alexander observes that staircases naturally attract people to pause, watch, and converse, and that providing built-in seating at their foot turns a circulation element into a small social amphitheatre.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "601-605",
+    "edition": "Oxford University Press 1977",
+    "isbn": "0-19-501919-9"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "stair_seat_tread_count"
+  },
+  "skills_embodying": [
+    "staircase"
+  ]
+}

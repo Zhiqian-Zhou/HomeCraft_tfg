@@ -1,0 +1,11 @@
+{
+  "id": "red-wool",
+  "block_id": "minecraft:red_wool",
+  "category": "wool",
+  "color": "red",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["medieval", "rustic"]
+}

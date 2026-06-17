@@ -1,0 +1,15 @@
+{
+  "id": "mossy-cobblestone",
+  "block_id": "minecraft:mossy_cobblestone",
+  "category": "stone",
+  "color": "mottled gray with green moss",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:mossy_cobblestone_stairs",
+    "slab": "minecraft:mossy_cobblestone_slab",
+    "wall": "minecraft:mossy_cobblestone_wall"
+  },
+  "used_by_styles": ["medieval", "rustic", "fantasy"]
+}

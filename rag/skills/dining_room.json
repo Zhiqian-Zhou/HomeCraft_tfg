@@ -1,0 +1,96 @@
+{
+  "id": "dining_room",
+  "name": "Dining room",
+  "kind": "room",
+  "description": "Communal eating space anchored by a long central table with chairs on both long sides, a hanging lantern chandelier above the table center, an open beamed ceiling that keeps the room airy, and small touches (flower pot, barrel for tableware) that signal everyday use.",
+  "typical_dimensions": {
+    "min": [
+      6,
+      4,
+      6
+    ],
+    "preferred": [
+      9,
+      5,
+      10
+    ],
+    "max": [
+      12,
+      5,
+      14
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "table",
+      "count": 1,
+      "rule": "Run of @primary blocks centered along the room's long horizontal axis at y = floor + 1."
+    },
+    {
+      "item": "chair",
+      "count": "4..8",
+      "rule": "Stairs blocks (@stairs) facing the table, distributed evenly on both long sides — minimum 2 per side."
+    },
+    {
+      "item": "chandelier",
+      "count": 1,
+      "rule": "One minecraft:lantern hanging from a small @primary cluster attached to the ceiling, directly above the table center."
+    },
+    {
+      "item": "minecraft:flower_pot",
+      "count": "1..2",
+      "rule": "Centerpiece on the table; in tight rooms set off-axis from the chandelier."
+    },
+    {
+      "item": "minecraft:barrel",
+      "count": 1,
+      "rule": "Tableware storage placed against an interior wall corner, clear of the seating area."
+    }
+  ],
+  "placement_rules": [
+    "Table centered along long axis",
+    "Chairs face the table",
+    "Lantern hangs over table center",
+    "Leave at least one cell between table and long walls so chairs fit",
+    "Barrel sits against an interior corner, never blocking a chair"
+  ],
+  "lighting_ventilation": "Primary light source is the hanging lantern over the table; the open beamed ceiling lets daylight (or torchlight from adjacent rooms) seep in between beams.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:oak_planks",
+        "stairs": "minecraft:oak_stairs"
+      },
+      "notes": "Heavy oak refectory table; sturdy stair-chair benches; iron lantern above."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "stairs": "minecraft:smooth_quartz_stairs"
+      },
+      "notes": "Minimalist quartz table, low stone chairs, redstone-lamp-like lantern fitting."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "stairs": "minecraft:dark_oak_stairs"
+      },
+      "notes": "Long dark-oak feasting table fit for a great hall; lantern as enchanted chandelier."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "eating-atmosphere",
+    "common-areas-at-the-heart"
+  ],
+  "tags": {
+    "category": "dining-room",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.dining_room.build(aabb, materials, style, **kwargs) -> List[Op]",
+  "skill_category": "room_role",
+  "schema_version": "2.0"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "granite",
+  "block_id": "minecraft:granite",
+  "category": "stone",
+  "color": "speckled pinkish brown",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:granite_stairs",
+    "slab": "minecraft:granite_slab",
+    "wall": "minecraft:granite_wall"
+  },
+  "used_by_styles": ["rustic", "mediterranean", "modern"]
+}

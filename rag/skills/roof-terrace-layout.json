@@ -1,0 +1,72 @@
+{
+  "id": "roof-terrace-layout",
+  "name": "Roof terrace layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "Floor-layout strategy for an inhabited rooftop level: instead of a fully enclosed top storey, the slab is left open to the sky and treated as an outdoor room sitting on top of the building. A low parapet one or two blocks high rings the entire perimeter for safety and visual containment, the floor is paved as a continuous deck, and the programme is composed of soft elements — a pergola or trellis for filtered shade, planters and small trees, a reflecting pool or hot tub, low benches — rather than walls. At most a third of the footprint is given to small enclosed volumes such as a cabana, summer kitchen, stair lobby or storage cupboard, always pushed to one edge so the rest of the deck stays open. This is the canonical plan of the Mediterranean azotea, the modern penthouse terrace and the rustic flat-roof veranda.",
+  "typical_dimensions": {
+    "min": [8, 3, 8],
+    "preferred": [12, 3, 12],
+    "max": [20, 4, 20]
+  },
+  "tags": {
+    "category": "courtyard",
+    "style": ["mediterranean", "modern", "rustic"]
+  },
+  "applicable_to": ["residential", "monument"],
+  "parameters": {
+    "ceiling": "none_open_to_sky",
+    "parapet_height": "1_to_2_blocks",
+    "enclosed_room_ratio": "0.0_to_0.3",
+    "features": "pergola_or_planters_or_pool"
+  },
+  "placement_rules": [
+    "Leave the main deck fully open to the sky — no roof slab spans the central area; any overhead structure must be an open pergola, trellis or fabric awning that admits light and rain.",
+    "Ring the entire perimeter with a continuous parapet one or two blocks tall so the level reads as a contained outdoor room and the edge is safe to walk; gaps are allowed only where a stair lands or a planter takes over the edge.",
+    "Pave the whole floor as one continuous surface in a single material so the deck reads as one room; level changes are limited to a single one-block step that separates a sunken zone (pool, lounge pit) from the main level.",
+    "Keep enclosed volumes (cabana, summer kitchen, stair lobby, storage) to at most 30% of the footprint and push them against one edge — usually the windward or shaded edge — so the remaining 70% stays open.",
+    "Place a pergola, planters or a small reflecting pool/hot tub as the central organising feature; the deck must read as programmed outdoor space, not as empty leftover roof.",
+    "Locate the access stair, ladder or hatch against the enclosed-volume edge (often inside the cabana or stair lobby) rather than in the middle of the deck so circulation does not bisect the open area.",
+    "Orient the principal seating and the main view through the lowest stretch of parapet (or a deliberate gap with a railing) so the outdoor room frames a view outward rather than staring at its own wall."
+  ],
+  "style_variants": {
+    "mediterranean": {
+      "palette_overrides": {
+        "deck_paving": "minecraft:smooth_sandstone",
+        "parapet": "minecraft:white_terracotta",
+        "pergola_posts": "minecraft:oak_log",
+        "planter": "minecraft:sandstone",
+        "accent": "minecraft:chiseled_sandstone"
+      },
+      "notes": "Whitewashed terracotta parapet capped in smooth sandstone, a sandstone-paved deck baking in the sun, an open pergola of oak posts threaded with vines and sandstone planters holding small citrus or olive trees — the classic azotea of a coastal village house."
+    },
+    "modern": {
+      "palette_overrides": {
+        "deck_paving": "minecraft:smooth_stone",
+        "parapet": "minecraft:quartz_block",
+        "pergola_posts": "minecraft:smooth_quartz",
+        "planter": "minecraft:polished_andesite",
+        "accent": "minecraft:dark_prismarine"
+      },
+      "notes": "Minimalist penthouse terrace: a crisp smooth-stone deck framed by a low quartz parapet, a rectilinear pergola of smooth-quartz columns, polished-andesite planters with clipped greenery and a dark-prismarine reflecting pool as the centrepiece."
+    },
+    "rustic": {
+      "palette_overrides": {
+        "deck_paving": "minecraft:cobblestone",
+        "parapet": "minecraft:mossy_cobblestone",
+        "pergola_posts": "minecraft:spruce_log",
+        "planter": "minecraft:oak_planks",
+        "accent": "minecraft:stripped_spruce_log"
+      },
+      "notes": "Farmhouse flat-roof veranda: a rough cobblestone deck behind a mossy-cobblestone parapet, a heavy spruce-log pergola hung with drying herbs and oak-plank box planters spilling over with kitchen-garden vegetables."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "public-outdoor-room",
+    "roof-layout",
+    "pools-of-light"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

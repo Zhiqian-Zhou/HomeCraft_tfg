@@ -1,0 +1,13 @@
+{
+  "id": "packed-ice",
+  "block_id": "minecraft:packed_ice",
+  "category": "ground",
+  "color": "ice-blue",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "used_by_styles": [
+    "fantasy",
+    "vanilla"
+  ]
+}

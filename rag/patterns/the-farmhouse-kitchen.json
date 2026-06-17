@@ -1,0 +1,19 @@
+{
+  "id": "the-farmhouse-kitchen",
+  "name": "Farmhouse Kitchen",
+  "source_work": "A Pattern Language",
+  "paraphrase": "Make the kitchen big enough to be a room in its own right, with a large central table where the household actually eats and gathers, rather than a narrow galley reserved only for cooking. Alexander observes that the modern split between an efficient work-kitchen and a separate dining room destroys the convivial rhythm of preparing and sharing a meal together, so cooking, eating and informal sitting should all happen in one warm, shared space arranged around the table.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "660-663",
+    "edition": "Oxford University Press 1977",
+    "isbn": "0-19-501919-9"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "kitchen_table_centrality"
+  },
+  "skills_embodying": [
+    "kitchen",
+    "pantry"
+  ]
+}

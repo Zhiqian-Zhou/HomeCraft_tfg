@@ -1,0 +1,27 @@
+{
+  "id": "alternating-repetition",
+  "name": "Alternating Repetition",
+  "source_work": "The Nature of Order",
+  "paraphrase": "Repetition becomes alive when two or more elements alternate, so that each element is intensified by the contrasting one beside it; pure repetition without alternation flattens into monotony. Alexander observes that columns and intercolumniations, solid and void, light and shadow, or wide and narrow bays achieve their strength precisely because the second system of centers interleaves with the first.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "144-242",
+    "edition": "Center for Environmental Structure 2002",
+    "isbn": "0-9726529-0-6"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "alternating_repetition_index",
+    "python_path": "TFGv2.eval.alternating_repetition",
+    "expected_range": [0.0, 1.0]
+  },
+  "skills_embodying": [
+    "column",
+    "archway_passage",
+    "arch",
+    "window_bay",
+    "stained_glass_window",
+    "parapet",
+    "pergola",
+    "perimeter_wall_with_windows"
+  ]
+}

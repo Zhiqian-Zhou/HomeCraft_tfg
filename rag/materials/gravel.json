@@ -1,0 +1,11 @@
+{
+  "id": "gravel",
+  "block_id": "minecraft:gravel",
+  "category": "ground",
+  "color": "mottled gray",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["rustic", "industrial", "natural"]
+}

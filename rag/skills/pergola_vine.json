@@ -1,0 +1,41 @@
+{
+  "id": "pergola_vine",
+  "name": "Vine-covered pergola",
+  "kind": "exterior",
+  "description": "Pergola arch densely covered with leaves — Mediterranean vine arbour.",
+  "typical_dimensions": {
+    "min": [
+      5,
+      3,
+      5
+    ],
+    "preferred": [
+      9,
+      5,
+      9
+    ],
+    "max": [
+      20,
+      8,
+      20
+    ]
+  },
+  "tags": {
+    "category": "any",
+    "style": [
+      "medieval",
+      "rustic",
+      "fantasy",
+      "gothic",
+      "renaissance",
+      "modern",
+      "minimalist",
+      "japanese",
+      "chinese",
+      "mediterranean"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.pergola_vine.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0"
+}

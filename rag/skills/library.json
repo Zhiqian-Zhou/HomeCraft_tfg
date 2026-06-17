@@ -1,0 +1,113 @@
+{
+  "id": "library",
+  "name": "Library",
+  "kind": "room",
+  "description": "A bookshelf-lined reading room. Perimeter walls are clad with stacks of bookshelves (2-3 blocks tall) with gaps for the door and window. A central lectern serves as the focal reading surface; a 3-block reading table flanked by stair-block chairs sits to one side. Wall-mounted lanterns provide steady light. Fantasy variants include an enchanting table beside the lectern; medieval variants may include a ladder to an upper gallery when the room is tall enough.",
+  "typical_dimensions": {
+    "min": [
+      6,
+      4,
+      6
+    ],
+    "preferred": [
+      10,
+      5,
+      10
+    ],
+    "max": [
+      14,
+      6,
+      14
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "minecraft:bookshelf",
+      "count": "8..200",
+      "rule": "Line every interior wall except the door and window cells; stack 2-3 high."
+    },
+    {
+      "item": "minecraft:lectern",
+      "count": "1..3",
+      "rule": "At least one centered between the bookshelves; add a second when floor area >= 10x10."
+    },
+    {
+      "item": "reading_table",
+      "count": 1,
+      "rule": "Three blocks of @primary along the z axis, offset from the lectern column."
+    },
+    {
+      "item": "minecraft:oak_stairs",
+      "count": "1..2",
+      "rule": "Two stair-block chairs flank the reading table; one in tight rooms."
+    },
+    {
+      "item": "minecraft:lantern",
+      "count": "2..4",
+      "rule": "Mount on the top interior corners of the walls, one row below the ceiling."
+    },
+    {
+      "item": "minecraft:enchanting_table",
+      "count": "0..1",
+      "rule": "Fantasy style only — placed adjacent to the central lectern."
+    },
+    {
+      "item": "minecraft:ladder",
+      "count": "0..6",
+      "rule": "Vertical ladder against the east interior wall when AABB is multi-floor friendly (height >= 5 and footprint >= 8x8)."
+    }
+  ],
+  "placement_rules": [
+    "Bookshelves line every wall except door/window",
+    "Lectern centered with light overhead",
+    "Reading table by the window",
+    "Door opens on the south wall, window on the north wall",
+    "Lanterns mounted near the ceiling for ambient light without obstructing shelves"
+  ],
+  "lighting_ventilation": "Two lanterns (four in larger rooms) hang near the ceiling corners for warm reading light. A glass pane on the north wall provides daylight without UV damage to books; the south door admits cross-flow ventilation when open.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:oak_planks",
+        "floor": "minecraft:oak_planks"
+      },
+      "notes": "Plain oak shelves, wool carpet optional, ladder to a mezzanine when room is tall."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_quartz",
+        "floor": "minecraft:polished_andesite"
+      },
+      "notes": "Bookshelves remain vanilla oak (canonical block) against pale stone walls; redstone lamps replace lanterns at the style-pack level."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "floor": "minecraft:dark_oak_planks"
+      },
+      "furniture_overrides": [
+        {
+          "item": "minecraft:enchanting_table",
+          "count": 1
+        }
+      ],
+      "notes": "Adds an enchanting table beside the central lectern; sea lanterns substitute for lanterns at the style-pack level."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "workplace-enclosure",
+    "light-on-two-sides"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "library",
+    "style": [
+      "medieval",
+      "fantasy",
+      "modern"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.library.build(aabb, materials, style, **kwargs) -> List[Op]",
+  "skill_category": "room_role",
+  "schema_version": "2.0"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "renaissance",
+  "name": "Renaissance",
+  "description": "Classical proportions and symmetrical facades inspired by Italian Renaissance villas and palazzi. Brick and stone construction articulated with columns, pediments and round-arched openings; rusticated bases give way to smoother upper stories.",
+  "palette": {
+    "primary": [
+      "minecraft:smooth_sandstone",
+      "minecraft:stone_bricks"
+    ],
+    "secondary": [
+      "minecraft:sandstone",
+      "minecraft:cobblestone"
+    ],
+    "accent": [
+      "minecraft:chiseled_sandstone",
+      "minecraft:quartz_pillar"
+    ],
+    "roof": [
+      "minecraft:smooth_red_sandstone",
+      "minecraft:terracotta"
+    ],
+    "floor": [
+      "minecraft:polished_diorite",
+      "minecraft:polished_andesite"
+    ],
+    "glass": [
+      "minecraft:glass",
+      "minecraft:glass_pane"
+    ],
+    "light": [
+      "minecraft:lantern",
+      "minecraft:sea_lantern"
+    ]
+  },
+  "signature_elements": [
+    "classical columns",
+    "pediments",
+    "symmetrical bays",
+    "rusticated stone",
+    "round-arched windows",
+    "frescoed walls (carpet/painting proxy)"
+  ],
+  "ratios": {
+    "story_height": 5,
+    "wall_thickness": 2,
+    "window_width": 3,
+    "roof_pitch": 0.8
+  },
+  "alexander_patterns": [
+    "strong-centers",
+    "alternating-repetition",
+    "main-entrance"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "eaves-overhang",
+  "name": "Eaves overhang",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "wall_fitting",
+  "description": "Projecting course of the roof that extends one to three blocks past the wall plane along the building's long sides, sheltering the wall and any opening directly below from rain, snow, and direct sun. The overhang is built as a continuation of the roof's lowest course — usually stairs facing outward backed by full blocks or slabs — and runs the full perimeter of the eaves edges, not the gables. Visually it terminates the wall in a strong horizontal shadow line, framing windows and doors from above. Different traditions exploit this for different reasons: an English cottage uses a modest overhang to throw rainwater clear of the cob/timber base; a Mediterranean villa shades whitewashed walls from harsh summer sun; a Japanese minka pushes the overhang far past the wall to protect paper-and-timber facades and create a sheltered engawa walkway beneath. Common in rustic, mediterranean, japanese, and medieval styles.",
+  "typical_dimensions": {
+    "min": [1, 1, 1],
+    "preferred": [1, 1, 2],
+    "max": [1, 2, 3]
+  },
+  "tags": {
+    "category": "roof",
+    "style": ["rustic", "mediterranean", "japanese", "medieval"]
+  },
+  "applicable_to": ["residential", "barn", "temple"],
+  "parameters": {
+    "overhang_distance": "1_to_3",
+    "placement": "all_eaves_perimeter",
+    "soffit_block": "wood_planks_or_stone_slab",
+    "supports": "brackets_corbels_or_none",
+    "common_in_styles": "rustic_mediterranean_japanese"
+  },
+  "alexander_patterns_relevant": ["sheltering-roof", "building-edge"],
+  "examples": [],
+  "python_skill_signature": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "end-rod",
+  "block_id": "minecraft:end_rod",
+  "category": "light-source",
+  "color": "white",
+  "transparent": true,
+  "light_emission": 14,
+  "is_solid": false,
+  "used_by_styles": [
+    "modern",
+    "minimalist",
+    "fantasy"
+  ]
+}

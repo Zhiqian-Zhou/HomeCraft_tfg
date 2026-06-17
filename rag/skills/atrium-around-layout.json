@@ -1,0 +1,74 @@
+{
+  "id": "atrium-around-layout",
+  "name": "Atrium-around layout",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "floor_layout",
+  "description": "Floor-layout strategy organised around a single tall atrium at the geometric centre of the footprint, with rooms or galleries opening directly onto it from every side. Unlike a courtyard-perimeter layout the atrium is fully enclosed and usually roofed by a glass skylight, and the gallery walkway that wraps it is an interior circulation ring rather than an external arcade. Each surrounding room presents its main facade — often with interior windows or open balustrades — to the atrium rather than to the building exterior, so the central void becomes the lit social heart that ties multiple storeys together vertically. The pattern is the workhorse of modern office buildings, shopping malls, hotel lobbies and large minimalist residences where shared daylight and visual connection across floors are the organising idea.",
+  "typical_dimensions": {
+    "min": [12, 5, 12],
+    "preferred": [16, 6, 16],
+    "max": [24, 8, 24]
+  },
+  "tags": {
+    "category": "courtyard",
+    "style": ["modern", "minimalist", "industrial"]
+  },
+  "applicable_to": ["residential", "shop"],
+  "parameters": {
+    "atrium_position": "geometric_center",
+    "atrium_roofed": true,
+    "gallery_width": 2,
+    "room_facade": "facing_atrium",
+    "multi_storey_visible": true
+  },
+  "placement_rules": [
+    "Place the atrium void so its centroid coincides with the geometric centre of the floor footprint; off-centre atria break the radial symmetry that makes the layout legible from every gallery.",
+    "Size the atrium between 25% and 40% of the floor area — smaller voids feel like lightwells, larger ones leave the surrounding rooms too shallow to furnish.",
+    "Keep the gallery walkway 2 blocks wide on every side of the atrium so two occupants can pass and so the balustrade plus floor plate read as a proper interior ring.",
+    "Roof the atrium with glass, stained_glass or sea_lantern panels so daylight reaches the lowest floor; this is what distinguishes the atrium from an open courtyard.",
+    "Every surrounding room presents its main door and at least one interior window onto the atrium, never to a back corridor — the void replaces the corridor as the primary circulation hub.",
+    "Stack the atrium void identically on every storey so the multi-storey visual connection is preserved; the gallery floor plates form rings around the same vertical shaft.",
+    "Reserve the outer wall of each peripheral room for an external window as well, so each room is doubly lit (atrium-side and exterior-side) and cross-ventilated."
+  ],
+  "lighting_ventilation": "The roofed atrium acts as the primary daylight source: a glass or sea_lantern skylight floods the central void and spills into each surrounding room through interior windows or open balustrades. Supplement with lanterns mounted on the gallery balustrades for night use. Peripheral rooms keep an external window for cross-ventilation and a second light source.",
+  "style_variants": {
+    "modern": {
+      "palette_overrides": {
+        "floor": "minecraft:smooth_quartz",
+        "wall": "minecraft:white_concrete",
+        "trim": "minecraft:light_gray_concrete",
+        "balustrade": "minecraft:glass_pane",
+        "skylight": "minecraft:glass"
+      },
+      "notes": "Glass skylight over a quartz-floored atrium; glass-pane balustrades around each gallery so the multi-storey void reads as a single luminous shaft."
+    },
+    "minimalist": {
+      "palette_overrides": {
+        "floor": "minecraft:smooth_stone",
+        "wall": "minecraft:white_concrete",
+        "trim": "minecraft:white_concrete",
+        "balustrade": "minecraft:glass_pane",
+        "skylight": "minecraft:glass"
+      },
+      "notes": "All-white atrium with frameless glass balustrades and a flush glass roof; ornament reduced to the void itself and a single hanging sea_lantern."
+    },
+    "industrial": {
+      "palette_overrides": {
+        "floor": "minecraft:polished_andesite",
+        "wall": "minecraft:smooth_stone",
+        "trim": "minecraft:iron_block",
+        "balustrade": "minecraft:iron_bars",
+        "skylight": "minecraft:glass"
+      },
+      "notes": "Exposed iron-bar balustrades and andesite floors; a steel-and-glass skylight evokes a converted warehouse or 19th-century arcade."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "common-areas-at-the-heart",
+    "interior-windows",
+    "pools-of-light"
+  ],
+  "examples": [],
+  "python_skill_signature": null
+}

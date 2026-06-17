@@ -1,0 +1,63 @@
+{
+  "id": "pagoda_tower",
+  "name": "Multi-tier pagoda tower",
+  "kind": "structural",
+  "description": "A standalone temple pagoda: a square shaft of `tier_count` storeys, each storey smaller than the one below and crowned with a curved upturned-eave course, the whole topped with a finial mast. Every storey is a hollow room with a glazed window on each face, so it reads as a habitable East-Asian tower rather than a solid spire.",
+  "typical_dimensions": {
+    "min": [
+      7,
+      9,
+      7
+    ],
+    "preferred": [
+      11,
+      18,
+      11
+    ],
+    "max": [
+      17,
+      36,
+      17
+    ]
+  },
+  "placement_rules": [
+    "Square footprint preferred so the four corner horns stay symmetric.",
+    "Each upper storey is centred over the one below and strictly within it (no floating walls).",
+    "Stands free in a courtyard or temple precinct as a strong vertical centre."
+  ],
+  "lighting_ventilation": "One glazed window per face per storey; the deep eaves shade each tier.",
+  "style_variants": {
+    "chinese": {
+      "palette_overrides": {
+        "@primary": "minecraft:red_concrete",
+        "@roof": "minecraft:yellow_concrete",
+        "@accent": "minecraft:gold_block"
+      },
+      "notes": "Imperial red shaft with yellow-tiled tiers and gilt finial."
+    },
+    "japanese": {
+      "palette_overrides": {
+        "@primary": "minecraft:spruce_planks",
+        "@roof": "minecraft:gray_concrete",
+        "@accent": "minecraft:dark_oak_log"
+      },
+      "notes": "Dark-timber shaft with charcoal tiers (Hōryū-ji feel)."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "strong-centers",
+    "roof-layout"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "any",
+    "style": [
+      "chinese",
+      "japanese"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.pagoda_tower.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0",
+  "style_affinity": "East-Asian (Japanese/Chinese) motif. Coherent in japanese/chinese (and fantasy). Out of place in Western, Gothic, Renaissance, Modern, Mediterranean buildings — use only if the building is East-Asian."
+}

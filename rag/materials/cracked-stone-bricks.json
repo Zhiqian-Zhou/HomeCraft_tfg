@@ -1,0 +1,11 @@
+{
+  "id": "cracked-stone-bricks",
+  "block_id": "minecraft:cracked_stone_bricks",
+  "category": "brick",
+  "color": "weathered gray",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["ruins", "medieval", "dungeon", "fantasy"]
+}

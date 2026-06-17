@@ -1,0 +1,83 @@
+{
+  "id": "spiral-staircase",
+  "name": "Spiral staircase",
+  "kind": "structural",
+  "description": "A circular helical staircase that climbs around a central column, completing roughly one full turn per floor of rise. Approximated in voxels as a 3x3 footprint helix: a single column of @primary at the centre and four step blocks arranged on its outer ring, each one Y-step higher than the previous and rotated 90 degrees clockwise so that four blocks span one full turn. The minimal footprint makes it the canonical vertical connector for towers, lighthouses, wizard towers, narrow lobbies and medieval keeps where a straight-flight staircase will not fit. Climbs indefinitely by repeating the four-block ring upwards; lands on the next floor at the same horizontal position it started.",
+  "typical_dimensions": {
+    "min": [3, 5, 3],
+    "preferred": [3, 8, 3],
+    "max": [4, 16, 4]
+  },
+  "required_furniture": [
+    {
+      "item": "central_column",
+      "count": 1,
+      "rule": "A 1x1 column of @primary running the full AABB height at the centre of the 3x3 footprint; the helix wraps around it."
+    },
+    {
+      "item": "stairs",
+      "count": "4..16",
+      "rule": "One @stairs block per Y-step on the outer ring, rotated 90 degrees clockwise from the previous step; four blocks complete one full turn."
+    },
+    {
+      "item": "fence",
+      "count": "0..16",
+      "rule": "Optional @fence column on the outermost corner of each step as a banister on the open side."
+    }
+  ],
+  "placement_rules": [
+    "Footprint is a strict 3x3 (or 4x4 at max) square; the helix never leaves it.",
+    "Central column is solid @primary from floor to ceiling of the AABB; it is the structural and visual axis of the skill.",
+    "Steps occupy the eight outer cells of the 3x3 ring, never the centre.",
+    "Each successive step rises exactly one block in Y and rotates one quarter-turn clockwise (parameter `direction`) around the central column.",
+    "Four steps per full turn means one full turn covers four Y-blocks; tune `turns_per_floor` if the floor height is not a multiple of four.",
+    "Stair facing on each block points outward (away from the central column) so the tread is climbable from inside the helix.",
+    "Lands on the next floor at the same XZ cell where the helix began, allowing stacking without a landing slab."
+  ],
+  "lighting_ventilation": "Place a @light block embedded in the central column every 4 Y-blocks (i.e. once per full turn) to keep the well lit and satisfy Java 1.16.5 mob-spawn rules; in towers a single window slit per turn on the outer wall is conventional.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "@stairs": "minecraft:cobblestone_stairs",
+        "@fence": "minecraft:oak_fence",
+        "@primary": "minecraft:cobblestone"
+      },
+      "notes": "Cobblestone helix around a cobblestone column — the canonical keep-and-tower spiral."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "@stairs": "minecraft:dark_oak_stairs",
+        "@fence": "minecraft:dark_oak_fence",
+        "@primary": "minecraft:dark_oak_planks"
+      },
+      "notes": "Dark-oak treads wrapping a dark-oak column — fits wizard towers and dungeon spires."
+    },
+    "gothic": {
+      "palette_overrides": {
+        "@stairs": "minecraft:stone_brick_stairs",
+        "@fence": "minecraft:iron_bars",
+        "@primary": "minecraft:stone_bricks"
+      },
+      "notes": "Stone-brick helix with iron-bar handrail — suits cathedral bell-towers and gothic keeps."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "stair-seats"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "staircase",
+    "style": ["medieval", "fantasy", "gothic"]
+  },
+  "applicable_to": ["tower", "castle", "residential"],
+  "parameters": {
+    "plan_shape": "circular_helix",
+    "central_column": true,
+    "turns_per_floor": 1,
+    "voxel_footprint": "3x3",
+    "direction": "clockwise"
+  },
+  "python_skill_signature": null,
+  "skill_category": "connector_template",
+  "schema_version": "2.0"
+}

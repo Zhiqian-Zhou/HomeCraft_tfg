@@ -1,0 +1,138 @@
+{
+  "id": "garden_bed",
+  "name": "Parterre de jardín",
+  "kind": "exterior",
+  "description": "Pequeño parterre rectangular: suelo de hierba sobre el footprint del AABB, borde de cobblestone_wall (o @secondary) de 1 bloque de alto definiendo la cama, sendero central de 3 bloques de ancho de @floor a lo largo del eje más largo, plantas variadas (flower_pot, oak_sapling, dandelion, poppy), 1-2 hay_block como pila de compost y dos postes de @fence con minecraft:lantern en las esquinas.",
+  "typical_dimensions": {
+    "min": [
+      4,
+      2,
+      4
+    ],
+    "preferred": [
+      10,
+      3,
+      10
+    ],
+    "max": [
+      16,
+      3,
+      16
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "grass_ground",
+      "count": 1,
+      "rule": "minecraft:grass_block cubriendo todo el footprint del AABB en y0."
+    },
+    {
+      "item": "bed_border",
+      "count": 1,
+      "rule": "Perímetro de cobblestone_wall (o @secondary en modern) de 1 bloque de alto en y0+1."
+    },
+    {
+      "item": "plants",
+      "count": "3..20",
+      "rule": "Mezcla de minecraft:flower_pot (3..5), minecraft:oak_sapling (3..5), minecraft:dandelion (3..5) y minecraft:poppy (3..5) sembradas sobre la hierba interior, fuera del sendero."
+    },
+    {
+      "item": "hay_block",
+      "count": "1..2",
+      "rule": "minecraft:hay_block en una esquina interior, simulando una pila de compost."
+    },
+    {
+      "item": "central_path",
+      "count": 1,
+      "rule": "Sendero de 3 bloques de ancho de @floor a lo largo del eje más largo, sustituye la hierba y abre el borde en ambos extremos."
+    },
+    {
+      "item": "lantern_post",
+      "count": "2..2",
+      "rule": "Poste de 2 bloques de @fence rematado con minecraft:lantern en las esquinas NW y SE del parterre."
+    }
+  ],
+  "placement_rules": [
+    "Path along long axis",
+    "Plants flank the path",
+    "Border defines the bed",
+    "Lantern posts at corners",
+    "Hay block tucked into a back corner (compost)",
+    "Path cuts through the border on both ends so the bed is walkable"
+  ],
+  "lighting_ventilation": "Dos lanterns colgadas a y0+3 sobre las esquinas NW y SE iluminan toda la cama incluso en parterres de 16×16. Al ser un espacio exterior la ventilación es total; en bedrooms anexas se recomienda colocar el parterre frente a una ventana para mejorar la luz natural interior.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "border": "minecraft:cobblestone_wall",
+        "@floor": "minecraft:gravel",
+        "@fence": "minecraft:oak_fence"
+      },
+      "furniture_overrides": [
+        {
+          "item": "extra_decor",
+          "block": "minecraft:hay_block",
+          "rule": "Pila de heno extra como compost rústico."
+        }
+      ],
+      "notes": "Estética rústica: muro de cobblestone, sendero de grava, vallas de roble."
+    },
+    "modern": {
+      "palette_overrides": {
+        "border": "minecraft:smooth_stone",
+        "@floor": "minecraft:polished_andesite",
+        "@fence": "minecraft:iron_bars"
+      },
+      "furniture_overrides": [
+        {
+          "item": "edge",
+          "block": "@secondary",
+          "rule": "Borde de hormigón limpio con aristas rectas, sin cobblestone_wall."
+        }
+      ],
+      "notes": "Bordes de hormigón limpio (smooth_stone / @secondary), sendero pulido y postes de iron_bars."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "border": "minecraft:mossy_cobblestone_wall",
+        "@floor": "minecraft:mossy_cobblestone",
+        "@fence": "minecraft:dark_oak_fence"
+      },
+      "furniture_overrides": [
+        {
+          "item": "extra_plant",
+          "block": "minecraft:red_mushroom",
+          "rule": "Sustituye algún poppy por seta roja."
+        },
+        {
+          "item": "extra_plant",
+          "block": "minecraft:brown_mushroom",
+          "rule": "Sustituye algún dandelion por seta marrón."
+        },
+        {
+          "item": "lantern_top",
+          "block": "minecraft:sea_lantern",
+          "rule": "Reemplaza minecraft:lantern por sea_lantern en los postes."
+        }
+      ],
+      "notes": "Parterre encantado: musgo, setas y sea_lantern en lugar de antorcha cálida."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "garden-growing-wild",
+    "public-outdoor-room",
+    "tree-places"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "other",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.garden_bed.build(aabb, materials, style, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "service-staircase",
+  "name": "Service staircase",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "connector_template",
+  "description": "Narrow, utilitarian vertical connector tucked into a back corner of the plan and intended for staff, servants, or service access rather than ceremonial circulation. Classically associated with Victorian townhouses (the hidden 'back stairs' that let servants move between floors without crossing the family's public rooms), but the same template applies to castle keeps with garrison access and to modern service cores behind kitchens or shops. The flight is a single straight run when depth allows and a tight winder when the footprint is square. Treads are plain @primary or @stairs blocks; balustrade is minimal — a single rail of @fence on the open side, no decorative newel. Lighting is functional, often a single @light per landing.",
+  "typical_dimensions": {
+    "min": [2, 5, 4],
+    "preferred": [3, 5, 5],
+    "max": [3, 8, 7]
+  },
+  "tags": {
+    "category": "staircase",
+    "style": ["victorian", "medieval", "modern"]
+  },
+  "applicable_to": ["residential", "castle", "monument"],
+  "parameters": {
+    "flight_shape": "straight_or_winder",
+    "width": "2_to_3",
+    "placement": "back_or_corner",
+    "balustrade": "minimal",
+    "purpose": "service_or_utility"
+  },
+  "alexander_patterns_relevant": ["intimacy-gradient"],
+  "python_skill_signature": null
+}

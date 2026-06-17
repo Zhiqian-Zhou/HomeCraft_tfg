@@ -1,0 +1,13 @@
+{
+  "id": "blue-stained-glass",
+  "block_id": "minecraft:blue_stained_glass",
+  "category": "glass",
+  "color": "blue",
+  "transparent": true,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "pane": "minecraft:blue_stained_glass_pane"
+  },
+  "used_by_styles": ["fantasy", "gothic"]
+}

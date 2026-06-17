@@ -1,0 +1,11 @@
+{
+  "id": "cracked-nether-bricks",
+  "block_id": "minecraft:cracked_nether_bricks",
+  "category": "brick",
+  "color": "dark weathered brown",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {},
+  "used_by_styles": ["ruins", "infernal", "dark-fantasy", "dungeon"]
+}

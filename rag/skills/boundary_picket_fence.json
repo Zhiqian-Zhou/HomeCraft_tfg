@@ -1,0 +1,41 @@
+{
+  "id": "boundary_picket_fence",
+  "name": "Picket fence boundary",
+  "kind": "exterior",
+  "description": "Low fence perimeter.",
+  "typical_dimensions": {
+    "min": [
+      5,
+      3,
+      5
+    ],
+    "preferred": [
+      9,
+      5,
+      9
+    ],
+    "max": [
+      20,
+      8,
+      20
+    ]
+  },
+  "tags": {
+    "category": "any",
+    "style": [
+      "medieval",
+      "rustic",
+      "fantasy",
+      "gothic",
+      "renaissance",
+      "modern",
+      "minimalist",
+      "japanese",
+      "chinese",
+      "mediterranean"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.boundary_picket_fence.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0"
+}

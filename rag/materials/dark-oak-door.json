@@ -1,0 +1,14 @@
+{
+  "id": "dark-oak-door",
+  "block_id": "minecraft:dark_oak_door",
+  "category": "furniture",
+  "color": "dark-brown",
+  "transparent": true,
+  "light_emission": 0,
+  "is_solid": false,
+  "used_by_styles": [
+    "gothic",
+    "medieval",
+    "fantasy"
+  ]
+}

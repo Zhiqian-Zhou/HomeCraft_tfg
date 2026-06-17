@@ -1,0 +1,136 @@
+{
+  "id": "stable",
+  "name": "Establo",
+  "kind": "exterior",
+  "description": "Estructura cubierta para animales (caballos, vacas). Frente abierto (+x) para acceso animal, tres muros de @primary en el fondo y los costados, suelo de @floor con parches de minecraft:hay_block como lecho de paja, tejado tipo cobertizo en pendiente con escalones (@stairs) orientados hacia el frente, interior subdividido en 2-3 cuadras separadas por particiones de @fence. Cada cuadra contiene minecraft:hay_block (comida), minecraft:cauldron[level=3] (abrevadero), minecraft:barrel (almacenamiento de tack) y 1+ minecraft:armor_stand como soporte de silla de montar. 1-2 minecraft:lantern colgadas del techo iluminan el interior.",
+  "typical_dimensions": {
+    "min": [
+      6,
+      4,
+      4
+    ],
+    "preferred": [
+      10,
+      4,
+      5
+    ],
+    "max": [
+      14,
+      5,
+      6
+    ]
+  },
+  "required_furniture": [
+    {
+      "item": "floor",
+      "count": 1,
+      "rule": "Plano de @floor cubriendo todo el footprint en y0, con parches de minecraft:hay_block como lecho de paja en cada cuadra."
+    },
+    {
+      "item": "walls_3_sides",
+      "count": 3,
+      "rule": "Muros sólidos de @primary en los lados norte (z=z0), sur (z=z1-1) y trasero (x=x0). El frente (x=x1-1) se deja abierto para acceso animal."
+    },
+    {
+      "item": "sloped_roof",
+      "count": 1,
+      "rule": "Tejado en pendiente tipo cobertizo: cumbrera plana de @roof por la parte alta trasera y curso de @stairs orientado hacia el frente, dando silueta de lean-to."
+    },
+    {
+      "item": "stall_partitions",
+      "count": "2..3",
+      "rule": "Particiones de @fence (2 bloques de alto) perpendiculares al frente que subdividen el interior en 2 (d<6) o 3 (d>=6) cuadras."
+    },
+    {
+      "item": "minecraft:hay_block",
+      "count": "3..6",
+      "rule": "Bloques de heno como comida y lecho: uno por cuadra junto al muro trasero y varios parches adicionales repartidos por el suelo."
+    },
+    {
+      "item": "minecraft:cauldron",
+      "count": "2..3",
+      "rule": "Caldero con agua (level=3) como abrevadero, uno por cuadra junto al heno."
+    },
+    {
+      "item": "minecraft:barrel",
+      "count": "2..3",
+      "rule": "Barril de almacenamiento (facing=up) por cuadra para tack/forraje, cerca del frente abierto."
+    },
+    {
+      "item": "minecraft:lantern",
+      "count": "1..2",
+      "rule": "Linternas colgando del curso del techo en la línea central a lo largo del eje x; 1 cerca del frente, una segunda hacia atrás cuando d>=5."
+    },
+    {
+      "item": "@armor_stand_entity",
+      "count": "2..3",
+      "rule": "Entidad armor_stand (no es un bloque en 1.16.5; se invoca via /summon o data-pack) como proxy de silla de montar / sostén de tack, uno en el frente de cada cuadra."
+    }
+  ],
+  "placement_rules": [
+    "Open at front for animal access",
+    "Stalls subdivided by fences",
+    "Hay floor + water + storage per stall",
+    "Sloped shed roof pitches from back-high to front-low",
+    "Lanterns hung along the central long axis under the roof",
+    "Armor stands flank the open front of each stall as saddle holders"
+  ],
+  "lighting_ventilation": "El frente totalmente abierto garantiza ventilación natural y entrada de luz solar. Por la noche, 1-2 lanterns colgadas justo debajo del curso del tejado iluminan toda la longitud del establo; en establos cortos (d<5) basta con una linterna central, en los más largos se añade una segunda hacia el muro trasero para iluminar el área de comida y agua.",
+  "style_variants": {
+    "medieval": {
+      "palette_overrides": {
+        "primary": "minecraft:oak_planks",
+        "roof": "minecraft:dark_oak_planks",
+        "stairs": "minecraft:dark_oak_stairs",
+        "floor": "minecraft:oak_planks",
+        "fence": "minecraft:oak_fence"
+      },
+      "notes": "Establo rústico de madera: paredes de roble, techado y escalones de dark_oak, vallas de roble. Lanterns de hierro y armor_stands desnudos para sillas de cuero."
+    },
+    "modern": {
+      "palette_overrides": {
+        "primary": "minecraft:smooth_stone",
+        "roof": "minecraft:smooth_stone",
+        "stairs": "minecraft:smooth_quartz_stairs",
+        "floor": "minecraft:polished_andesite",
+        "fence": "minecraft:iron_bars"
+      },
+      "notes": "Cuadra moderna de hipódromo: paredes y tejado de smooth_stone, suelo de polished_andesite, particiones de iron_bars. Comederos de cauldron y barriles de aluminio sugerido por la paleta."
+    },
+    "fantasy": {
+      "palette_overrides": {
+        "primary": "minecraft:dark_oak_planks",
+        "roof": "minecraft:dark_oak_planks",
+        "stairs": "minecraft:dark_oak_stairs",
+        "floor": "minecraft:dark_oak_planks",
+        "fence": "minecraft:dark_oak_fence",
+        "accent": "minecraft:purpur_block"
+      },
+      "furniture_overrides": [
+        {
+          "item": "ridge_accent",
+          "block": "minecraft:purpur_block",
+          "rule": "Bloque de purpur_block en el centro del frente del tejado como remate mágico."
+        }
+      ],
+      "notes": "Establo encantado de pegasos/unicornios: maderas oscuras con un acento de purpur_block en el remate del tejado. Lanterns sustituibles por sea_lantern via materials.light."
+    }
+  },
+  "alexander_patterns_relevant": [
+    "sheltering-roof",
+    "workplace-enclosure",
+    "building-edge"
+  ],
+  "examples": [],
+  "tags": {
+    "category": "barn",
+    "style": [
+      "medieval",
+      "modern",
+      "fantasy"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.stable.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "exterior_feature",
+  "schema_version": "2.0"
+}

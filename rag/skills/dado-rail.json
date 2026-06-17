@@ -1,0 +1,26 @@
+{
+  "id": "dado-rail",
+  "name": "Dado rail",
+  "kind": "structural",
+  "schema_version": "2.0",
+  "skill_category": "wall_fitting",
+  "description": "Horizontal molding strip running continuously along an interior wall at chair-rail height (approximately y=2 from the floor), originally devised in classical and Victorian interiors to protect plaster from the backs of chairs and to articulate the wall into two visually distinct registers. The lower band (the dado or wainscot) is typically clad in a darker, more durable wood treatment, while the upper band carries a lighter paint, wallpaper, or plaster finish. In voxel terms it is a one-block-tall ribbon of stripped log or planks placed against the inner face of perimeter walls, wrapping corners and skipping door openings. Used by the architecture_planner to give Victorian, Renaissance, and Gothic-revival rooms a clear levels-of-scale break between floor and ceiling.",
+  "typical_dimensions": {
+    "min": [3, 1, 1],
+    "preferred": [8, 1, 1],
+    "max": [16, 1, 1]
+  },
+  "tags": {
+    "category": "other",
+    "style": ["victorian", "renaissance", "gothic"]
+  },
+  "applicable_to": ["residential", "monument"],
+  "parameters": {
+    "height_above_floor": 2,
+    "block": "stripped_spruce_log_or_oak_planks",
+    "placement": "interior_walls_continuous",
+    "divides": "lower_wainscot_from_upper_paint"
+  },
+  "alexander_patterns_relevant": ["levels-of-scale"],
+  "python_skill_signature": null
+}

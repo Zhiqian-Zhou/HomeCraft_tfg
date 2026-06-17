@@ -1,0 +1,15 @@
+{
+  "id": "bricks",
+  "block_id": "minecraft:bricks",
+  "category": "brick",
+  "color": "red",
+  "transparent": false,
+  "light_emission": 0,
+  "is_solid": true,
+  "variants": {
+    "stairs": "minecraft:brick_stairs",
+    "slab": "minecraft:brick_slab",
+    "wall": "minecraft:brick_wall"
+  },
+  "used_by_styles": ["modern", "victorian", "industrial", "colonial", "vanilla"]
+}

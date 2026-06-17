@@ -1,0 +1,42 @@
+{
+  "id": "shoji_screen",
+  "name": "Shoji-style screen wall",
+  "kind": "decorative",
+  "description": "Wall lattice band of @glass_pane — a translucent shoji screen.",
+  "typical_dimensions": {
+    "min": [
+      4,
+      3,
+      4
+    ],
+    "preferred": [
+      8,
+      4,
+      8
+    ],
+    "max": [
+      16,
+      9,
+      16
+    ]
+  },
+  "tags": {
+    "category": "any",
+    "style": [
+      "medieval",
+      "rustic",
+      "fantasy",
+      "gothic",
+      "renaissance",
+      "modern",
+      "minimalist",
+      "japanese",
+      "chinese",
+      "mediterranean"
+    ]
+  },
+  "python_skill_signature": "pipeline.skills.shoji_screen.build(aabb: AABB, materials: Materials, style: str, **kwargs) -> list[Op]",
+  "skill_category": "room_decoration",
+  "schema_version": "2.0",
+  "style_affinity": "East-Asian (Japanese/Chinese) motif. Coherent in japanese/chinese (and fantasy). Out of place in Western, Gothic, Renaissance, Modern, Mediterranean buildings — use only if the building is East-Asian."
+}

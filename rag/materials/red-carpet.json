@@ -1,0 +1,14 @@
+{
+  "id": "red-carpet",
+  "block_id": "minecraft:red_carpet",
+  "category": "decorative",
+  "color": "red",
+  "transparent": true,
+  "light_emission": 0,
+  "is_solid": false,
+  "used_by_styles": [
+    "medieval",
+    "gothic",
+    "renaissance"
+  ]
+}

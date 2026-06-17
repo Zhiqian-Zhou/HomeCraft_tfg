@@ -1,0 +1,19 @@
+{
+  "id": "half-hidden-garden",
+  "name": "Half-Hidden Garden",
+  "source_work": "A Pattern Language",
+  "paraphrase": "Place the garden so that it lies neither wholly exposed to the street nor entirely buried behind the house, but partly glimpsed and partly concealed: visible enough to invite passers-by and to draw the household outside, yet sheltered enough to feel private and intimate. Alexander observes that gardens fully open to the street feel unused, while gardens fully hidden are forgotten; the half-hidden garden, threaded by walls, hedges or the building itself, is the one that comes to life.",
+  "verified_against_corpus": true,
+  "canonical_reference": {
+    "pages": "545-547",
+    "edition": "Oxford University Press 1977",
+    "isbn": "0-19-501919-9"
+  },
+  "geometric_operationalisation": {
+    "metric_name": "garden_concealment_ratio"
+  },
+  "skills_embodying": [
+    "courtyard_well",
+    "fountain"
+  ]
+}

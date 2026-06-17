@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homecraft.tfg/schemas/expanded_prompt.schema.json",
+  "title": "ExpandedPrompt",
+  "description": "Pre-processed prompt produced by the prompt_expander Stage 0. Adds architectural detail, style/size hints, and Alexander pattern keywords to a possibly-short user prompt. Fed to the retriever + main_agent as a richer description.",
+  "type": "object",
+  "required": ["original_prompt", "expanded_description"],
+  "additionalProperties": false,
+  "properties": {
+    "original_prompt": { "type": "string", "minLength": 1 },
+    "expanded_description": {
+      "type": "string",
+      "minLength": 50,
+      "maxLength": 2000,
+      "description": "Rich paragraph (80-200 words) faithful to the user's intent + architectural detail."
+    },
+    "implied_style": {
+      "type": ["string", "null"],
+      "enum": ["medieval", "fantasy", "gothic", "renaissance", "modern", "minimalist",
+               "japanese", "chinese", "mediterranean", "rustic", null]
+    },
+    "implied_size_bucket": {
+      "type": ["string", "null"],
+      "enum": ["small", "medium", "large", "xlarge", null]
+    },
+    "implied_category": {
+      "type": ["string", "null"],
+      "enum": ["residential", "castle", "tower", "temple", "shop", "tavern",
+               "barn", "windmill", "lighthouse", "monument", "other", null]
+    },
+    "implied_rooms": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Room roles the user likely wants (e.g. kitchen, bedroom, hallway). Use snake_case from the catalog."
+    },
+    "implied_exterior_features": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "atmosphere": {
+      "type": ["string", "null"],
+      "description": "Mood / vibe in 2-6 words (e.g. 'cozy, lived-in, single-family')."
+    },
+    "alexander_intent_keywords": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Pattern IDs from RAG-C most relevant to this prompt (e.g. intimacy-gradient, the-farmhouse-kitchen). Max 6."
+    },
+    "constraints": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Hard constraints the user wrote or strongly implied (e.g. 'height ≤ 2 floors', 'rustic materials only')."
+    }
+  }
+}
