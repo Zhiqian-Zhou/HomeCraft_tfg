@@ -38,6 +38,8 @@ This repo mirrors the architecture described in the dissertation. Each concept m
 | Evaluator (Chapter 5) | [`pipeline/agents/evaluator.py`](pipeline/agents/evaluator.py) |
 | Iterative skill curation loop | [`tools/gym/`](tools/gym/) |
 | Cross-model experiment harness | [`scratch/experimento/`](scratch/experimento/) + [`tools/run_experiment2.py`](tools/run_experiment2.py) |
+| Distillation / SFT pipeline | [`sft/`](sft/) |
+| Human-judge validation study | [`correlacion_humano/`](correlacion_humano/) |
 | Cross-reference verifier | [`tools/verify_rag_cross_refs.py`](tools/verify_rag_cross_refs.py) |
 | Browser viewer | [`viewer/`](viewer/) |
 | Plot generation | [`tools/build_plots.py`](tools/build_plots.py) |
@@ -175,6 +177,21 @@ light on two sides, main entrance, sheltering roof, window place, …). See
 
 An iterative "gym" that repeatedly builds a diverse prompt set, evaluates it, diagnoses which
 skill category is weakest, and reports an action checklist — used to harden the skill library.
+
+### Distillation / SFT — `sft/`
+
+A supervised fine-tuning pipeline that distils a large backbone into a small, local-hardware
+model for the text → voxel-JSON task: an **Unsloth QLoRA** trainer (`train_unsloth.py`) for Gemma
+on a single GPU, an inference script (`infer.py`) that loads the LoRA adapter and validates output
+against the building schema, a **Modal** serverless endpoint (`modal/`) that toggles the adapter
+at request time (base / SFT / hybrid), and **Vast.ai** orchestration (`vast/`) for parallel
+multi-GPU runs. See [`sft/README.md`](sft/README.md).
+
+### Human-judge validation — `correlacion_humano/`
+
+The study that validates the automatic evaluator against human judgement (RQ5): 13 anonymised
+Minecraft players rated 20 scenes on the five families, and `analysis.py` correlates their
+consensus with the automatic scores. Anonymised ratings and the analysis ship here.
 
 ---
 

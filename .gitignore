@@ -45,3 +45,14 @@ scratch/experimento2/*.log
 # Reference buildings: raw schematics are license-mixed and not redistributable
 rag/reference_buildings/raw/
 rag/reference_buildings/index/
+
+# SFT: only the training/inference CODE is tracked, never weights or results
+sft/outputs_vast/
+sft/figs/
+sft/_infer_tmp.json
+sft/modal/endpoints.json
+sft/modal/*.jsonl
+sft/modal/*.txt
+sft/vast/*.tar.gz
+sft/**/*.safetensors
+scratch/sft/

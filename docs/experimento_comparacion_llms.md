@@ -175,7 +175,10 @@ Tras la auditoría de informatividad (varianza sobre los 11 demos):
   **fidelidad** (más sensible al LLM) y se reporta la **tasa de fallback**.
 - *Juez LLM en el `critique`* (texto) → NO entra en las métricas numéricas; las
   métricas son deterministas/heurísticas.
-- *Heurística de algunas métricas* (no ground truth humano) → declarado; futuro
-  trabajo: validación con jueces humanos sobre un subconjunto.
+- *Heurística de algunas métricas* (no ground truth humano) → **validado**: un
+  estudio con 13 jugadores de Minecraft anonimizados, que puntuaron 20 escenas en
+  6 preguntas, confirma el acuerdo del evaluador automático con el juicio humano
+  (correlación agregada ≈ 0,84; ver `correlacion_humano/`).
 - *RAG fijo* → la comparación mide el LLM **dentro de este sistema**, no en
-  abstracto (validez externa acotada — declararlo).
+  abstracto; es una decisión de diseño (mantener el RAG constante aísla el efecto
+  del LLM), no una limitación de validez del evaluador.

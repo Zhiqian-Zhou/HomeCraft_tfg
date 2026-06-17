@@ -1,0 +1,26 @@
+[
+  {
+    "key": "gemma-4-e2b",
+    "model": "google/gemma-4-E2B-it",
+    "chat_template": "gemma-3",
+    "max_seq_len": 8192,
+    "epochs": 3,
+    "gated": true
+  },
+  {
+    "key": "gemma-4-e4b",
+    "model": "google/gemma-4-E4B-it",
+    "chat_template": "gemma-3",
+    "max_seq_len": 8192,
+    "epochs": 3,
+    "gated": true
+  },
+  {
+    "key": "qwen3.5-9b",
+    "model": "Qwen/Qwen3.5-9B",
+    "chat_template": "qwen3",
+    "max_seq_len": 8192,
+    "epochs": 3,
+    "gated": false
+  }
+]

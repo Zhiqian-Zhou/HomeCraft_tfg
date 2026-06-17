@@ -244,61 +244,6 @@ def fig_style_category_coverage():
     plt.close(fig)
 
 
-def fig_postpass_ablation_placeholder():
-    """Placeholder bar chart for the failure-with vs failure-without ablation."""
-    models = ["Qwen3-35B", "Gemma3-31B", "Llama4-Scout",
-              "Gemma3-26B", "Qwen3-9B", "Llama3.3-70B"]
-    x = np.arange(len(models))
-    fig, ax = plt.subplots(figsize=(7.0, 3.6), constrained_layout=True)
-    ax.bar(x - 0.18, [0] * len(models), 0.34,
-           label="With post pass", color=PALETTE[0],
-           edgecolor="black", linewidth=0.4)
-    ax.bar(x + 0.18, [0] * len(models), 0.34,
-           label="Without post pass", color=PALETTE[1],
-           edgecolor="black", linewidth=0.4)
-    ax.set_xticks(x); ax.set_xticklabels(models, rotation=15)
-    ax.set_ylabel("Mean composite score")
-    ax.set_ylim(0, 1.0)
-    ax.legend(loc="upper right", frameon=False, fontsize=8)
-    ax.text(len(models) / 2 - 0.5, 0.5,
-            "Pending: experiment in progress",
-            ha="center", va="center", fontsize=12,
-            color="#666666", style="italic")
-    fig.savefig(PLOTS / "postpass_ablation.pdf", bbox_inches="tight")
-    plt.close(fig)
-
-
-def fig_sft_training_curve_placeholder():
-    """Placeholder training curve for the SFT study."""
-    fig, ax = plt.subplots(figsize=(6.5, 3.6), constrained_layout=True)
-    ax.set_xlabel("Training step")
-    ax.set_ylabel("Loss")
-    ax.set_xlim(0, 1000)
-    ax.set_ylim(0, 3.0)
-    ax.text(500, 1.5, "Pending: SFT run scheduled",
-            ha="center", va="center", fontsize=12,
-            color="#666666", style="italic")
-    fig.savefig(PLOTS / "sft_training_curve.pdf", bbox_inches="tight")
-    plt.close(fig)
-
-
-def fig_sft_per_prompt_delta_placeholder():
-    """Placeholder per prompt score delta for the SFT study."""
-    prompts = ["P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9", "P10"]
-    fig, ax = plt.subplots(figsize=(7.0, 3.4), constrained_layout=True)
-    ax.bar(prompts, [0] * len(prompts), color=PALETTE[0],
-           edgecolor="black", linewidth=0.4)
-    ax.axhline(0, color="black", linewidth=0.5)
-    ax.set_ylabel(r"Composite delta (student minus base)")
-    ax.set_ylim(-0.3, 0.3)
-    ax.text(len(prompts) / 2 - 0.5, 0.15,
-            "Pending: SFT evaluation",
-            ha="center", va="center", fontsize=12,
-            color="#666666", style="italic")
-    fig.savefig(PLOTS / "sft_per_prompt_delta.pdf", bbox_inches="tight")
-    plt.close(fig)
-
-
 def main():
     stats = load_stats()
     csv_rows = load_csv()
@@ -308,10 +253,7 @@ def main():
     fig_completion_rate(stats)
     fig_gym_trajectory()
     fig_style_category_coverage()
-    fig_postpass_ablation_placeholder()
-    fig_sft_training_curve_placeholder()
-    fig_sft_per_prompt_delta_placeholder()
-    print(f"Generated 9 plots in {PLOTS}")
+    print(f"Generated 6 plots in {PLOTS}")
 
 
 if __name__ == "__main__":

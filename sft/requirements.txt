@@ -1,0 +1,21 @@
+# Requisitos para el SFT con Unsloth en una RTX 5090 (Blackwell, sm_120).
+#
+# IMPORTANTE (Blackwell): la 5090 necesita CUDA 12.8 y PyTorch >= 2.7 con cu128.
+# Instala PRIMERO PyTorch para cu128 y LUEGO unsloth, p.ej.:
+#
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+#   pip install -r sft/requirements.txt
+#
+# Si bitsandbytes da error en Blackwell, usa una versión >= 0.45.0 (soporte sm_120).
+# Unsloth recomienda su rama estable; si hay problemas de kernels, prueba la
+# versión más reciente: pip install --upgrade --no-cache-dir unsloth unsloth_zoo
+
+unsloth>=2025.3.1
+unsloth_zoo
+trl>=0.15.0
+transformers>=4.49.0
+datasets>=2.19.0
+accelerate>=0.34.0
+peft>=0.13.0
+bitsandbytes>=0.45.0
+# triton lo trae torch; xformers es opcional (Unsloth tiene su propio attention).
