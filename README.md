@@ -221,8 +221,9 @@ skill/style→material, building→material, skill→skill, and JSON-schema vali
 - **Scoring & retrieval** — `score_corpus.py`, `build_retrieval_index.py`,
   `evaluate_building.py`.
 - **Experiments & plots** — `run_experiment2.py` (cross-model comparison),
-  `run_integration_loop.py`, `build_plots.py`. Experiment design lives in
-  [`scratch/experimento/DISENO.md`](scratch/experimento/DISENO.md).
+  `run_integration_loop.py`, `build_plots.py`. The 50-prompt benchmark lives in
+  `scratch/experimento2/prompts_50.jsonl`; the full experimental design is documented in
+  the dissertation (Chapter "Experimental design").
 
 ---
 
@@ -231,7 +232,6 @@ skill/style→material, building→material, skill→skill, and JSON-schema vali
 - [`pipeline_description.md`](pipeline_description.md) — detailed pipeline walkthrough (the cascade, stage by stage, with the composition algorithm).
 - [`docs/PROVENANCE_AUDIT.md`](docs/PROVENANCE_AUDIT.md) — knowledge-base provenance & license audit (what is verified vs. synthesised) *(en español)*.
 - [`docs/TYPOLOGY_CATALOG.md`](docs/TYPOLOGY_CATALOG.md) — architectural typology system.
-- [`docs/experimento_comparacion_llms.md`](docs/experimento_comparacion_llms.md) — cross-model experiment design.
 
 ---
 
