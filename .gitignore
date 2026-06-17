@@ -22,7 +22,7 @@ scratch/skill_previews/
 scratch/generations/
 output/
 
-# Experiment outputs (only the harness CODE is tracked, never the results)
+# Experiment outputs (only the harness CODE + prompt benchmark are tracked, never the results)
 scratch/experimento/results*
 scratch/experimento/*.jsonl
 scratch/experimento/builds*/
@@ -31,6 +31,9 @@ scratch/experimento/*.log
 scratch/experimento/RESULTADOS*.md
 scratch/experimento/EXPERIMENTO_*.md
 scratch/experimento/_*/
+scratch/experimento2/results*
+scratch/experimento2/builds*/
+scratch/experimento2/*.log
 
 # Reference buildings: raw schematics are license-mixed and not redistributable
 rag/reference_buildings/raw/

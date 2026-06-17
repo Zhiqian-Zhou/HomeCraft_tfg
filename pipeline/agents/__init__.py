@@ -8,6 +8,6 @@ Stages (text → voxel JSON):
     aggregator     → master_plan.json (BOT + ordered ops + injected connectors)
     voxelizer      → ReferenceBuilding JSON (compose + wrap)
 
-Determinism: retriever, alexander_scorer, aggregator, voxelizer are pure Python
+Determinism: retriever, aggregator, voxelizer are pure Python
 (no LLM). main_agent / room_agent / exterior_agent call OpenRouter via llm.py.
 """

@@ -3,4 +3,5 @@
 
 openai>=1.0          # LLM calls via OpenRouter (OpenAI-compatible client)
 jsonschema>=4.21     # schema validation for RAG collections & buildings
+referencing>=0.30    # JSON-schema registry used by pipeline/agents/schema_utils.py
 numpy>=1.26          # evaluator geometry & voxel math

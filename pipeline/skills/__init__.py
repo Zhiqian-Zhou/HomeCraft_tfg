@@ -21,7 +21,7 @@ _SKILLS_DIR = Path(__file__).resolve().parent
 
 # Modules in this directory that are infrastructure, not skills.
 _INFRA = {"base", "composer", "preview", "test_harness", "eaves", "params",
-          "__init__"}
+          "seedutil", "typologies", "__init__"}
 
 
 def list_skills() -> list[str]:
