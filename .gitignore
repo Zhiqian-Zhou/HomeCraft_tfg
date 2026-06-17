@@ -1,6 +1,13 @@
 # macOS
 .DS_Store
 
+# Secrets / API keys (never commit)
+.env
+.env.*
+scratch/.env
+*.pem
+*.key
+
 # Python
 __pycache__/
 *.py[cod]
